@@ -41,14 +41,16 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:keepScreenOn="false">
+
             <Button
-                android:layout_width="match_parent"
                 android:id="@+id/donebtn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_margin="10dp"
                 android:layout_gravity="bottom"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
                 android:background="@drawable/roundedbutton"
                 android:text="DONE"
                 android:textColor="@android:color/white"

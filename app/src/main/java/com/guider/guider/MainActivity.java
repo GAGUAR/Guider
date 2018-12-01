@@ -13,6 +13,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -37,7 +38,7 @@ import com.google.maps.android.SphericalUtil;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-public class MainActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
     private GoogleMap mMap;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final String ATAG="Opened";
@@ -56,7 +57,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
         start=(Button)findViewById(R.id.start);
         stop=(Button)findViewById(R.id.stop);
-
+        stop.setVisibility(View.INVISIBLE);
 
 
 
@@ -68,7 +69,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
-                startService(i);   //Start GPS Service
+                startService(i);
+                start.setVisibility(View.INVISIBLE);
+                stop.setVisibility(View.VISIBLE);//Start GPS Service
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +79,9 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
 
-                stopService(i); //Stop GPS Service
+                stopService(i);
+                start.setVisibility(View.VISIBLE);
+                stop.setVisibility(View.INVISIBLE);//Stop GPS Services
             }
         });
 
