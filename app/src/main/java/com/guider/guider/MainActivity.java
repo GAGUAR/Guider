@@ -76,7 +76,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
 
-                stopService(i); //Stop GPS service
+                stopService(i); //Stop GPS Service
             }
         });
 
