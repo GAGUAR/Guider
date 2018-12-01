@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "706545767124",
+    "firebase_url": "https://elemental-leaf-222114.firebaseio.com",
+    "project_id": "elemental-leaf-222114",
+    "storage_bucket": "elemental-leaf-222114.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706545767124:android:8f8877feccef1692",
+        "android_client_info": {
+          "package_name": "com.guider.guider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706545767124-2epauq45kp1m2ofjvsf96aamjbcfo52b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guider.guider",
+            "certificate_hash": "4168cf21486d6def63c495c4e544bd80a22cdcc3"
+          }
+        },
+        {
+          "client_id": "706545767124-hb6udu1ekr0hjefu53sbggt87aq3tpe0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbzQZol_G-y-PwogDemGzO-If43dSDueI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706545767124-hb6udu1ekr0hjefu53sbggt87aq3tpe0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

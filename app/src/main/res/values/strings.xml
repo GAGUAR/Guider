@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Guider</string>
+    <string name="title_activity_main">Guider</string>
+    <string name="my_service_desc">Desc</string>
+    <string name="my_infinite_service">Service</string>
+    <string name="done">DONE</string>
+    <string name="lop">Livonijas ordeņa pils ir viens no vecākajiem viduslaiku cietokšņiem Latvijā, kas saglabājies līdz mūsdienām. Vēstures dokumentos pils pirmoreiz minēta 1290. gadā, kas tiek pieņemts arī par Ventspils pilsētas dibināšanas gadu. Plašus arheoloģiskus pētījumus un pils atjaunošanu uzsāka 1995. gadā. Atjaunojot, tika saglabātas gan 14. gs. nišas un 15. gs. sienu gleznojumi, gan 17. gs. durvju ailas, gan 19. gs. cietuma durvis. No ārpuses pils pašlaik ir ieguvusi 19. gs. izskatu.</string>
+    <string name="am">2007. gada augustā Ventspilī tika atklāts Ziemeļkurzemes Amatniecības konsultāciju centrs – Amatu māja. Ventspils tūrisma objekts atrodas Kurzemes hercogistes senākajā skolas ēkā (18. gs.), kas atjaunota un pārtapusi par mūsdienīgu kultūras objektu un interesantu apskates objektu pilsētas viesiem.
+
+Tā kā laikā no 1849. līdz 1851. gadam šajā ēkā, kur tolaik atradās apriņķa skola, mācījies arī ievērojamais jaunlatviešu darbinieks un izcilais folklorists Krišjānis Barons (1835-1923), pie amatu mājas atklāta Kr. Baronam veltīta tēlnieka Gļeba Panteļejeva veidota piemiņas plāksne. Amatu mājā darbojas un savu amata prasmi interesentiem rāda audēji un keramiķi.
+
+Amatu mājā atrodas arī izstāžu zāle, kur var aplūkot amatnieku darbu izstādes, kā arī rīkot seminārus un citus pasākumus. Suvenīru salonā var iegādāties amatnieku darinājumus un suvenīrus. Amatu mājas ēkā kādreiz darbojusies apriņķa skola, tāpēc apmeklētājiem apskatei tiek piedāvāta 19. gs. stilā iekārtota mācību klase. Iepriekš piesakoties, tajā iespējams piedalīties mācību stundā, kas norit tā laika tradīcijās.</string>
+    <string name="bp">Ventspils brīvostas pārvalde atrodas kādreizējā viesnīcas “Royal” ēkā, kas būvēta historisma un jūgendstila periodā. Ēka atjaunota 1998. gadā un saņēmusi Latvijas Arhitektu savienības balvu kā togad vislabāk rekonstruētais objekts.</string>
+    <string name="dc">Piedāvā mācību klasi (18 darba vietas ar datorpieslēgumu) un konferenču telpu (līdz 60 vietām). Pieejams bezvadu internets, datori, multimediju projektori, video, ekrāni, tāfeles. Tiek nodrošināta dokumentu drukāšana, pavairošana, iesiešana, laminēšana, pasākumu fotografēšana, filmēšana, montāža.</string>
+    <string name="gb">Rekonstruēta 2004./2005. gadā un atzīta par labāko rekonstruēto objektu Latvijā 2004. gadā. Projekta autors arhitekts J. Poga. Interjera autors – V. Terbets. Darbojas publiskā bibliotēka ar grāmatām, periodiku, mūziku kompaktdiskos, video un audio kasetēm. Šeit ierīkota arī pastāvīga latviešu modernās mākslas „trešā viļņa” pārstāvju izstāde un bērnu un jauniešu centrs.</string>
+    <string name="jak">Piemiņas akmens Ventspils brīvostas jūras kanāla padziļināšanai. Akmens izcelts no 17, 5 m dziļuma. Tēlnieks P. Jaunzems, arhitekts J. Poga. Uzstādīts 1998. gadā. Atrodas Ostas ielas promenādē.</string>
+    <string name="jf">Akmeņu iela ir senākā bruģētā iela Ventspilī un tā virzās gar Vecpilsētas laukumu, kas līdz 20. gs. 30. gadu beigām bija apbūvēts. Tagad šeit stāv tēlnieka Jāņa Zariņa veidotais piemineklis (1954) Jānim Fabriciusam (1877–1929), leģendāram padomju Sarkanās armijas latviešu strēlnieku divīziju komandierim, mūsu novadniekam, kurš dzimis Ventspils novada Zlēku pagastā.</string>
+    <string name="jn">Ventspils Jaunrades nams ir liels ārpusskolas nodarbību komplekss dažādu aktivitāšu un programmu īstenošanai pilsētas, valsts, reģiona un starptautiskā mērogā. 1912. gadā būvētais Ventspils Latviešu biedrības nams rekonstruēts, piemērojot to mūsdienu jaunatnes vajadzībām, Eiropas Reģionālās attīstības fonda “Jaunrades nama attīstības projekta” ietvaros. Turklāt projekta ietvaros ir izveidots planetārijs un observatorija interešu izglītības nodrošināšanai un kā apskates objekts pilsētas viesiem.</string>
+    <string name="kk">Uzstādīts 1938. gadā par tautas saziedotiem līdzekļiem. Tā idejas autors ir toreizējais Ventspils ostas kapteinis V. Ābelnieks. Piemineklis atrodas Piemiņas laukumā Ventas upes krastā.</string>
+    <string name="kvp">Piemineklis atrodas Ventmalā, netālu no Livonijas ordeņa pils. Autors M. Polis. Skulptūra atlieta bronzā Vācijā.
+
+Tā „novēro” Ventspils ostas darbību, kā arī katru kuģi, kas pa jūras vārtiem iepeld Ventspils ostā. Populāra pilsētas viesu fotografēšanās vieta.</string>
+    <string name="pt">Ventspils Pasažieru terminālis Dārza ielā 6 atklāts 2007. g., pilnībā rekonstruējot ilgu laiku pamestos vācu tirgotāju Reinku ģimenes 1904. un 1905. g. celtos namus, kuros 20. gs. pirmajā pusē atradās vācu reālskola. Termināļa ēkā darbojas arī Tūrisma informācijas centrs.</string>
+    <string name="rl">Vecpilsētas sirds ir Rātslaukums ar Evanģēliski luterisko Nikolaja baznīcu, Starptautisko Rakstnieku un tulkotāju māju, moderni rekonstruēto Galvenās bibliotēkas ēku un Digitālo centru.
+
+Netālu no Tirgus laukuma, Skolas ielā atrodas jaunākais pilsētas tūrisma objekts - 2007.gada augustā atklātā Ventspils Amatu māja ar darbnīcām keramiķiem, audējiem un kalējiem, kas atvērtas apskatei. Šeit ierīkota arī 19.gs. mācību klase, kur atraktīvā ekskursijā ir iespēja iejusties tā laika mācību stundas atmosfērā.
+
+Rātslaukumā aug 1936.gadā par godu arhibīskapam Teodoram Grīnbergam iestādīte ozoli, kam līdzās atrodas senais un ar lielu rūpību koptais Ventspils Nikolaja ev.luteriskās baznīcas dārzs.</string>
+    <string name="strkv">Autori R. un I. Dobičini. Strūklaka ir 2,8 m augsta un 15t smaga. Strūklakas izgatavošanai 2002. gadā no Zviedrijas tika atvests 38t smags akmens bluķis. Izveidota kā liela „galva” ar izspūrušiem „matiem” – ūdens strūklām.</string>
+    <string name="svnik">Uzbūvēta 1901. gadā, sekojot pareizticīgo baznīcu 17. gadsimta arhitektūras tradīcijām – neobizantiskā stilā ar pieciem kupoliem. Pirmā pasaules kara laikā (1915–1918) vācu armijas vajadzībām šeit ierīkoja zirgu staļļus un benzīna noliktavu. Pēc ilga remonta baznīca tika atvērta tikai 1927. gadā.</string>
+    <string name="tulkmaja">Starptautiskā rakstnieku un tulkotāju māja ierīkota 18. gs. ēkā, kur 1850. gadā ierīkoja pilsētas Rātsnamu, un kur ilgus gadus darbojās Venstpils ekskursiju birojs, bet 2006. gada augustā tika atklāta Starptautiskā rakstnieku un tulkotāju māja, kur regulāri viesojas Latvijas un dažādu ārvalstu rakstnieki un tulkotāji.</string>
+    <string name="vt">Veidojies 17. gs. sākumā. Līdz 19. gs. vidum pie Tirgus laukuma atradās rātsnams. Tirgus un Skolas ielas krustojumā atrodas vecākais (1646) dzīvojamais nams Ventspilī. Populāra pilsētnieku un viesu iepirkšanās vieta.
+
+Tirgus laukums sen sev pievērsis Ventspils senās apbūves un plānojuma pētnieku uzmanību. Savulaik tas uzskatīts par senāko Ventspils centru. Ventspils vēsturiskā centra pētniece arhitekte Rita Zandberga (1929.-1993.) savulaik uzskatīja, ka Tirgus laukums izveidots laikā no 14. Līdz 17.gs. Taču, pamazām iepazīstoties ar arhīvos saglabātajām ziņām, viņa nonāca pie secinājuma, ka Tirgus laukums izveidots un tirgus laukuma komplekss celts 17. gs. sākumā, laikā, kad viduslaiku Ventspils jau eksistēja, un tātad tā nav senākā pilsētas daļa.
+
+2009. gadā tirgus laukumā notika rekonstrukcijas darbi un 5.decembrī tas tika atklāts ar vērienīgu pasākumu.</string>
+
+</resources>
