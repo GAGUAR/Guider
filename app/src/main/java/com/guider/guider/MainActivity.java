@@ -68,7 +68,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
-                startService(i);
+                startService(i);   //Start GPS Service
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +76,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void onClick(View v) {
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
 
-                stopService(i);
+                stopService(i); //Stop GPS service
             }
         });
 
