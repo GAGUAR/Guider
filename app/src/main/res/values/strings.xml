@@ -35,4 +35,8 @@ Tirgus laukums sen sev pievērsis Ventspils senās apbūves un plānojuma pētni
 
 2009. gadā tirgus laukumā notika rekonstrukcijas darbi un 5.decembrī tas tika atklāts ar vērienīgu pasākumu.</string>
 
+    <string name="title_activity_start">StartActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 </resources>
