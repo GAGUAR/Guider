@@ -1,6 +1,7 @@
     package com.guider.guider;
 
     import android.annotation.SuppressLint;
+    import android.app.Activity;
     import android.app.Notification;
     import android.app.PendingIntent;
     import android.app.Service;
@@ -38,7 +39,11 @@
 
     public class GPS_Service extends Service {
     private LocationListener listener;
+    private BroadcastReceiver broadcastReceiver1;
     private static final String TAG="MyLogs";
+        private boolean sightseeing=true;
+        private boolean food=true;
+        private boolean hotels=true;
     LatLng latLng1;
     LatLng latLng2;
     LatLng latLng3;
@@ -59,6 +64,16 @@
         LatLng latLng18;
         LatLng latLng19;
         LatLng latLng20;
+        LatLng latLng21;
+        LatLng latLng22;
+        LatLng latLng23;
+        LatLng latLng24;
+        LatLng latLng25;
+        LatLng latLng26;
+        LatLng latLng27;
+        LatLng latLng28;
+        LatLng latLng29;
+
     boolean opened1=false;
         boolean opened2=false;
         boolean opened3=false;
@@ -76,6 +91,18 @@
         boolean opened15=false;
         boolean opened16=false;
         boolean opened17=false;
+        boolean opened18=false;
+        boolean opened19=false;
+        boolean opened20=false;
+        boolean opened21=false;
+        boolean opened22=false;
+        boolean opened23=false;
+        boolean opened24=false;
+        boolean opened25=false;
+        boolean opened26=false;
+        boolean opened27=false;
+        boolean opened28=false;
+        boolean opened29=false;
 
 
         DatabaseReference ref;
@@ -99,6 +126,16 @@
         listener=new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
+                if(broadcastReceiver1==null){
+                    new BroadcastReceiver() {
+                        @Override
+                        public void onReceive(Context context, Intent intent) {
+                            sightseeing = (boolean) intent.getExtras().get("sightseeing");
+                            food = (boolean) intent.getExtras().get("food");
+                            hotels = (boolean) intent.getExtras().get("hotels");
+                        }
+                    };
+                }
                 float[] distance1 = new float[2];
                 float[] distance2 = new float[2];
                 float[] distance3 = new float[2];
@@ -119,6 +156,15 @@
                 float[] distance18 = new float[2];
                 float[] distance19 = new float[2];
                 float[] distance20 = new float[2];
+                float[] distance21 = new float[2];
+                float[] distance22 = new float[2];
+                float[] distance23 = new float[2];
+                float[] distance24 = new float[2];
+                float[] distance25 = new float[2];
+                float[] distance26 = new float[2];
+                float[] distance27 = new float[2];
+                float[] distance28 = new float[2];
+                float[] distance29 = new float[2];
 
 
 
@@ -143,6 +189,18 @@
                 latLng15=new LatLng(57.394795, 21.551473);      //30m
                 latLng16=new LatLng(57.396254, 21.567992);    //55m
                 latLng17=new LatLng(57.396350, 21.566161);      //30m
+                latLng18=new LatLng(57.393944, 21.563573);
+                latLng19=new LatLng(57.395355, 21.557619);
+                latLng20=new LatLng(57.393611, 21.544619);
+                latLng21=new LatLng(57.391978, 21.544134);
+                latLng22=new LatLng(57.389321, 21.542962);
+                latLng23=new LatLng(57.390291, 21.556095);
+                latLng24=new LatLng(57.394999, 21.565962);
+                latLng25=new LatLng(57.392392, 21.559977);
+                latLng26=new LatLng(57.395302, 21.564229);
+                latLng27=new LatLng(57.394781, 21.567159);
+                latLng28=new LatLng(57.396416, 21.565055);
+                latLng29=new LatLng(57.396636, 21.560647);
 
                 Location.distanceBetween( latLng.latitude,latLng.longitude,       //Counts distance between GeoLocation and Radius
                         latLng1.latitude,latLng1.longitude, distance1);
@@ -178,208 +236,385 @@
                         latLng16.latitude,latLng16.longitude, distance16);
                 Location.distanceBetween( latLng.latitude,latLng.longitude,
                         latLng17.latitude,latLng17.longitude, distance17);
-                if(opened1!=true) {
-                    if (distance1[0] > 100) {
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng18.latitude,latLng18.longitude, distance18);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng19.latitude,latLng19.longitude, distance19);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng20.latitude,latLng20.longitude, distance20);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng21.latitude,latLng21.longitude, distance21);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng22.latitude,latLng22.longitude, distance22);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng23.latitude,latLng23.longitude, distance23);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng24.latitude,latLng24.longitude, distance24);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng25.latitude,latLng25.longitude, distance25);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng26.latitude,latLng26.longitude, distance26);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng27.latitude,latLng27.longitude, distance27);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng28.latitude,latLng28.longitude, distance28);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng29.latitude,latLng29.longitude, distance29);
+                if(sightseeing==true) {
+                    if (opened1 != true) {
+                        if (distance1[0] > 100) {
 
-                        opened1 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","1");     //IF in Radius open InfoActivity and sent activityInterger to set text and image
-                        startActivity(myIntent);
-                        opened1 = true;    //To prevent looped infinity opening( IF statement)
+                            opened1 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "1");     //IF in Radius open InfoActivity and sent activityInterger to set text and image
+                            startActivity(myIntent);
+                            opened1 = true;    //To prevent looped infinity opening( IF statement)
 
 
+                        }
+                    }
+                    if (opened2 != true) {
+                        if (distance2[0] > 35) {
+
+                            opened2 = false;
+                        } else {
+
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "2");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(myIntent);
+                            opened2 = true;
+
+
+                        }
+                    }
+
+                    if (opened4 != true) {
+                        if (distance4[0] > 50) {
+
+                            opened4 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "4");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            startActivity(myIntent);
+                            opened4 = true;
+
+
+                        }
+                    }
+                    if (opened5 != true) {
+                        if (distance5[0] > 30) {
+
+                            opened5 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "5");
+                            startActivity(myIntent);
+
+                            opened5 = true;
+
+
+                        }
+                    }
+                    if (opened6 != true) {
+                        if (distance6[0] > 60) {
+
+                            opened6 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "6");
+                            startActivity(myIntent);
+
+                            opened6 = true;
+
+                        }
+                    }
+                    if (opened7 != true) {
+                        if (distance7[0] > 40) {
+
+                            opened7 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "7");
+                            startActivity(myIntent);
+
+                            opened7 = true;
+
+
+                        }
+                    }
+                    if (opened8 != true) {
+                        if (distance8[0] > 25) {
+
+                            opened8 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "8");
+                            startActivity(myIntent);
+                            opened8 = true;
+
+
+                        }
+                    }
+                    if (opened9 != true) {
+                        if (distance9[0] > 20) {
+
+                            opened9 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "9");
+                            startActivity(myIntent);
+                            opened9 = true;
+
+
+                        }
+                    }
+                    if (opened10 != true) {
+                        if (distance10[0] > 50) {
+
+                            opened10 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "10");
+                            startActivity(myIntent);
+                            opened10 = true;
+
+
+                        }
+                    }
+                    if (opened11 != true) {
+                        if (distance11[0] > 30) {
+
+                            opened11 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "11");
+                            startActivity(myIntent);
+                            opened11 = true;
+
+
+                        }
+                    }
+                    if (opened12 != true) {
+                        if (distance12[0] > 50) {
+
+                            opened12 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "12");
+                            startActivity(myIntent);
+                            opened12 = true;
+                        }
+                    }
+                    if (opened13 != true) {
+                        if (distance13[0] > 25) {
+
+                            opened13 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "13");
+                            startActivity(myIntent);
+                            opened13 = true;
+                        }
+                    }
+                    if (opened14 != true) {
+                        if (distance14[0] > 70) {
+
+                            opened14 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "14");
+                            startActivity(myIntent);
+                            opened14 = true;
+                        }
+                    }
+                    if (opened15 != true) {
+                        if (distance15[0] > 30) {
+
+                            opened15 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "15");
+                            startActivity(myIntent);
+                            opened15 = true;
+                        }
+                    }
+                    if (opened16 != true) {
+                        if (distance16[0] > 55) {
+
+                            opened16 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "16");
+                            startActivity(myIntent);
+                            opened16 = true;
+                        }
                     }
                 }
-                if(opened2!=true) {
-                    if (distance2[0] > 35) {
 
-                        opened2 = false;
-                    } else {
+                    if (opened17 != true) {
+                        if (distance17[0] > 20) {
 
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","2");
-                        startActivity(myIntent);
-                        opened2 = true;
+                            opened17 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "17");
+                            startActivity(myIntent);
 
+                            opened17 = true;
+                        }
+                    }
+                if(hotels==true) {
+                    if (opened18 != true) {
+                        if (distance18[0] > 40) {
 
+                            opened18 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "18");
+                            startActivity(myIntent);
+
+                            opened18 = true;
+                        }
+                    }
+                    if (opened19 != true) {
+                        if (distance19[0] > 40) {
+
+                            opened19 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "19");
+                            startActivity(myIntent);
+
+                            opened19 = true;
+                        }
+                    }
+                    if (opened20 != true) {
+                        if (distance20[0] > 40) {
+
+                            opened20 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "20");
+                            startActivity(myIntent);
+
+                            opened20 = true;
+                        }
+                    }
+                    if (opened21 != true) {
+                        if (distance21[0] > 40) {
+
+                            opened21 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "21");
+                            startActivity(myIntent);
+
+                            opened21 = true;
+                        }
+                    }
+                    if (opened22 != true) {
+                        if (distance22[0] > 40) {
+
+                            opened22 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "22");
+                            startActivity(myIntent);
+
+                            opened22 = true;
+                        }
                     }
                 }
 
-                if(opened4!=true) {
-                    if (distance4[0] > 50) {
+                if(opened23!=true) {
+                    if (distance23[0] > 40) {
 
-                        opened4 = false;
+                        opened23 = false;
                     } else {
                         Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","4");
-                        startActivity(myIntent);
-                        opened4 = true;
-
-
-                    }
-                }
-                if(opened5!=true) {
-                    if (distance5[0] > 30) {
-
-                        opened5 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","5");
+                        myIntent.putExtra("integers","23");
                         startActivity(myIntent);
 
-                        opened5 = true;
-
-
+                        opened23 = true;
                     }
                 }
-                if(opened6!=true) {
-                    if (distance6[0] > 60) {
+                if(food==true) {
+                    if (opened24 != true) {
+                        if (distance24[0] > 25) {
 
-                        opened6 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","6");
-                        startActivity(myIntent);
+                            opened24 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "24");
+                            startActivity(myIntent);
 
-                        opened6 = true;
+                            opened24 = true;
+                        }
+                    }
+                    if (opened25 != true) {
+                        if (distance25[0] > 30) {
 
+                            opened25 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "25");
+                            startActivity(myIntent);
+
+                            opened25 = true;
+                        }
+                    }
+                    if (opened26 != true) {
+                        if (distance26[0] > 40) {
+
+                            opened26 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "26");
+                            startActivity(myIntent);
+
+                            opened26 = true;
+                        }
+                    }
+                    if (opened27 != true) {
+                        if (distance27[0] > 15) {
+
+                            opened27 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "27");
+                            startActivity(myIntent);
+
+                            opened27 = true;
+                        }
+                    }
+                    if (opened28 != true) {
+                        if (distance28[0] > 15) {
+
+                            opened28 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "28");
+                            startActivity(myIntent);
+
+                            opened28 = true;
+                        }
+                    }
+                    if (opened29 != true) {
+                        if (distance29[0] > 40) {
+
+                            opened29 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            myIntent.putExtra("integers", "29");
+                            startActivity(myIntent);
+
+                            opened29 = true;
+                        }
                     }
                 }
-                if(opened7!=true) {
-                    if (distance7[0] > 40) {
-
-                        opened7 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","7");
-                        startActivity(myIntent);
-
-                        opened7 = true;
-
-
-                    }
-                }
-                if(opened8!=true) {
-                    if (distance8[0] > 25) {
-
-                        opened8 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","8");
-                        startActivity(myIntent);
-                        opened8 = true;
-
-
-                    }
-                }
-                if(opened9!=true) {
-                    if (distance9[0] > 20) {
-
-                        opened9 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","9");
-                        startActivity(myIntent);
-                        opened9 = true;
-
-
-                    }
-                }
-                if(opened10!=true) {
-                    if (distance10[0] > 50) {
-
-                        opened10 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","10");
-                        startActivity(myIntent);
-                        opened10 = true;
-
-
-                    }
-                }
-                if(opened11!=true) {
-                    if (distance11[0] > 30) {
-
-                        opened11 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","11");
-                        startActivity(myIntent);
-                        opened11 = true;
-
-
-                    }
-                }
-                if(opened12!=true) {
-                    if (distance12[0] > 50) {
-
-                        opened12 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","12");
-                        startActivity(myIntent);
-                        opened12 = true;
-                    }
-                }
-                if(opened13!=true) {
-                    if (distance13[0] > 25) {
-
-                        opened13 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","13");
-                        startActivity(myIntent);
-                        opened13 = true;
-                    }
-                }
-                if(opened14!=true) {
-                    if (distance14[0] > 70) {
-
-                        opened14 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","14");
-                        startActivity(myIntent);
-                        opened14 = true;
-                    }
-                }
-                if(opened15!=true) {
-                    if (distance15[0] > 30) {
-
-                        opened15 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","15");
-                        startActivity(myIntent);
-                        opened15 = true;
-                    }
-                }
-                if(opened16!=true) {
-                    if (distance16[0] > 55) {
-
-                        opened16 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","16");
-                        startActivity(myIntent);
-                        opened16 = true;
-                    }
-                }
-                if(opened17!=true) {
-                    if (distance17[0] > 20) {
-
-                        opened17 = false;
-                    } else {
-                        Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","17");
-                        startActivity(myIntent);
-
-                        opened17 = true;
-                    }
-                }
-
                 intent.putExtra("latLng1", latLng1);
                 intent.putExtra("latLng2", latLng2);
                 intent.putExtra("latLng3", latLng3);
@@ -397,6 +632,18 @@
                 intent.putExtra("latLng15", latLng15);
                 intent.putExtra("latLng16", latLng16);
                 intent.putExtra("latLng17", latLng17);
+                intent.putExtra("latLng18", latLng18);
+                intent.putExtra("latLng19", latLng19);
+                intent.putExtra("latLng20", latLng20);
+                intent.putExtra("latLng21", latLng21);
+                intent.putExtra("latLng22", latLng22);
+                intent.putExtra("latLng23", latLng23);
+                intent.putExtra("latLng24", latLng24);
+                intent.putExtra("latLng25", latLng25);
+                intent.putExtra("latLng26", latLng26);
+                intent.putExtra("latLng27", latLng27);
+                intent.putExtra("latLng28", latLng28);
+                intent.putExtra("latLng29", latLng29);
 
                 sendBroadcast(intent); //sending  all coordinate data
 

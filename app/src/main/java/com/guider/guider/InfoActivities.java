@@ -110,6 +110,67 @@ public class InfoActivities extends AppCompatActivity{
             infoImage.setImageDrawable(getResources().getDrawable(R.drawable.jf));
             this.setTitle("PIEMINEKLIS JĀNIM FABRICIUSAM");
         }
+        if(activityNo==18){
+            infotext.setText(getString(R.string.kupfer));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.kupfer));
+            this.setTitle("KUPFERNAMS");
+        }
+        if(activityNo==19){
+            infotext.setText(getString(R.string.klosteris));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.klosteris));
+            this.setTitle("KLOSTERIS");
+        }
+        if(activityNo==20){
+            infotext.setText(getString(R.string.mazais));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.mazais));
+            this.setTitle("MAZAIS NAMIŅŠ");
+        }
+        if(activityNo==21){
+            infotext.setText(getString(R.string.oranžnams));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.oranznams));
+            this.setTitle("ORANŽAIS NAMS");
+        }
+        if(activityNo==22){
+            infotext.setText(getString(R.string.portoss));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.portoss));
+            this.setTitle("PORTOSS");
+        }
+        if(activityNo==23){
+            infotext.setText(getString(R.string.dzintari));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.dzintari));
+            this.setTitle("DZINTARI");
+        }
+        //food
+        if(activityNo==24){
+            infotext.setText(getString(R.string.landora));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.landora));
+            this.setTitle("LANDORA 6");
+        }
+        if(activityNo==25){
+            infotext.setText(getString(R.string.erm));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.erm));
+            this.setTitle("ĒRMANĪTIS");
+        }
+        if(activityNo==26){
+            infotext.setText(getString(R.string.skroderkrogs));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.skroderkrogs));
+            this.setTitle("SKRODERKROGS");
+        }
+        if(activityNo==27){
+            infotext.setText(getString(R.string.dolcevita));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.dolcevita));
+            this.setTitle("DOLCE VITA");
+        }
+        if(activityNo==28){
+            infotext.setText(getString(R.string.burgerbars));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.burgerbars));
+            this.setTitle("BURGERBĀRS");
+        }
+        if(activityNo==29){
+            infotext.setText(getString(R.string.ostas23));
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.ostas23));
+            this.setTitle("OSTAS 23");
+        }
     }
 
 }

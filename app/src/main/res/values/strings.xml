@@ -35,6 +35,21 @@ Tirgus laukums sen sev pievērsis Ventspils senās apbūves un plānojuma pētni
 
 2009. gadā tirgus laukumā notika rekonstrukcijas darbi un 5.decembrī tas tika atklāts ar vērienīgu pasākumu.</string>
 
+    <string name="kupfer">Adrese: Kārļa iela 5\nTālrunis: +371 63626999\nFakss:+371 63626999\nE-pasts: info@hotelkupfernams.lv, www.hotelkupfernams.lv
+</string>
+    <string name="klosteris">Strādnieku iela 5\nTālrunis: +371 29467889\nE-pasts: andris.zvaigzne11@gmail.com www.klosteris.viss.lv
+</string>
+    <string name="mazais">Adrese: Kr. Valdemāra iela 29\nTālrunis: +371 29677730\nE-pasts: mazaisnamins@inbox.lv, www.mazaisnamins.lv</string>
+    <string name="oranžnams">Adrese: Znotiņu iela 6\nTālrunis: +371 29119473\nE-pasts: orangebuild@gmail.com, www.oranzaisnams.lv</string>
+    <string name="portoss">Adrese: Medņu iela 4\nVentspils, Telefons: +371 2610 3210; +371 28382225\nE-pasts: hotelportos@inbox.lv, www.portoss.lv</string>
+    <string name="dzintari">Adrese: Meža iela 41\nTelefons: +371 29736387\nE-pasts: dzintari41@inbox.lv, http://www.ventspilsapartamenti.lv/</string>
+    <string name="landora">Adrese: Lielā iela 6\nTālrunis: +371 29230635\nE-pasts: landora@apollo.lv\nDarba laiks: katru dienu 12:00-18:00</string>
+    <string name="erm">Adrese: Saules iela 16\nTālrunis: +371 29264748\nE-pasts: ermanitis.ventspils@inbox.lv\nDarba laiks: 8:00 - 20:00</string>
+    <string name="skroderkrogs">Adrese: Skroderu iela 6\nTālrunis: +371 63627634; 26951552\nE-pasts: skroderkrogs@inbox.lv\nDarba laiks: 11:00 - 22:00</string>
+    <string name="dolcevita">Adrese: Kuldīgas iela 20\nTālrunis: 63600810\nwww.enhars.lv</string>
+    <string name="burgerbars">Adrese: Tirgus iela 11\nTelefons: 25708337  – galdiņu rezervācija, banketi\nE-pasts: office@zitari.lv</string>
+    <string name="ostas23">Adrese: Ostas iela 23\nTel. +371 63622396; +371 22015754\ne-pasts: ela@pilskrogs.lv</string>
+
     <string name="title_activity_start">StartActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

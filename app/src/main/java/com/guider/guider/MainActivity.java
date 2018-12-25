@@ -16,9 +16,11 @@ import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,9 +45,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final String ATAG="Opened";
-    private Button start,stop;
+    private Button start,stop,search;
     private BroadcastReceiver broadcastReceiver;
     private Marker currentLocationMarker;
+    private boolean sightseeing=true;
+    private boolean food=true;
+    private boolean hotels=true;
 
 
     @Override
@@ -58,7 +63,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
         start=(Button)findViewById(R.id.start);
         stop=(Button)findViewById(R.id.stop);
+        search=(Button)findViewById(R.id.searchButton);
         stop.setVisibility(View.INVISIBLE);
+        search.setVisibility(View.INVISIBLE);
 
 
 
@@ -72,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 Intent i=new Intent(getApplicationContext(),GPS_Service.class);
                 startService(i);
                 start.setVisibility(View.INVISIBLE);
-                stop.setVisibility(View.VISIBLE);//Start GPS Service
+                stop.setVisibility(View.VISIBLE);
+                search.setVisibility(View.VISIBLE);//Start GPS Service
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +90,71 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                 stopService(i);
                 start.setVisibility(View.VISIBLE);
-                stop.setVisibility(View.INVISIBLE);//Stop GPS Services
+                stop.setVisibility(View.INVISIBLE);
+                search.setVisibility(View.INVISIBLE);//Stop GPS Services
+            }
+        });
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(MainActivity.this,search);
+                popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        Intent intentaim = new Intent(getApplicationContext(),GPS_Service.class);
+                        switch (item.getItemId()){
+                            case R.id.all:
+                                mMap.clear();
+                                sightseeing=true;
+                                food=true;
+                                hotels=true;
+                                intentaim.putExtra("sightseeing", sightseeing);
+                                intentaim.putExtra("food", food);
+                                intentaim.putExtra("hotels", hotels);
+                                sendBroadcast(intentaim);
+                                return true;
+                            case R.id.sightseeing:
+                                mMap.clear();
+                                sightseeing=true;
+                                food=false;
+                                hotels=false;
+                                intentaim.putExtra("sightseeing", sightseeing);
+                                intentaim.putExtra("food", food);
+                                intentaim.putExtra("hotels", hotels);
+                                sendBroadcast(intentaim);
+                                return true;
+                            case R.id.hotels:
+                                mMap.clear();
+                                sightseeing=false;
+                                food=false;
+                                hotels=true;
+                                intentaim.putExtra("sightseeing", sightseeing);
+                                intentaim.putExtra("food", food);
+                                intentaim.putExtra("hotels", hotels);
+                                sendBroadcast(intentaim);
+                                return true;
+                            case R.id.food:
+                                mMap.clear();
+                                sightseeing=false;
+                                food=true;
+                                hotels=false;
+                                intentaim.putExtra("sightseeing", sightseeing);
+                                intentaim.putExtra("food", food);
+                                intentaim.putExtra("hotels", hotels);
+                                sendBroadcast(intentaim);
+                                return true;
+                                default:
+                                    return false;
+
+                        }
+
+                    }
+
+                });
+
+                popupMenu.show();
+                 //sending  all coordinate data
             }
         });
 
@@ -148,104 +220,195 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     LatLng latLng15= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng15");
                     LatLng latLng16= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng16");
                     LatLng latLng17= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng17");
+                    LatLng latLng18= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng18");
+                    LatLng latLng19= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng19");
+                    LatLng latLng20= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng20");
+                    LatLng latLng21= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng21");
+                    LatLng latLng22= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng22");
+                    LatLng latLng23= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng23");
+                    LatLng latLng24= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng24");
+                    LatLng latLng25= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng25");
+                    LatLng latLng26= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng26");
+                    LatLng latLng27= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng27");
+                    LatLng latLng28= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng28");
+                    LatLng latLng29= (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng29");
+                    if(sightseeing==true) {
+                        mMap.addCircle(new CircleOptions()    //Drawing Circles on Map
+                                .center(latLng1)
+                                .radius(100)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng2)
+                                .radius(35)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng4)
+                                .radius(50)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng5)
+                                .radius(30)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng6)
+                                .radius(60)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng7)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng8)
+                                .radius(25)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng9)
+                                .radius(20)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng10)
+                                .radius(50)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng11)
+                                .radius(30)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng12)
+                                .radius(50)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng13)
+                                .radius(25)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng14)
+                                .radius(70)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng15)
+                                .radius(30)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng16)
+                                .radius(55)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng17)
+                                .radius(20)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                    }
+                    // Hotels and food -------------------------------------------------------------------------------
+                    if(hotels==true) {
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng18)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng19)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng20)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng21)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng22)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng23)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                    }
+                    if(food==true) {
+                        //Food
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng24)
+                                .radius(25)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng25)
+                                .radius(30)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng26)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng27)
+                                .radius(15)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng28)
+                                .radius(15)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
+                        mMap.addCircle(new CircleOptions()
+                                .center(latLng29)
+                                .radius(40)
+                                .strokeColor(Color.BLACK)
+                                .strokeWidth(2.0f)
+                        );
 
-                    mMap.addCircle(new CircleOptions()    //Drawing Circles on Map
-                    .center(latLng1)
-                    .radius(100)
-                    .strokeColor(Color.BLACK)
-                    .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng2)
-                            .radius(35)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng4)
-                            .radius(50)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng5)
-                            .radius(30)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng6)
-                            .radius(60)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng7)
-                            .radius(40)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng8)
-                            .radius(25)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng9)
-                            .radius(20)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng10)
-                            .radius(50)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng11)
-                            .radius(30)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng12)
-                            .radius(50)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng13)
-                            .radius(25)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng14)
-                            .radius(70)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng15)
-                            .radius(30)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng16)
-                            .radius(55)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-                    mMap.addCircle(new CircleOptions()
-                            .center(latLng17)
-                            .radius(20)
-                            .strokeColor(Color.BLACK)
-                            .strokeWidth(2.0f)
-                    );
-
+                    }
                 }
             };
         }
@@ -256,9 +419,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(broadcastReceiver==null){
-            unregisterReceiver(broadcastReceiver);
-        }
+
     }
 
     @Override
