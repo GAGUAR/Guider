@@ -268,6 +268,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "1");     //IF in Radius open InfoActivity and sent activityInterger to set text and image
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened1 = true;    //To prevent looped infinity opening( IF statement)
 
@@ -311,6 +312,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "5");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened5 = true;
@@ -325,6 +327,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "6");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened6 = true;
@@ -338,6 +341,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "7");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened7 = true;
@@ -352,6 +356,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "8");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened8 = true;
 
@@ -365,6 +370,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "9");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened9 = true;
 
@@ -378,6 +384,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "10");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened10 = true;
 
@@ -391,6 +398,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "11");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened11 = true;
 
@@ -404,6 +412,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "12");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened12 = true;
                         }
@@ -415,6 +424,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "13");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened13 = true;
                         }
@@ -426,6 +436,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "14");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened14 = true;
                         }
@@ -437,6 +448,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "15");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened15 = true;
                         }
@@ -448,6 +460,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "16");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
                             opened16 = true;
                         }
@@ -461,6 +474,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "17");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened17 = true;
@@ -474,6 +488,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "18");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened18 = true;
@@ -486,6 +501,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "19");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened19 = true;
@@ -498,6 +514,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "20");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened20 = true;
@@ -510,6 +527,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "21");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened21 = true;
@@ -522,6 +540,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "22");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened22 = true;
@@ -536,6 +555,7 @@
                     } else {
                         Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                         myIntent.putExtra("integers","23");
+                        myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(myIntent);
 
                         opened23 = true;
@@ -549,6 +569,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "24");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened24 = true;
@@ -561,6 +582,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "25");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened25 = true;
@@ -573,6 +595,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "26");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened26 = true;
@@ -585,6 +608,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "27");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened27 = true;
@@ -597,6 +621,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "28");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened28 = true;
@@ -609,6 +634,7 @@
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
                             myIntent.putExtra("integers", "29");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             startActivity(myIntent);
 
                             opened29 = true;
