@@ -670,6 +670,7 @@
                 intent.putExtra("latLng27", latLng27);
                 intent.putExtra("latLng28", latLng28);
                 intent.putExtra("latLng29", latLng29);
+                intent.putExtra("bearing",location.getBearing());
 
                 sendBroadcast(intent); //sending  all coordinate data
 

@@ -5,18 +5,14 @@
     android:layout_height="match_parent"
     android:layout_alignParentBottom="false"
     android:orientation="vertical">
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
         android:orientation="vertical">
-        <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:id="@+id/searchButton"
-            android:layout_alignLeft="@id/map"
-            android:background="@drawable/search" />
+
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/map"
@@ -25,12 +21,28 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             tools:context=".MapsActivity" />
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/searchButton"
+            android:layout_margin="8dp"
+            android:layout_above="@+id/gpscenter"
+            android:layout_alignRight="@id/map"
+            android:background="@drawable/search" />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/gpscenter"
+            android:layout_margin="8dp"
+            android:layout_above="@+id/buttonlayout"
+            android:layout_alignRight="@id/map"
+            android:background="@drawable/gpscenter" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/map"
-
+            android:id="@+id/buttonlayout"
             android:background="@color/colorPrimary"
             android:orientation="vertical">
 
