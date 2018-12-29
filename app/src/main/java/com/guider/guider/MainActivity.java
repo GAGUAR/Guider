@@ -16,10 +16,13 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.PopupMenu;
+import android.text.Layout;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -27,6 +30,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
@@ -59,8 +63,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
     private static final String ATAG = "Opened";
-    private Button start, stop, search, gpscenter;
+    private Button start, stop, search, gpscenter, yes, no,crossexit;
     private BroadcastReceiver broadcastReceiver;
+    private RelativeLayout exitlout;
     private Marker currentLocationMarker;
     private boolean sightseeing = true;
     private boolean food = true;
@@ -69,22 +74,49 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
+    private boolean stopserv=false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+        exitlout=(RelativeLayout) findViewById(R.id.exitlout);
         start = (Button) findViewById(R.id.start);
         stop = (Button) findViewById(R.id.stop);
+        crossexit=(Button)findViewById(R.id.exitbutton);
         search = (Button) findViewById(R.id.searchButton);
         stop.setVisibility(View.INVISIBLE);
         search.setVisibility(View.INVISIBLE);
+        yes=(Button)findViewById(R.id.yes);
+        no=(Button)findViewById(R.id.no);
+        exitlout.setVisibility(View.INVISIBLE);
         gpscenter=(Button)findViewById(R.id.gpscenter);
         gpscenter.setVisibility(View.GONE);
         getLocationPermission();
         enable_buttons();
     }
     private void enable_buttons() {
+        crossexit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nopressed();
+            }
+        });
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nopressed();
+            }
+        });
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+                stopService(i);
+                finish();
+            }
+        });
         gpscenter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,12 +137,15 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
 
-                stopService(i);
-                start.setVisibility(View.VISIBLE);
-                stop.setVisibility(View.INVISIBLE);
                 search.setVisibility(View.INVISIBLE);//Stop GPS Services
+                exitlout.setVisibility(View.VISIBLE);
+                gpscenter.setVisibility(View.GONE);
+                mMap.getUiSettings().setZoomGesturesEnabled(false);
+                mMap.getUiSettings().setScrollGesturesEnabled(false);
+                mMap.getUiSettings().setTiltGesturesEnabled(false);
+                mMap.getUiSettings().setRotateGesturesEnabled(false);
+                stopserv=true;
             }
         });
         search.setOnClickListener(new View.OnClickListener() {
@@ -178,6 +213,21 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         });
 
     }
+
+    private void nopressed() {
+        if(moved!=false){
+            gpscenter.setVisibility(View.VISIBLE);
+        }
+        stop.setVisibility(View.VISIBLE);
+        search.setVisibility(View.VISIBLE);
+        exitlout.setVisibility(View.INVISIBLE);
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+        mMap.getUiSettings().setScrollGesturesEnabled(true);
+        mMap.getUiSettings().setTiltGesturesEnabled(true);
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+        stopserv=false;
+    }
+
     private void getDeviceLocation(){
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -188,7 +238,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 location.addOnCompleteListener(new OnCompleteListener() {
                     @Override
                     public void onComplete(@NonNull Task task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful() && task.getResult() != null) {
                             Location currentLocation = (Location) task.getResult();
                             moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                     DEFAULT_ZOOM);
@@ -497,16 +547,17 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
     @Override
     public void onCameraMoveStarted(int reason) {
-
-        if (reason == GoogleMap.OnCameraMoveStartedListener.REASON_GESTURE) {
-            moved=true;
-            gpscenter.setVisibility(View.VISIBLE);
-        } else if (reason == GoogleMap.OnCameraMoveStartedListener
-                .REASON_API_ANIMATION) {
-            moved=true;
-            gpscenter.setVisibility(View.VISIBLE);
-        } else if (reason == GoogleMap.OnCameraMoveStartedListener
-                .REASON_DEVELOPER_ANIMATION) {
+        if (stopserv = true) {
+            if (reason == GoogleMap.OnCameraMoveStartedListener.REASON_GESTURE) {
+                moved = true;
+                gpscenter.setVisibility(View.VISIBLE);
+            } else if (reason == GoogleMap.OnCameraMoveStartedListener
+                    .REASON_API_ANIMATION) {
+                moved = true;
+                gpscenter.setVisibility(View.VISIBLE);
+            } else if (reason == GoogleMap.OnCameraMoveStartedListener
+                    .REASON_DEVELOPER_ANIMATION) {
+            }
         }
     }
 }

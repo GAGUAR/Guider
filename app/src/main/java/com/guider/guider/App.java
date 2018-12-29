@@ -7,7 +7,7 @@
     import android.os.Build;
 
     public class App extends Application {
-    public static final String CHANNEL_ID="exampleServiceChannel";
+    public static final String CHANNEL_ID="guiderTourNotification";
 
     @Override
     public void onCreate() {
@@ -17,7 +17,7 @@
 
     private void createNotificationChannel() {
         if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
-            NotificationChannel serviceChannel=new NotificationChannel(CHANNEL_ID,"Example Service Channel", NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel serviceChannel=new NotificationChannel(CHANNEL_ID,"Guider Tour Notification", NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager manager=getSystemService(NotificationManager.class);
             manager.createNotificationChannel(serviceChannel);
         }

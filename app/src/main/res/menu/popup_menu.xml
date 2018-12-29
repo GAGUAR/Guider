@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item
     android:id="@+id/all"
-    android:title="All"/>
+    android:title="Viss"/>
     <item
         android:id="@+id/sightseeing"
-        android:title="Sightseeing"/>
+        android:title="Ievērojamākās vietas"/>
     <item
         android:id="@+id/hotels"
-        android:title="Hotels"/>
+        android:title="Viesnīcas"/>
     <item
         android:id="@+id/food"
-        android:title="Food"/>
+        android:title="Restorāni un kafejnīcas"/>
 </menu>
