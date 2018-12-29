@@ -55,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.setMyLocationEnabled(true);
             mMap.setOnCameraMoveStartedListener(this);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
-            Log.d(ATAG, String.valueOf(gps_init));
         }
     }
 
@@ -67,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Button start, stop, search, gpscenter, yes, no,crossexit;
     private BroadcastReceiver broadcastReceiver;
     private RelativeLayout exitlout;
+    private RelativeLayout loadinglout;
     private Marker currentLocationMarker;
     private boolean sightseeing = true;
     private boolean food = true;
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private boolean stopserv=false;
-    private boolean gps_init=false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -87,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         start = (Button) findViewById(R.id.start);
         stop = (Button) findViewById(R.id.stop);
         crossexit=(Button)findViewById(R.id.exitbutton);
+        loadinglout=(RelativeLayout)findViewById(R.id.loadinglout);
+        loadinglout.setVisibility(View.INVISIBLE);
         search = (Button) findViewById(R.id.searchButton);
         stop.setVisibility(View.INVISIBLE);
         search.setVisibility(View.INVISIBLE);
@@ -133,7 +134,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 startService(i);
                 start.setVisibility(View.INVISIBLE);
                 stop.setVisibility(View.VISIBLE);
-                search.setVisibility(View.VISIBLE);//Start GPS Service
+                    loadinglout.setVisibility(View.VISIBLE);
+                mMap.getUiSettings().setZoomGesturesEnabled(false);
+                mMap.getUiSettings().setScrollGesturesEnabled(false);
+                mMap.getUiSettings().setTiltGesturesEnabled(false);
+                mMap.getUiSettings().setRotateGesturesEnabled(false);
+                stopserv=true;
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
@@ -306,15 +312,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     protected void onResume() {
         super.onResume();
+
         if (broadcastReceiver == null) {
             broadcastReceiver = new BroadcastReceiver() {
                 @Override
                 public void onReceive(Context context, Intent intent) {
-
                     String latLng = "\n" + intent.getExtras().get("coordinates");
                     if(latLng!=null){
-                        gps_init=true;
-                        Log.d(ATAG, String.valueOf(gps_init));
+                        loadinglout.setVisibility(View.INVISIBLE);
+                        search.setVisibility(View.VISIBLE);
+                        mMap.getUiSettings().setZoomGesturesEnabled(true);
+                        mMap.getUiSettings().setScrollGesturesEnabled(true);
+                        mMap.getUiSettings().setTiltGesturesEnabled(true);
+                        mMap.getUiSettings().setRotateGesturesEnabled(true);
+                        stopserv=false;
                     }
                     String[] LatLng = latLng.split(",");
                     double latitude = Double.parseDouble(LatLng[0]); //Person coords
