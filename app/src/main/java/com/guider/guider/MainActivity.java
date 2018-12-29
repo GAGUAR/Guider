@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.setMyLocationEnabled(true);
             mMap.setOnCameraMoveStartedListener(this);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
+            Log.d(ATAG, String.valueOf(gps_init));
         }
     }
 
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private boolean stopserv=false;
+    private boolean gps_init=false;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -310,6 +312,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 public void onReceive(Context context, Intent intent) {
 
                     String latLng = "\n" + intent.getExtras().get("coordinates");
+                    if(latLng!=null){
+                        gps_init=true;
+                        Log.d(ATAG, String.valueOf(gps_init));
+                    }
                     String[] LatLng = latLng.split(",");
                     double latitude = Double.parseDouble(LatLng[0]); //Person coords
                     double longitude = Double.parseDouble(LatLng[1]);
