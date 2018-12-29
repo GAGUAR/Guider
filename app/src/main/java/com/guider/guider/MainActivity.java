@@ -320,12 +320,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     String latLng = "\n" + intent.getExtras().get("coordinates");
                     if(latLng!=null){
                         loadinglout.setVisibility(View.INVISIBLE);
-                        search.setVisibility(View.VISIBLE);
+                        if(stopserv!=true) {
+                            search.setVisibility(View.VISIBLE);
+                        }
                         mMap.getUiSettings().setZoomGesturesEnabled(true);
                         mMap.getUiSettings().setScrollGesturesEnabled(true);
                         mMap.getUiSettings().setTiltGesturesEnabled(true);
                         mMap.getUiSettings().setRotateGesturesEnabled(true);
-                        stopserv=false;
+
                     }
                     String[] LatLng = latLng.split(",");
                     double latitude = Double.parseDouble(LatLng[0]); //Person coords
