@@ -106,7 +106,7 @@
                     android:background="@drawable/textback"
                     android:textColor="@android:color/white"
                     android:textSize="30dp"
-                    android:text="Tiešām?"/>
+                    android:text="Iziet"/>
                     <Button
                         android:layout_width="30dp"
                         android:layout_height="30dp"
@@ -115,7 +115,19 @@
                         android:layout_alignParentTop="true"
                         android:background="@drawable/cross" />
                 </RelativeLayout>
-
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vai jūs tiešām gribat iziet?"
+                    android:textAlignment="center"
+                    android:textSize="15dp"
+                    android:padding="10dp"/>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -144,7 +156,7 @@
                     android:text="NĒ"
                     android:textColor="@android:color/white"
                     android:textSize="17dp" />
-
+            </LinearLayout>
             </LinearLayout>
             </LinearLayout>
 
