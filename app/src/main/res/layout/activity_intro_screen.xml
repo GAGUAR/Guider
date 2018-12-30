@@ -3,14 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@color/colorPrimary"
     tools:context=".IntroScreen">
 
-    <ImageView
+
+    <RelativeLayout
+        android:id="@+id/introloading"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="-35dp"
-        android:src="@drawable/full_logo_white2"/>
+        android:gravity="center" >
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/imgintro"
+            android:src="@drawable/full_logo_white2"/>
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgintro"
+            android:id="@+id/progbarintro"
+            android:layout_margin="20dp"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/colorPrimaryDark"/>
+
+    </RelativeLayout>
 
 </RelativeLayout>
