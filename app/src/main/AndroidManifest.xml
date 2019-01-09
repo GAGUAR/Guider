@@ -34,10 +34,11 @@
 
         <activity
             android:name=".IntroScreen"
-            android:theme="@style/Theme.Transparent"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -53,9 +54,12 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".InfoActivities"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"></activity>
+        <activity
+            android:name=".InfoActivities"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".HomeActivity"></activity>
     </application>
 
 </manifest>

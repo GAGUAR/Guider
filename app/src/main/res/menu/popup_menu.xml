@@ -8,7 +8,7 @@
         android:title="Ievērojamākās vietas"/>
     <item
         android:id="@+id/hotels"
-        android:title="Viesnīcas"/>
+        android:title="Viesnīcas" />
     <item
         android:id="@+id/food"
         android:title="Restorāni un kafejnīcas"/>

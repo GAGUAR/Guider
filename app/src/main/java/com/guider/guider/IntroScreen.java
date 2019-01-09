@@ -20,7 +20,7 @@ public class IntroScreen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(1000);
-                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

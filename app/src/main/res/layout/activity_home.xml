@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="false"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/hlout"
+        android:layout_alignParentBottom="false"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/homebuttons"
+            android:layout_margin="10dp"
+            android:text="PATSTAVĪGI"
+            android:id="@+id/freewalk"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:text="MARŠRUTI"
+            android:id="@+id/routes"
+            android:background="@drawable/homebuttons"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:id="@+id/obj"
+            android:background="@drawable/homebuttons"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:text="OBJEKTI"
+            android:layout_weight="1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/homebuttons"
+            android:layout_margin="10dp"
+            android:id="@+id/lang"
+            android:textColor="@android:color/white"
+            android:textSize="20dp"
+            android:text="LATVIEŠU"
+            android:layout_weight="1"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonlayout1"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/mainbuttons"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+
+            android:onClick="stopService"
+            android:text="IZIET"
+            android:textColor="@android:color/white"
+            android:textSize="17dp" />
+    </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
