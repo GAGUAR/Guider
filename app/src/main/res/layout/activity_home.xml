@@ -4,78 +4,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="false"
+    android:background="@color/hometextcolor"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/hlout"
         android:layout_alignParentBottom="false"
         android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/homescreen"
+            android:scaleType="centerCrop"
+            />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/homebuttons"
-            android:layout_margin="10dp"
             android:text="PATSTAVĪGI"
             android:id="@+id/freewalk"
-            android:textColor="@android:color/white"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/homebuttons"
+            android:textColor="@color/hometextcolor"
             android:textSize="20dp"
             android:layout_weight="1"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
             android:text="MARŠRUTI"
             android:id="@+id/routes"
+            android:layout_marginTop="0.5dp"
             android:background="@drawable/homebuttons"
-            android:textColor="@android:color/white"
+            android:textColor="@color/hometextcolor"
             android:textSize="20dp"
             android:layout_weight="1"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="10dp"
             android:id="@+id/obj"
+            android:layout_marginTop="0.5dp"
             android:background="@drawable/homebuttons"
-            android:textColor="@android:color/white"
+            android:textColor="@color/hometextcolor"
             android:textSize="20dp"
             android:text="OBJEKTI"
             android:layout_weight="1"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="0.5dp"
             android:background="@drawable/homebuttons"
-            android:layout_margin="10dp"
-            android:id="@+id/lang"
-            android:textColor="@android:color/white"
+            android:textColor="@color/hometextcolor"
             android:textSize="20dp"
+            android:id="@+id/lang"
             android:text="LATVIEŠU"
             android:layout_weight="1"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/buttonlayout1"
-        android:background="@color/colorPrimary"
-        android:orientation="vertical">
         <Button
-            android:id="@+id/stop"
+            android:id="@+id/stop1"
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="0.5dp"
             android:layout_alignParentEnd="true"
-            android:background="@drawable/mainbuttons"
+            android:textSize="20dp"
+            android:background="@drawable/homebuttons"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-
             android:onClick="stopService"
             android:text="IZIET"
-            android:textColor="@android:color/white"
-            android:textSize="17dp" />
-    </RelativeLayout>
+            android:textColor="@android:color/holo_red_light"/>
+
     </LinearLayout>
 </LinearLayout>
 
