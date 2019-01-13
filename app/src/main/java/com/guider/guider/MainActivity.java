@@ -55,7 +55,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             mMap.setMyLocationEnabled(true);
             mMap.setOnCameraMoveStartedListener(this);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
+            startserv();
         }
+    }
+
+    private void startserv() {
+        Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+        startService(i);
+        loadinglout.setVisibility(View.VISIBLE);
+        mMap.getUiSettings().setZoomGesturesEnabled(true);
+        mMap.getUiSettings().setScrollGesturesEnabled(true);
+        mMap.getUiSettings().setTiltGesturesEnabled(true);
+        mMap.getUiSettings().setRotateGesturesEnabled(true);
+        addCircles();
+        Log.d(ATAG, String.valueOf(service_stop));
     }
 
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
@@ -63,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
     private static final String ATAG = "Opened";
-    private Button start, stop, search, gpscenter, yes, no,crossexit;
+    private Button stop, search, gpscenter, yes, no,crossexit;
     private BroadcastReceiver broadcastReceiver;
     private BroadcastReceiver broadcastReceiver2;
     private RelativeLayout exitlout;
@@ -87,13 +100,12 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_main);
         exitlout=(RelativeLayout) findViewById(R.id.exitlout);
         service_stop=false;
-        start = (Button) findViewById(R.id.start);
         stop = (Button) findViewById(R.id.stop);
+        stop.setEnabled(false);
         crossexit=(Button)findViewById(R.id.exitbutton);
         loadinglout=(RelativeLayout)findViewById(R.id.loadinglout);
         loadinglout.setVisibility(View.INVISIBLE);
         search = (Button) findViewById(R.id.searchButton);
-        stop.setVisibility(View.GONE);
         search.setVisibility(View.GONE);
         yes=(Button)findViewById(R.id.yes);
         no=(Button)findViewById(R.id.no);
@@ -114,8 +126,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     if (received != true) {
                         received = true;
                         loadinglout.setVisibility(View.GONE);
-                        start.setVisibility(View.GONE);
-                        stop.setVisibility(View.VISIBLE);
+                        stop.setEnabled(true);
                         search.setVisibility(View.VISIBLE);
                         LatLng latLng1 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng1");   //Getting radius center coords
                         LatLng latLng2 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng2");
@@ -350,6 +361,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), GPS_Service.class);
                 stopService(i);
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -360,20 +373,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 gpscenter.setVisibility(View.GONE);
             }
         });
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
-                startService(i);
-                    loadinglout.setVisibility(View.VISIBLE);
-                mMap.getUiSettings().setZoomGesturesEnabled(true);
-                mMap.getUiSettings().setScrollGesturesEnabled(true);
-                mMap.getUiSettings().setTiltGesturesEnabled(true);
-                mMap.getUiSettings().setRotateGesturesEnabled(true);
-                addCircles();
-                Log.d(ATAG, String.valueOf(service_stop));
-            }
-        });
+
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

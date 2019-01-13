@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                finish();
             }
         });
         informat.setOnClickListener(new View.OnClickListener() {
