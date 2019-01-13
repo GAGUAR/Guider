@@ -4,79 +4,119 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="false"
-    android:background="@color/hometextcolor"
     android:orientation="vertical">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/hlout"
         android:layout_alignParentBottom="false"
         android:orientation="vertical">
-        <ImageView
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:src="@drawable/homescreen"
-            android:scaleType="centerCrop"
-            />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="PATSTAVĪGI"
-            android:id="@+id/freewalk"
-            android:layout_marginTop="0.5dp"
-            android:background="@drawable/homebuttons"
-            android:textColor="@color/hometextcolor"
-            android:textSize="20dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="MARŠRUTI"
-            android:id="@+id/routes"
-            android:layout_marginTop="0.5dp"
-            android:background="@drawable/homebuttons"
-            android:textColor="@color/hometextcolor"
-            android:textSize="20dp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/obj"
-            android:layout_marginTop="0.5dp"
-            android:background="@drawable/homebuttons"
-            android:textColor="@color/hometextcolor"
-            android:textSize="20dp"
-            android:text="OBJEKTI"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="0.5dp"
-            android:background="@drawable/homebuttons"
-            android:textColor="@color/hometextcolor"
-            android:textSize="20dp"
-            android:id="@+id/lang"
-            android:text="LATVIEŠU"
-            android:layout_weight="1"/>
-        <Button
-            android:id="@+id/stop1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:layout_marginTop="0.5dp"
-            android:layout_alignParentEnd="true"
-            android:textSize="20dp"
-            android:background="@drawable/homebuttons"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:onClick="stopService"
-            android:text="IZIET"
-            android:textColor="@android:color/holo_red_light"/>
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="false"
+            android:orientation="horizontal">
+            <Button
+                android:text="PATSTĀVĪGI"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/freewalk"
+                android:padding="10dp"
+                android:drawableTop="@drawable/tourist"
+                android:layout_margin="10dp"
+                android:background="@drawable/redbutton"
+                android:layout_weight="1"/>
+            <Button
+                android:text="MARŠRUTI"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:id="@+id/routes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:drawableTop="@drawable/ic_route_svgrepo_com"
+                android:layout_margin="10dp"
+                android:background="@drawable/blue"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:orientation="horizontal">
+            <Button
+                android:text="OBJEKTI"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:id="@+id/obj"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:drawableTop="@drawable/marker"
+                android:layout_margin="10dp"
+                android:background="@drawable/orange"
+                android:layout_weight="1"/>
+            <Button
+                android:text="INFORMĀCIJA"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/informat"
+                android:drawableTop="@drawable/ic_info_black_24dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/green"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:orientation="horizontal">
+            <Button
+                android:text="VALODAS"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:id="@+id/lang"
+                android:drawableTop="@drawable/language"
+                android:layout_margin="10dp"
+                android:background="@drawable/purple"
+                android:layout_weight="1"/>
+            <Button
+                android:text="IZIET"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:drawableTop="@drawable/close"
+                android:id="@+id/exit"
+                android:layout_margin="10dp"
+                android:background="@drawable/red"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
+
 </LinearLayout>
+
 
 
 

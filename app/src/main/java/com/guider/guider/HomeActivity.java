@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
-    Button freewalk, routes, obj, lang;
+    Button freewalk, routes, obj, lang,informat,exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,9 @@ public class HomeActivity extends AppCompatActivity {
         routes=(Button)findViewById(R.id.routes);
         obj=(Button)findViewById(R.id.obj);
         lang=(Button)findViewById(R.id.lang);
+        informat=(Button)findViewById(R.id.informat);
+        exit=(Button)findViewById(R.id.exit);
+
         buttons();
     }
 
@@ -42,6 +45,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         lang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        informat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
