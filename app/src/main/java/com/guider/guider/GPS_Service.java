@@ -30,7 +30,6 @@
     import com.google.firebase.database.DatabaseError;
     import com.google.firebase.database.DatabaseReference;
     import com.google.firebase.database.FirebaseDatabase;
-    import com.google.maps.android.SphericalUtil;
 
     import java.util.ArrayList;
 
@@ -267,8 +266,11 @@
                             opened1 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "1");     //IF in Radius open InfoActivity and sent activityInterger to set text and image
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "1");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened1 = true;    //To prevent looped infinity opening( IF statement)
 
@@ -282,8 +284,11 @@
                         } else {
 
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "2");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "2");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened2 = true;
 
@@ -297,9 +302,11 @@
                             opened4 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "4");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "4");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(myIntent);
+                            myIntent.putExtras(extras);
                             opened4 = true;
 
 
@@ -311,8 +318,11 @@
                             opened5 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "5");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "5");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened5 = true;
@@ -326,8 +336,11 @@
                             opened6 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "6");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "6");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened6 = true;
@@ -340,8 +353,11 @@
                             opened7 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "7");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "7");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened7 = true;
@@ -355,8 +371,11 @@
                             opened8 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "8");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "8");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened8 = true;
 
@@ -369,9 +388,11 @@
                             opened9 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "9");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "9");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                            startActivity(myIntent);
+                            myIntent.putExtras(extras);
                             opened9 = true;
 
 
@@ -383,8 +404,11 @@
                             opened10 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "10");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "10");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened10 = true;
 
@@ -397,8 +421,11 @@
                             opened11 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "11");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "11");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened11 = true;
 
@@ -411,8 +438,11 @@
                             opened12 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "12");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "12");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened12 = true;
                         }
@@ -423,8 +453,11 @@
                             opened13 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "13");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "13");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened13 = true;
                         }
@@ -435,8 +468,11 @@
                             opened14 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "14");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "14");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened14 = true;
                         }
@@ -447,8 +483,11 @@
                             opened15 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "15");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "15");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened15 = true;
                         }
@@ -459,8 +498,11 @@
                             opened16 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "16");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "16");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened16 = true;
                         }
@@ -473,8 +515,11 @@
                             opened17 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "17");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "17");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened17 = true;
@@ -487,8 +532,11 @@
                             opened18 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "18");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "18");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened18 = true;
@@ -500,8 +548,11 @@
                             opened19 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "19");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "19");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened19 = true;
@@ -513,8 +564,11 @@
                             opened20 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "20");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "20");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened20 = true;
@@ -526,8 +580,11 @@
                             opened21 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "21");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "21");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened21 = true;
@@ -539,8 +596,11 @@
                             opened22 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "22");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "22");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened22 = true;
@@ -554,8 +614,11 @@
                         opened23 = false;
                     } else {
                         Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                        myIntent.putExtra("integers","23");
+                        Bundle extras = new Bundle();
+                        extras.putString("integers", "23");
+                        extras.putString("booleanGps", "1");
                         myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        myIntent.putExtras(extras);
                         startActivity(myIntent);
 
                         opened23 = true;
@@ -568,8 +631,11 @@
                             opened24 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "24");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "24");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened24 = true;
@@ -581,8 +647,11 @@
                             opened25 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "25");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "25");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened25 = true;
@@ -594,8 +663,11 @@
                             opened26 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "26");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "26");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened26 = true;
@@ -607,8 +679,11 @@
                             opened27 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "27");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "27");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened27 = true;
@@ -620,8 +695,11 @@
                             opened28 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "28");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "28");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened28 = true;
@@ -633,8 +711,11 @@
                             opened29 = false;
                         } else {
                             Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
-                            myIntent.putExtra("integers", "29");
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "29");
+                            extras.putString("booleanGps", "1");
                             myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
                             startActivity(myIntent);
 
                             opened29 = true;

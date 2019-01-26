@@ -26,19 +26,56 @@
         </RelativeLayout>
 
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:layout_weight="2">
+            <TextView
+                android:id="@+id/maininfo"
+                android:layout_width="match_parent"
+                android:background="@drawable/infotitles"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="GALVENĀ INFORMĀCIJA"
+                android:textStyle="bold"
+                android:padding="10dp"
+
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/infotext"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:background="@drawable/homebuttons"
+                android:layout_height="wrap_content"
                 android:layout_weight="4"
+                android:padding="5dp"
                 android:layout_margin="5dp"
                 android:textColor="@android:color/black"
                 android:textSize="15dp" />
-        </RelativeLayout>
+            <TextView
+                android:id="@+id/secondinfo"
+                android:layout_width="match_parent"
+                android:background="@drawable/infotitles"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:text="PAPILDUS INFORMĀCIJA"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="17dp" />
+            <TextView
+                android:id="@+id/infotext2"
+                android:background="@drawable/homebuttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:textSize="15dp" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

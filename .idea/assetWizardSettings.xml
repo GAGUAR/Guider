@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -28,12 +33,13 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="height" value="90" />
-                            <entry key="outputName" value="close" />
+                            <entry key="height" value="40" />
+                            <entry key="outputName" value="ic_iestade" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\Jaguar\Downloads\route-svgrepo-com.svg" />
-                            <entry key="width" value="90" />
+                            <entry key="sourceFile" value="C:\Users\Jaguar\Downloads\3d-building-svgrepo-com.svg" />
+                            <entry key="width" value="40" />
                           </map>
                         </option>
                       </PersistentState>
