@@ -3,6 +3,8 @@
     import android.annotation.SuppressLint;
     import android.app.Activity;
     import android.app.Notification;
+    import android.app.NotificationChannel;
+    import android.app.NotificationManager;
     import android.app.PendingIntent;
     import android.app.Service;
     import android.content.BroadcastReceiver;
@@ -12,6 +14,7 @@
     import android.location.Location;
     import android.location.LocationListener;
     import android.location.LocationManager;
+    import android.os.Build;
     import android.os.Bundle;
     import android.os.IBinder;
     import android.os.SystemClock;
@@ -43,6 +46,8 @@
         private boolean sightseeing=true;
         private boolean food=true;
         private boolean hotels=true;
+        private NotificationManager mNotificationManager;
+        LatLng latlngEnd;
     LatLng latLng1;
     LatLng latLng2;
     LatLng latLng3;
@@ -111,6 +116,7 @@
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
+
         return null;
     }
 
@@ -119,14 +125,21 @@
     public int onStartCommand(final Intent intent, int flags, int startId) {
         ref = FirebaseDatabase.getInstance().getReference("MyLocation");
         geoFire=new GeoFire(ref);
+        String latLngE=(String) intent.getExtras().get("latLngE");
+        if(latLngE!=null) {
+            String[] LatLng = latLngE.split(",");
+            double latitude = Double.parseDouble(LatLng[0]); //Person coords
+            double longitude = Double.parseDouble(LatLng[1]);
+            latlngEnd = new LatLng(latitude, longitude);
+        }
         Intent notificationIntent=new Intent(this,MainActivity.class);
         PendingIntent pendingIntent=PendingIntent.getActivity(this,
                 0,notificationIntent,0);
+
         listener=new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                if(broadcastReceiver1==null){
-                    new BroadcastReceiver() {
+                new BroadcastReceiver() {
                         @Override
                         public void onReceive(Context context, Intent intent) {
                             sightseeing = (boolean) intent.getExtras().get("sightseeing");
@@ -134,7 +147,7 @@
                             hotels = (boolean) intent.getExtras().get("hotels");
                         }
                     };
-                }
+                float[] distEnd = new float[2];
                 float[] distance1 = new float[2];
                 float[] distance2 = new float[2];
                 float[] distance3 = new float[2];
@@ -200,6 +213,19 @@
                 latLng27=new LatLng(57.394781, 21.567159);
                 latLng28=new LatLng(57.396416, 21.565055);
                 latLng29=new LatLng(57.396636, 21.560647);
+                if(latlngEnd!=null){
+                    Location.distanceBetween( latLng.latitude,latLng.longitude,
+                            latlngEnd.latitude,latlngEnd.longitude, distEnd);
+                        if (distEnd[0] > 50) {
+
+                        } else {
+                            Intent myIntent = new Intent("EndOfRoute");
+                            boolean routeInProgress=false;
+                            Log.d(TAG, String.valueOf(routeInProgress));
+                            myIntent.putExtra("EndofRoute", routeInProgress);
+                            sendBroadcast(myIntent);
+                    }
+                }
 
                 Location.distanceBetween( latLng.latitude,latLng.longitude,       //Counts distance between GeoLocation and Radius
                         latLng1.latitude,latLng1.longitude, distance1);
@@ -779,15 +805,31 @@
                 startActivity(i);
             }
         };
+
         manager=(LocationManager)getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,0,listener);
-        Notification notification=new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("Guider")
-                .setContentText("Tour is in process")
-                .setSmallIcon(R.drawable.ic_android)
-                .setContentIntent(pendingIntent)
-                .build();
-        startForeground(1,notification);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(this.getApplicationContext(), "notify_001");
+        mBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
+        mBuilder.setContentTitle("Guider");
+        mBuilder.setOngoing(true);
+        mBuilder.setContentText("Guider ekskursija ir aktīva");
+        mBuilder.setPriority(Notification.PRIORITY_MAX);
+
+        mNotificationManager =
+                (NotificationManager) this.getSystemService(Context.NOTIFICATION_SERVICE);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelId = "Guider";
+            NotificationChannel channel = new NotificationChannel(channelId,
+                    "Guider Tours",
+                    NotificationManager.IMPORTANCE_DEFAULT);
+            mNotificationManager.createNotificationChannel(channel);
+            mBuilder.setChannelId(channelId);
+        }
+
+        mNotificationManager.notify(0, mBuilder.build());
 
         return START_STICKY;
 
@@ -808,7 +850,7 @@
         super.onDestroy();
         if(manager!=null){
             manager.removeUpdates(listener);
-
+            mNotificationManager.cancel(0);
 
             }
         }

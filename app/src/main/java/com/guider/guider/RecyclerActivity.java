@@ -1,6 +1,9 @@
 package com.guider.guider;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -12,7 +15,6 @@ import java.util.ArrayList;
 public class RecyclerActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageUrls = new ArrayList<Integer>();
@@ -22,7 +24,17 @@ public class RecyclerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycl);
         Log.d(TAG, "onCreate: started.");
+        BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
 
+            @Override
+            public void onReceive(Context arg0, Intent intent) {
+                String action = intent.getAction();
+                if (action.equals("finish_activity")) {
+                    finish();
+                }
+            }
+        };
+        registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
         initImageBitmaps();
     }
 

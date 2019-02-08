@@ -36,9 +36,21 @@
             android:layout_height="60dp"
             android:id="@+id/gpscenter"
             android:layout_margin="8dp"
-            android:layout_above="@+id/buttonlayout"
+            android:layout_above="@+id/progbar1"
             android:layout_alignRight="@id/map"
             android:background="@drawable/gpscenter" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progbar1"
+            android:layout_above="@+id/buttonlayout"
+            android:layout_alignRight="@+id/map">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:indeterminate="true" />
+    </RelativeLayout>
 
 
         <RelativeLayout
