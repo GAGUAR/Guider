@@ -11,8 +11,11 @@ import android.widget.Button;
 
 import com.google.maps.model.LatLng;
 
+import java.util.ArrayList;
+
 public class HomeActivity extends AppCompatActivity {
     Button freewalk, routes, obj, lang,informat,exit;
+    private boolean objects;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,8 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 String latLngEnd=null;
+                ArrayList<LatLng>waypts=null;
+                intent.putExtra("waypts",waypts);
                 intent.putExtra("latLngEnd",latLngEnd);
                 startActivity(intent);
                 finish();
@@ -53,13 +58,18 @@ public class HomeActivity extends AppCompatActivity {
         routes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(getApplicationContext(), ObjectChoose.class);
+                objects=false;
+                intent.putExtra("ObjBool",objects);
+                startActivity(intent);
             }
         });
         obj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ObjectChoose.class);
+                objects=true;
+                intent.putExtra("ObjBool",objects);
                 startActivity(intent);
             }
         });

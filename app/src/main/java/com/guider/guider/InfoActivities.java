@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
 
+import java.util.ArrayList;
+
 public class InfoActivities extends AppCompatActivity{
     private TextView infotext;
     private ImageView infoImage;
@@ -69,6 +71,8 @@ public class InfoActivities extends AppCompatActivity{
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    ArrayList<com.google.maps.model.LatLng> waypts=null;
+                    intent.putExtra("waypts",waypts);
                     intent.putExtra("latLngEnd",objLatLng);
                     Intent intent1 = new Intent("finish_activity");
                     sendBroadcast(intent1);

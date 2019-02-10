@@ -84,12 +84,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private GoogleMap mMap;
     private FusedLocationProviderClient mFusedLocationProviderClient;
     private MarkerOptions place1, place2;
+    private PolylineOptions polylineOptions;
     private Polyline currentPolyline;
-    private LatLng latlng, latlngEnd, latLng1, latLng2, latLng4, latLng5, latLng6,latLng7,latLng8,latLng9, latLng10,
+    private LatLng startRoute, latlng, latlngEnd, latLng1, latLng2, latLng4, latLng5, latLng6,latLng7,latLng8,latLng9, latLng10,
             latLng11, latLng12, latLng13, latLng14, latLng15, latLng16,latLng17,latLng18,latLng19,latLng20,latLng21,latLng22,latLng23,
             latLng24,latLng25,latLng26,latLng27,latLng28,latLng29;
     private boolean routeBoolean=false;
     private boolean ROUTE_PERMISSION = false;
+    private ArrayList<LatLng>waypts=new ArrayList<>();
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -170,14 +172,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         addCircles();
 
         if(isMyServiceRunning(GPS_Service.class)==false) {
-            Log.d(ATAG,"Dont");
-            Intent i = new Intent(getApplicationContext(), GPS_Service.class);
-            Intent intent1 = getIntent();
-            latlngE = (String) intent1.getExtras().get("latLngEnd");
-            i.putExtra("latLngE", latlngE);
-            startService(i);
-
+            Intent intent3= getIntent();
+            waypts= (ArrayList<LatLng>) intent3.getExtras().get("waypts");
+            if(waypts!=null){
+                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+                latlngE=waypts.get(0).toString().substring(10,35);
+                i.putExtra("latLngE", latlngE);
+                startService(i);
+            }else {
+                Log.d(ATAG, "Dont");
+                Intent i = new Intent(getApplicationContext(), GPS_Service.class);
+                Intent intent1 = getIntent();
+                latlngE = (String) intent1.getExtras().get("latLngEnd");
+                i.putExtra("latLngE", latlngE);
+                startService(i);
+            }
         }
+
     }
 
     private boolean isMyServiceRunning(Class<?> serviceClass) {
@@ -660,9 +671,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 public void onReceive(Context context, Intent intent) {
                     routeBoolean= (boolean) intent.getExtras().get("EndofRoute");
                     if(routeBoolean==false){
-                        mMap.clear();
-                        addMarkers2();
+                        if(waypts!=null){
+                            mMap.clear();
+                            addMarkers2();
+                            polylineOptions = new PolylineOptions();
+                            polylineOptions.color(Color.BLUE);
+                            polylineOptions.width(10);
+                            polylineOptions.addAll(waypts);
+                            mMap.addPolyline(polylineOptions);
+                        }else {
+                            mMap.clear();
+                            addMarkers2();
+                        }
                     }
+
                 }
             };
             registerReceiver(broadcastReceiver3, new IntentFilter("EndOfRoute"));
