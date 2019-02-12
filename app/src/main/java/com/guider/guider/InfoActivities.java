@@ -202,7 +202,7 @@ public class InfoActivities extends AppCompatActivity{
             titletext.setText("VENTSPILS SV. NIKOLAJA PAREIZTICĪGO BAZNĪCA");
             scndinfotitle.setVisibility(View.GONE);
             secondinfo.setVisibility(View.GONE);
-            objLatLng="57.396254, 21.567992";
+            objLatLng="57.398447, 21.572733";
         }
         if(activityNo==17){
             infotext.setText(getString(R.string.jf));

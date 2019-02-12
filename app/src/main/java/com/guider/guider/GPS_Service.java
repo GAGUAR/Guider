@@ -199,7 +199,7 @@
                 latLng13=new LatLng(57.396078, 21.566493);         //40m
                 latLng14=new LatLng(57.395365, 21.563156);   //70m
                 latLng15=new LatLng(57.394795, 21.551473);      //30m
-                latLng16=new LatLng(57.396254, 21.567992);    //55m
+                latLng16=new LatLng(57.398447, 21.572733);    //55m
                 latLng17=new LatLng(57.396350, 21.566161);      //30m
                 latLng18=new LatLng(57.393944, 21.563573);
                 latLng19=new LatLng(57.395355, 21.557619);
