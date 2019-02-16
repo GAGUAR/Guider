@@ -309,6 +309,15 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     myIntent.putExtras(extras);
                     mContext.startActivity(myIntent);
                 }
+                if(img_pressed=="VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "30");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
             }
         });
     }

@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Polyline currentPolyline;
     private LatLng startRoute, latlng, latlngEnd, latLng1, latLng2, latLng4, latLng5, latLng6,latLng7,latLng8,latLng9, latLng10,
             latLng11, latLng12, latLng13, latLng14, latLng15, latLng16,latLng17,latLng18,latLng19,latLng20,latLng21,latLng22,latLng23,
-            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29;
+            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29, latLng30;
     private boolean routeBoolean=false;
     private boolean ROUTE_PERMISSION = false;
     private ArrayList<LatLng>waypts=new ArrayList<>();
@@ -240,6 +240,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         latLng27 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng27");
                         latLng28 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng28");
                         latLng29 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng29");
+                        latLng30 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng30");
 
                         addMarkers2();
                     }
@@ -401,6 +402,11 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .zIndex(1.0f)
                     .title("OSTAS 23"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng30)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA"));
         }
     }
 

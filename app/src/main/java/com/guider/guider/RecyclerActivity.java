@@ -64,6 +64,9 @@ public class RecyclerActivity extends AppCompatActivity {
 
         mImageUrls.add(R.drawable.vt);
         mNames.add("VENTSPILS TIRGUS");
+
+        mImageUrls.add(R.drawable.niklutbaz);
+        mNames.add("VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA");
         }
         if(chosenNo==2){
             mImageUrls.add(R.drawable.gb);
