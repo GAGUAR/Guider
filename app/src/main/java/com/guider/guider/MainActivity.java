@@ -88,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Polyline currentPolyline;
     private LatLng startRoute, latlng, latlngEnd, latLng1, latLng2, latLng4, latLng5, latLng6,latLng7,latLng8,latLng9, latLng10,
             latLng11, latLng12, latLng13, latLng14, latLng15, latLng16,latLng17,latLng18,latLng19,latLng20,latLng21,latLng22,latLng23,
-            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29, latLng30;
+            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29, latLng30,latLng31,latLng32,latLng33,latLng34,latLng35,latLng36,latLng37,latLng38,latLng39,latLng40;
     private boolean routeBoolean=false;
     private boolean ROUTE_PERMISSION = false;
     private ArrayList<LatLng>waypts=new ArrayList<>();
@@ -241,6 +241,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         latLng28 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng28");
                         latLng29 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng29");
                         latLng30 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng30");
+                        latLng31 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng31");
+                        latLng32 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng32");
+                        latLng33 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng33");
+                        latLng34 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng34");
+                        latLng35 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng35");
+                        latLng36 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng36");
+                        latLng37 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng37");
+                        latLng38 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng38");
+                        latLng39 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng39");
+                        latLng40 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng40");
 
                         addMarkers2();
                     }
@@ -407,6 +417,57 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .zIndex(1.0f)
                     .title("VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng31)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("RĀTSGALDS"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng32)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("VENTSPILS LUTERĀŅU DRAUDZES NAMS"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng33)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("VENTSPILS ALUS DARĪTAVA “COURLANDER”"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng34)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("AKA VENTSPILS TIRGUS LAUKUMĀ"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng35)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("ZVANU TORNIS TIRGUS LAUKUMĀ"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng36)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("GOVIS “PIE SPOGUĻA”"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng37)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("MĀRĪTES"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng38)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("SIEVIŠĶĪGĀ GOVS"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng39)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("GOTIŅA ŠŪPOLĒS"));
+            mMap.addMarker(new MarkerOptions()
+                    .position(latLng40)
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                    .zIndex(1.0f)
+                    .title("LATVIJAS MELNĀ"));
+
         }
     }
 
@@ -658,12 +719,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
                     }
 
-                    if (currentLocationMarker != null) {
-                        currentLocationMarker.remove();
-                    }
-                    MarkerOptions marker = new MarkerOptions();
-                    marker.position(latlng).icon(BitmapDescriptorFactory.fromResource(R.drawable.navi_show));
-                    currentLocationMarker = mMap.addMarker(marker);
+                    mMap.setMyLocationEnabled(true);
                 }
             };
         }

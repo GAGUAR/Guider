@@ -78,6 +78,16 @@
         LatLng latLng28;
         LatLng latLng29;
         LatLng latLng30;
+        LatLng latLng31;
+        LatLng latLng32;
+        LatLng latLng33;
+        LatLng latLng34;
+        LatLng latLng35;
+        LatLng latLng36;
+        LatLng latLng37;
+        LatLng latLng38;
+        LatLng latLng39;
+        LatLng latLng40;
 
     boolean opened1=false;
         boolean opened2=false;
@@ -109,6 +119,16 @@
         boolean opened28=false;
         boolean opened29=false;
         boolean opened30=false;
+        boolean opened31=false;
+        boolean opened32=false;
+        boolean opened33=false;
+        boolean opened34=false;
+        boolean opened35=false;
+        boolean opened36=false;
+        boolean opened37=false;
+        boolean opened38=false;
+        boolean opened39=false;
+        boolean opened40=false;
 
 
         DatabaseReference ref;
@@ -180,6 +200,16 @@
                 float[] distance28 = new float[2];
                 float[] distance29 = new float[2];
                 float[] distance30 = new float[2];
+                float[] distance31 = new float[2];
+                float[] distance32 = new float[2];
+                float[] distance33 = new float[2];
+                float[] distance34 = new float[2];
+                float[] distance35 = new float[2];
+                float[] distance36 = new float[2];
+                float[] distance37 = new float[2];
+                float[] distance38 = new float[2];
+                float[] distance39 = new float[2];
+                float[] distance40 = new float[2];
 
 
 
@@ -217,6 +247,16 @@
                 latLng28=new LatLng(57.396416, 21.565055);
                 latLng29=new LatLng(57.396636, 21.560647);
                 latLng30=new LatLng(57.396002, 21.567951);
+                latLng31=new LatLng(57.395592, 21.567232);
+                latLng32=new LatLng(57.396335, 21.567627);
+                latLng33=new LatLng(57.397319, 21.567090);
+                latLng34=new LatLng(57.397647, 21.567370);
+                latLng35=new LatLng(57.397483, 21.568149);
+                latLng36=new LatLng(57.398190, 21.569543);
+                latLng37=new LatLng(57.398470, 21.568062);
+                latLng38=new LatLng(57.398602, 21.567294);
+                latLng39=new LatLng(57.398143, 21.565802);
+                latLng40=new LatLng(57.398184, 21.565340);
                 if(latlngEnd!=null){
                     Location.distanceBetween( latLng.latitude,latLng.longitude,
                             latlngEnd.latitude,latlngEnd.longitude, distEnd);
@@ -291,6 +331,26 @@
                         latLng29.latitude,latLng29.longitude, distance29);
                 Location.distanceBetween( latLng.latitude,latLng.longitude,
                         latLng30.latitude,latLng30.longitude, distance30);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng31.latitude,latLng31.longitude, distance31);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng32.latitude,latLng32.longitude, distance32);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng33.latitude,latLng33.longitude, distance33);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng34.latitude,latLng34.longitude, distance34);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng35.latitude,latLng35.longitude, distance35);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng36.latitude,latLng36.longitude, distance36);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng37.latitude,latLng37.longitude, distance37);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng38.latitude,latLng38.longitude, distance38);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng39.latitude,latLng39.longitude, distance39);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng40.latitude,latLng40.longitude, distance40);
                 if(sightseeing==true) {
                     if (opened1 != true) {
                         if (distance1[0] > 100) {
@@ -509,6 +569,137 @@
                             opened14 = true;
                         }
                     }
+
+                    if (opened32 != true) {
+                        if (distance32[0] > 25) {
+
+                            opened32 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "32");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened32 = true;
+                        }
+                    }
+
+                    if (opened34 != true) {
+                        if (distance34[0] > 10) {
+
+                            opened34 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "34");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened34 = true;
+                        }
+                    }
+                    if (opened35 != true) {
+                        if (distance35[0] > 20) {
+
+                            opened35 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "35");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened35 = true;
+                        }
+                    }
+                    if (opened36 != true) {
+                        if (distance36[0] > 10) {
+
+                            opened36 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "36");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened36 = true;
+                        }
+                    }
+                    if (opened37 != true) {
+                        if (distance37[0] > 30) {
+
+                            opened37 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "37");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened37 = true;
+                        }
+                    }
+                    if (opened38 != true) {
+                        if (distance38[0] > 10) {
+
+                            opened38 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "38");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened38 = true;
+                        }
+                    }
+                    if (opened39 != true) {
+                        if (distance39[0] > 15) {
+
+                            opened39 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "39");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened39 = true;
+                        }
+                    }
+                    if (opened40 != true) {
+                        if (distance40[0] > 15) {
+
+                            opened40 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "40");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened40 = true;
+                        }
+                    }
+
                     if (opened15 != true) {
                         if (distance15[0] > 30) {
 
@@ -754,7 +945,7 @@
                         }
                     }
                     if (opened30 != true) {
-                        if (distance16[0] > 55) {
+                        if (distance30[0] > 55) {
 
                             opened30 = false;
                         } else {
@@ -766,6 +957,38 @@
                             myIntent.putExtras(extras);
                             startActivity(myIntent);
                             opened30 = true;
+                        }
+                    }
+                    if (opened31 != true) {
+                        if (distance31[0] > 35) {
+
+                            opened31 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "31");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened31 = true;
+                        }
+                    }
+                    if (opened33 != true) {
+                        if (distance33[0] > 15) {
+
+                            opened33 = false;
+                        } else {
+                            Intent myIntent = new Intent(getApplicationContext(), InfoActivities.class);
+                            Bundle extras = new Bundle();
+                            extras.putString("integers", "33");
+                            extras.putString("booleanGps", "1");
+                            myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            myIntent.putExtras(extras);
+                            startActivity(myIntent);
+
+                            opened33 = true;
                         }
                     }
                 }
@@ -799,6 +1022,16 @@
                 intent.putExtra("latLng28", latLng28);
                 intent.putExtra("latLng29", latLng29);
                 intent.putExtra("latLng30", latLng30);
+                intent.putExtra("latLng31", latLng31);
+                intent.putExtra("latLng32", latLng32);
+                intent.putExtra("latLng33", latLng33);
+                intent.putExtra("latLng34", latLng34);
+                intent.putExtra("latLng35", latLng35);
+                intent.putExtra("latLng36", latLng36);
+                intent.putExtra("latLng37", latLng37);
+                intent.putExtra("latLng38", latLng38);
+                intent.putExtra("latLng39", latLng39);
+                intent.putExtra("latLng40", latLng40);
                 intent.putExtra("bearing",location.getBearing());
                 boolean started=true;
                 intent.putExtra("started",started);

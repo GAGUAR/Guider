@@ -318,6 +318,97 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     myIntent.putExtras(extras);
                     mContext.startActivity(myIntent);
                 }
+                if(img_pressed=="RĀTSGALDS") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "31");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="VENTSPILS LUTERĀŅU DRAUDZES NAMS") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "32");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="VENTSPILS ALUS DARĪTAVA “COURLANDER”") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "33");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="AKA VENTSPILS TIRGUS LAUKUMĀ") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "34");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="ZVANU TORNIS TIRGUS LAUKUMĀ") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "35");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="GOVIS “PIE SPOGUĻA”") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "36");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="MĀRĪTES") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "37");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="SIEVIŠĶĪGĀ GOVS") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "38");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="GOTIŅA ŠŪPOLĒS") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "39");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+                if(img_pressed=="LATVIJAS MELNĀ") {
+                    Intent myIntent = new Intent(mContext, InfoActivities.class);
+                    Bundle extras = new Bundle();
+                    extras.putString("integers", "40");
+                    extras.putString("booleanGps", "2");
+                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    myIntent.putExtras(extras);
+                    mContext.startActivity(myIntent);
+                }
+
             }
         });
     }

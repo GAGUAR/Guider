@@ -67,6 +67,23 @@ public class RecyclerActivity extends AppCompatActivity {
 
         mImageUrls.add(R.drawable.niklutbaz);
         mNames.add("VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA");
+            mImageUrls.add(R.drawable.lutdrnams);
+            mNames.add("VENTSPILS LUTERĀŅU DRAUDZES NAMS");
+            mImageUrls.add(R.drawable.aka);
+            mNames.add("AKA VENTSPILS TIRGUS LAUKUMĀ");
+            mImageUrls.add(R.drawable.zvantornis);
+            mNames.add("ZVANU TORNIS TIRGUS LAUKUMĀ");
+            mImageUrls.add(R.drawable.piespog);
+            mNames.add("GOVIS “PIE SPOGUĻA”");
+            mImageUrls.add(R.drawable.marites);
+            mNames.add("MĀRĪTES");
+            mImageUrls.add(R.drawable.sievgovs);
+            mNames.add("SIEVIŠĶĪGĀ GOVS");
+            mImageUrls.add(R.drawable.supgovs);
+            mNames.add("GOTIŅA ŠŪPOLĒS");
+            mImageUrls.add(R.drawable.latvmeln);
+            mNames.add("LATVIJAS MELNĀ");
+
         }
         if(chosenNo==2){
             mImageUrls.add(R.drawable.gb);
@@ -116,6 +133,12 @@ public class RecyclerActivity extends AppCompatActivity {
 
             mImageUrls.add(R.drawable.ostas23);
             mNames.add("OSTAS 23");
+
+            mImageUrls.add(R.drawable.rgalds);
+            mNames.add("RĀTSGALDS");
+
+            mImageUrls.add(R.drawable.courlander);
+            mNames.add("VENTSPILS ALUS DARĪTAVA “COURLANDER”");
 
         }
         if(chosenNo==5){
