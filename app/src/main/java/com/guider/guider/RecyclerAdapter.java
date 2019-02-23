@@ -23,9 +23,10 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     private static final String TAG = "RecyclerViewAdapter";
 
-    private ArrayList<String> mImageNames = new ArrayList<>();
-    private ArrayList<Integer> mImages = new ArrayList<>();
+    private ArrayList<String> mImageNames;
+    private ArrayList<Integer> mImages;
     private Context mContext;
+    private String booleanGps="2";
 
     public RecyclerAdapter(Context context, ArrayList<String> imageNames, ArrayList<Integer> images ) {
         mImageNames = imageNames;
@@ -58,357 +59,171 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
                 String img_pressed=mImageNames.get(position);
                 if(img_pressed=="LIVONIJAS ORDEŅA PILS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "1");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "1";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="AMATU MĀJA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "11");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "11";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="RĀTSLAUKUMS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "2");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "2";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="STARPTAUTISKĀ RAKSTNIEKU UN TULKOTĀJU MĀJA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "5");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "5";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="STRŪKLAKA 'KUĢU VĒROTĀJS'") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "4");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "4";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS SV. NIKOLAJA PAREIZTICĪGO BAZNĪCA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "16");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "16";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS TIRGUS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "10");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "10";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS GALVENĀ BIBLIOTĒKA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "6");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "6";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS BRĪVOSTAS PĀRVALDE") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "7");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "7";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="PRĀMJU TERMINĀLIS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "12");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "12";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS DIGITĀLAIS CENTRS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "13");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "13";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS JAUNRADES NAMS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "14");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "14";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="JŪRAKMENS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "8");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "8";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="PIEMINEKLIS KRIŠJĀNIM VALDEMĀRAM") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "9");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "9";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="PIEMINEKLIS JŪRNIEKIEM UN ZVEJNIEKIEM") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "15");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "15";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="PIEMINEKLIS JĀNIM FABRICIUSAM") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "17");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "17";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="LANDORA 6") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "24");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "24";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="ĒRMANĪTIS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "25");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "25";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="SKRODERKROGS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "26");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "26";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="DOLCE VITA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "27");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "27";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="BURGERBĀRS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "28");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "28";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="OSTAS 23") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "29");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "29";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="KUPFERNAMS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "18");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "18";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="KLOSTERIS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "19");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "19";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="MAZAIS NAMIŅŠ") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "20");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "20";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="ORANŽAIS NAMS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "21");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "21";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="PORTOSS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "22");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "22";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="DZINTARI") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "23");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "23";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS NIKOLAJA LUTERĀŅU BAZNĪCA") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "30");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "30";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="RĀTSGALDS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "31");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "31";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS LUTERĀŅU DRAUDZES NAMS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "32");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "32";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="VENTSPILS ALUS DARĪTAVA “COURLANDER”") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "33");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "33";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="AKA VENTSPILS TIRGUS LAUKUMĀ") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "34");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "34";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="ZVANU TORNIS TIRGUS LAUKUMĀ") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "35");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "35";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="GOVIS “PIE SPOGUĻA”") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "36");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "36";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="MĀRĪTES") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "37");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "37";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="SIEVIŠĶĪGĀ GOVS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "38");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "38";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="GOTIŅA ŠŪPOLĒS") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "39");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "39";
+                    imagePressed(integer,booleanGps);
                 }
                 if(img_pressed=="LATVIJAS MELNĀ") {
-                    Intent myIntent = new Intent(mContext, InfoActivities.class);
-                    Bundle extras = new Bundle();
-                    extras.putString("integers", "40");
-                    extras.putString("booleanGps", "2");
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    myIntent.putExtras(extras);
-                    mContext.startActivity(myIntent);
+                    String integer = "40";
+                    imagePressed(integer,booleanGps);
                 }
 
+            }
+            private void imagePressed(String integer, String booleanGps) {
+                Intent myIntent = new Intent(mContext, InfoActivities.class);
+                Bundle extras = new Bundle();
+                extras.putString("integers", integer);
+                extras.putString("booleanGps", booleanGps);
+                myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                myIntent.putExtras(extras);
+                mContext.startActivity(myIntent);
             }
         });
     }

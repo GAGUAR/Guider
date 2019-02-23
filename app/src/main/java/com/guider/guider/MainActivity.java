@@ -2,6 +2,7 @@ package com.guider.guider;
 
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
     private static final float DEFAULT_ZOOM = 15f;
     private static final String ATAG = "Opened";
-    private Button stop, search, gpscenter, yes, no,crossexit;
+    private Button stop, gpscenter, yes, no,crossexit;
     private BroadcastReceiver broadcastReceiver;
     private BroadcastReceiver broadcastReceiver2;
     private BroadcastReceiver broadcastReceiver3;
@@ -75,9 +76,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private RelativeLayout loadinglout;
     private RelativeLayout progbar;
     private Marker currentLocationMarker;
-    private boolean sightseeing = true;
-    private boolean food = true;
-    private boolean hotels = true;
     private boolean moved;
     private String latlngE;
     private Boolean mLocationPermissionsGranted = false;
@@ -160,8 +158,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         progbar=(RelativeLayout)findViewById(R.id.progbar1);
         loadinglout=(RelativeLayout)findViewById(R.id.loadinglout);
         loadinglout.setVisibility(View.INVISIBLE);
-        search = (Button) findViewById(R.id.searchButton);
-        search.setVisibility(View.GONE);
         yes=(Button)findViewById(R.id.yes);
         no=(Button)findViewById(R.id.no);
         exitlout.setVisibility(View.GONE);
@@ -210,10 +206,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         loadinglout.setVisibility(View.GONE);
                         progbar.setVisibility(View.GONE);
                         stop.setEnabled(true);
-                        search.setVisibility(View.VISIBLE);
                         latLng1 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng1");   //Getting radius center coords
                         latLng2 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng2");
-
                         latLng4 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng4");
                         latLng5 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng5");
                         latLng6 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng6");
@@ -265,7 +259,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     private void addMarkers2() {
-        if (sightseeing == true) {
             mMap.addMarker(new MarkerOptions()
             .position(latLng1)
             .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
@@ -346,9 +339,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .zIndex(1.0f)
                     .title("PIEMINEKLIS JĀNIM FABRICIUSAM"));
-        }
         // Hotels and food -------------------------------------------------------------------------------
-        if (hotels == true) {
             mMap.addMarker(new MarkerOptions()
                     .position(latLng18)
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
@@ -379,8 +370,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .zIndex(1.0f)
                     .title("DZINTARI"));
-        }
-        if (food == true) {
             //Food
             mMap.addMarker(new MarkerOptions()
                     .position(latLng24)
@@ -468,7 +457,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .zIndex(1.0f)
                     .title("LATVIJAS MELNĀ"));
 
-        }
     }
 
     private void enable_buttons() {
@@ -506,7 +494,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
 
-                search.setVisibility(View.GONE);//Stop GPS Services
                 exitlout.setVisibility(View.VISIBLE);
                 gpscenter.setVisibility(View.GONE);
                 mMap.getUiSettings().setZoomGesturesEnabled(false);
@@ -517,77 +504,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 stoppressed=true;
             }
         });
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popupMenu = new PopupMenu(MainActivity.this, search);
-                popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Intent intentaim = new Intent(getApplicationContext(), GPS_Service.class);
-                        switch (item.getItemId()) {
-                            case R.id.all:
-                                mMap.clear();
-                                received=false;
-                                addCircles();
-                                sightseeing = true;
-                                food = true;
-                                hotels = true;
-                                intentaim.putExtra("sightseeing", sightseeing);
-                                intentaim.putExtra("food", food);
-                                intentaim.putExtra("hotels", hotels);
-                                sendBroadcast(intentaim);
-                                return true;
-                            case R.id.sightseeing:
-                                mMap.clear();
-                                received=false;
-                                addCircles();
-                                sightseeing = true;
-                                food = false;
-                                hotels = false;
-                                intentaim.putExtra("sightseeing", sightseeing);
-                                intentaim.putExtra("food", food);
-                                intentaim.putExtra("hotels", hotels);
-                                sendBroadcast(intentaim);
-                                return true;
-                            case R.id.hotels:
-                                mMap.clear();
-                                received=false;
-                                addCircles();
-                                sightseeing = false;
-                                food = false;
-                                hotels = true;
-                                intentaim.putExtra("sightseeing", sightseeing);
-                                intentaim.putExtra("food", food);
-                                intentaim.putExtra("hotels", hotels);
-                                sendBroadcast(intentaim);
-                                return true;
-                            case R.id.food:
-                                mMap.clear();
-                                received=false;
-                                addCircles();
-                                sightseeing = false;
-                                food = true;
-                                hotels = false;
-                                intentaim.putExtra("sightseeing", sightseeing);
-                                intentaim.putExtra("food", food);
-                                intentaim.putExtra("hotels", hotels);
-                                sendBroadcast(intentaim);
-                                return true;
-                            default:
-                                return false;
 
-                        }
-
-                    }
-
-                });
-
-                popupMenu.show();
-                //sending  all coordinate data
-            }
-        });
 
     }
 
@@ -596,7 +513,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             gpscenter.setVisibility(View.VISIBLE);
         }
         stop.setVisibility(View.VISIBLE);
-        search.setVisibility(View.VISIBLE);
         exitlout.setVisibility(View.GONE);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
         mMap.getUiSettings().setScrollGesturesEnabled(true);
@@ -693,6 +609,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         startserv();
         if (broadcastReceiver == null) {
             broadcastReceiver = new BroadcastReceiver() {
+                @SuppressLint("MissingPermission")
                 @Override
                 public void onReceive(Context context, Intent intent) {
                     String latLng = "\n" + intent.getExtras().get("coordinates");
@@ -806,5 +723,3 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         currentPolyline = mMap.addPolyline((PolylineOptions) values[0]);
     }
 }
-
-

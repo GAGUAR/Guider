@@ -24,14 +24,6 @@
             android:layout_weight="1"
             tools:context=".MapsActivity" />
         <Button
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:id="@+id/searchButton"
-            android:layout_margin="8dp"
-            android:layout_above="@+id/gpscenter"
-            android:layout_alignRight="@id/map"
-            android:background="@drawable/search" />
-        <Button
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:id="@+id/gpscenter"
