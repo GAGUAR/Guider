@@ -41,7 +41,8 @@
         <activity
             android:name=".IntroScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Transparent">
+            android:theme="@style/Theme.Transparent"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -63,10 +64,14 @@
         <activity
             android:name=".InfoActivities"
             android:screenOrientation="portrait" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".RecyclerActivity" />
-        <activity android:name=".ObjectChoose"></activity>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".RecyclerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ObjectChoose"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

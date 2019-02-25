@@ -106,7 +106,7 @@
                 android:drawableLeft="@drawable/phone_icon"
                 android:padding="10dp"
                 android:id="@+id/phoneButton"
-                android:text="PIEZVĀNĪT"
+                android:text="PIEZVANĪT"
                 android:textColor="@android:color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
