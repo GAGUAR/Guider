@@ -214,6 +214,54 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
                     String integer = "40";
                     imagePressed(integer,booleanGps);
                 }
+                 if(img_pressed=="LEMBERGA HŪTE") {
+                    String integer = "41";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="PĀRVENTAS BIBLIOTĒKA") {
+                    String integer = "42";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="JŪRAS STĀVKRASTI STALDZENĒ") {
+                    String integer = "43";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="PUĶU GOVS") {
+                    String integer = "44";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="GAISMAS GOVS") {
+                    String integer = "45";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="GOVS MATROZIS") {
+                    String integer = "46";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="PIENA CEĻŠ GOVS") {
+                    String integer = "47";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="VENTSPILS ZĀĻU GOVS") {
+                    String integer = "48";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="GOVS CEĻOTĀJA") {
+                    String integer = "49";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="VENTSPILS 2. VIDUSSKOLA") {
+                    String integer = "50";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="PIEJŪRAS BRĪVDABAS MUZEJS") {
+                    String integer = "51";
+                    imagePressed(integer,booleanGps);
+                }
+                if(img_pressed=="VENTSPILS MAZBĀNĪTIS") {
+                    String integer = "52";
+                    imagePressed(integer,booleanGps);
+                }
 
             }
             private void imagePressed(String integer, String booleanGps) {
