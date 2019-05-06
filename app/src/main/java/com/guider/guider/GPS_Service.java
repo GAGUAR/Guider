@@ -23,7 +23,7 @@
     private String booleanGps = "1";
         private NotificationManager mNotificationManager;
         LatLng latlngEnd, latLng1, latLng2,latLng4,latLng5,latLng6,latLng7,latLng8,latLng9,latLng10,latLng11,latLng12,latLng13,latLng14,latLng15,latLng16,latLng17,latLng18,latLng19,latLng20,latLng21,
-        latLng22,latLng23,latLng24,latLng25,latLng26,latLng27,latLng28,latLng29,latLng30,latLng31,latLng32,latLng33,latLng34,latLng35,latLng36,latLng37,latLng38,latLng39,latLng40;
+        latLng22,latLng23,latLng24,latLng25,latLng26,latLng27,latLng28,latLng29,latLng30,latLng31,latLng32,latLng33,latLng34,latLng35,latLng36,latLng37,latLng38,latLng39,latLng40,latLng41,latLng42,latLng43,latLng44,latLng45,latLng46,latLng47,latLng48,latLng49,latLng50,latLng51,latLng52;
         boolean opened1=false;
         boolean opened2=false;
         boolean opened4=false;
@@ -63,6 +63,18 @@
         boolean opened38=false;
         boolean opened39=false;
         boolean opened40=false;
+        boolean opened41=false;
+        boolean opened42=false;
+        boolean opened43=false;
+        boolean opened44=false;
+        boolean opened45=false;
+        boolean opened46=false;
+        boolean opened47=false;
+        boolean opened48=false;
+        boolean opened49=false;
+        boolean opened50=false;
+        boolean opened51=false;
+        boolean opened52=false;
     private LocationManager manager;
     @Nullable
     @Override
@@ -123,6 +135,18 @@
                 float[] distance38 = new float[2];
                 float[] distance39 = new float[2];
                 float[] distance40 = new float[2];
+                float[] distance41 = new float[2];
+                float[] distance42 = new float[2];
+                float[] distance43 = new float[2];
+                float[] distance44 = new float[2];
+                float[] distance45 = new float[2];
+                float[] distance46 = new float[2];
+                float[] distance47 = new float[2];
+                float[] distance48 = new float[2];
+                float[] distance49 = new float[2];
+                float[] distance50 = new float[2];
+                float[] distance51 = new float[2];
+                float[] distance52 = new float[2];
                 Intent intent = new Intent("location_update");
                 intent.putExtra("coordinates", location.getLongitude() + "," + location.getLatitude());   //Sends local device coordinates to MainActivity
                 LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
@@ -165,6 +189,18 @@
                 latLng38=new LatLng(57.398602, 21.567294);
                 latLng39=new LatLng(57.398143, 21.565802);
                 latLng40=new LatLng(57.398184, 21.565340);
+                latLng41=new LatLng(57.375320, 21.548041);
+                latLng42=new LatLng(57.403801, 21.591665);
+                latLng43=new LatLng(57.444989, 21.605236);
+                latLng44=new LatLng(57.388072, 21.582282);
+                latLng45=new LatLng(57.393273, 21.564254);
+                latLng46=new LatLng(57.400300, 21.529508);
+                latLng47=new LatLng(57.393025, 21.541028);
+                latLng48=new LatLng(57.403823, 21.591320);
+                latLng49=new LatLng(57.395156, 21.553630);
+                latLng50=new LatLng(57.387892, 21.566085);
+                latLng51=new LatLng(57.385013, 21.537881);
+                latLng52=new LatLng(57.376095, 21.548336);
                 if(latlngEnd!=null){
                     Location.distanceBetween( latLng.latitude,latLng.longitude,
                             latlngEnd.latitude,latlngEnd.longitude, distEnd);
@@ -255,6 +291,31 @@
                         latLng39.latitude,latLng39.longitude, distance39);
                 Location.distanceBetween( latLng.latitude,latLng.longitude,
                         latLng40.latitude,latLng40.longitude, distance40);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng41.latitude,latLng41.longitude, distance41);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng42.latitude,latLng42.longitude, distance42);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng43.latitude,latLng43.longitude, distance43);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng44.latitude,latLng44.longitude, distance44);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng45.latitude,latLng45.longitude, distance45);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng46.latitude,latLng46.longitude, distance46);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng47.latitude,latLng47.longitude, distance47);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng48.latitude,latLng48.longitude, distance48);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng49.latitude,latLng49.longitude, distance49);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng50.latitude,latLng50.longitude, distance50);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng51.latitude,latLng51.longitude, distance51);
+                Location.distanceBetween( latLng.latitude,latLng.longitude,
+                        latLng52.latitude,latLng52.longitude, distance52);
+
                     if (opened1 != true) {
                         if (distance1[0] > 100) {
                             opened1 = false;
@@ -607,6 +668,117 @@
                         opened40 = true;
                     }
                 }
+                if (opened41 != true) {
+                    if (distance41[0] > 15) {
+                        opened41 = false;
+                    } else {
+                        String integer="41";
+                        onComeActivity(integer,booleanGps);
+                        opened41 = true;
+                    }
+                }
+                if (opened42 != true) {
+                    if (distance42[0] > 15) {
+                        opened42 = false;
+                    } else {
+                        String integer="42";
+                        onComeActivity(integer,booleanGps);
+                        opened42 = true;
+                    }
+                }
+                if (opened43 != true) {
+                    if (distance43[0] > 15) {
+                        opened43 = false;
+                    } else {
+                        String integer="43";
+                        onComeActivity(integer,booleanGps);
+                        opened43 = true;
+                    }
+                }
+                if (opened44 != true) {
+                    if (distance44[0] > 15) {
+                        opened44 = false;
+                    } else {
+                        String integer="44";
+                        onComeActivity(integer,booleanGps);
+                        opened44 = true;
+                    }
+                }
+                if (opened45 != true) {
+                    if (distance45[0] > 15) {
+                        opened45 = false;
+                    } else {
+                        String integer="45";
+                        onComeActivity(integer,booleanGps);
+                        opened45 = true;
+                    }
+                }
+                if (opened46 != true) {
+                    if (distance46[0] > 15) {
+                        opened46 = false;
+                    } else {
+                        String integer="46";
+                        onComeActivity(integer,booleanGps);
+                        opened46 = true;
+                    }
+                }
+                if (opened47 != true) {
+                    if (distance47[0] > 15) {
+                        opened47 = false;
+                    } else {
+                        String integer="47";
+                        onComeActivity(integer,booleanGps);
+                        opened47 = true;
+                    }
+                }
+                if (opened48 != true) {
+                    if (distance48[0] > 15) {
+                        opened48 = false;
+                    } else {
+                        String integer="48";
+                        onComeActivity(integer,booleanGps);
+                        opened48 = true;
+                    }
+                }
+                if (opened49 != true) {
+                    if (distance49[0] > 15) {
+                        opened49 = false;
+                    } else {
+                        String integer="49";
+                        onComeActivity(integer,booleanGps);
+                        opened49 = true;
+                    }
+                }
+                if (opened50 != true) {
+                    if (distance50[0] > 30) {
+                        opened50 = false;
+                    } else {
+                        String integer="50";
+                        onComeActivity(integer,booleanGps);
+                        opened50 = true;
+                    }
+                }
+                if (opened51 != true) {
+                    if (distance51[0] > 30) {
+                        opened51 = false;
+                    } else {
+                        String integer="51";
+                        onComeActivity(integer,booleanGps);
+                        opened51 = true;
+                    }
+                }
+                if (opened52 != true) {
+                    if (distance52[0] > 15) {
+                        opened52 = false;
+                    } else {
+                        String integer="52";
+                        onComeActivity(integer,booleanGps);
+                        opened52 = true;
+                    }
+                }
+
+
+
                 intent.putExtra("latLng1", latLng1);
                 intent.putExtra("latLng2", latLng2);
                 intent.putExtra("latLng4", latLng4);
@@ -646,6 +818,18 @@
                 intent.putExtra("latLng38", latLng38);
                 intent.putExtra("latLng39", latLng39);
                 intent.putExtra("latLng40", latLng40);
+                intent.putExtra("latLng41", latLng41);
+                intent.putExtra("latLng42", latLng42);
+                intent.putExtra("latLng43", latLng43);
+                intent.putExtra("latLng44", latLng44);
+                intent.putExtra("latLng45", latLng45);
+                intent.putExtra("latLng46", latLng46);
+                intent.putExtra("latLng47", latLng47);
+                intent.putExtra("latLng48", latLng48);
+                intent.putExtra("latLng49", latLng49);
+                intent.putExtra("latLng50", latLng50);
+                intent.putExtra("latLng51", latLng51);
+                intent.putExtra("latLng52", latLng52);
                 intent.putExtra("bearing",location.getBearing());
                 boolean started=true;
                 intent.putExtra("started",started);
