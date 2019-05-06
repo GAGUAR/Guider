@@ -116,5 +116,60 @@ Tirgus laukums rekonstruēts ar Eiropas Reģionālās attīstības fonda, Ventsp
 Visiem "Oranžā nama" viesiem no 1. maija līdz 31. oktobrim, piedāvājam ģimenes brīvbiļetes uz Ventspils muzejiem - pils, amatu māja, piejūras brīvdabas muzejs (arī Mazbānītis).
 </string>
     <string name="title_activity_start">StartActivity</string>
+    <string name="hute">Ventspilnieki pratuši uzbūvēt kalnu un devuši tam ilggadējā pilsētas mēra vārdu – „Lemberga hūte”. Unikālais kalns Rietumlatvijas piejūras zemienē radīts mākslīgi, izmantojot būvgružus un rekonstruējamo ielu nederīgo grunts segumu. Tā augstums šobrīd ir 58 m, nobrauciena garums 240 m un tas tiek palielināts katru gadu.
+Ziemā kalns iepriecina slēpotājus un snovbordistus, kuriem izveidots īpašs snovborda parks un kalnu slēpošanas trase. Līksmus brīžus sagādā arī kameršļūkšanas trase un bērnu trase nobraucieniem ar ragaviņām. Kalna darbību nodrošina pieci pacēlāji, pieci sniega pūtēji un sniega traktors. Trases ir apgaismotas. Tiem, kas slēpojot vēl nejūtas īsti droši, palīdzēs prasmīgi slēpošanas instruktori. Kalna pakājē darbojas arī kalnu slēpošanas un snovborda inventāra noma.
+</string>
+    <string name="parvbibl">Bibliotēka bērniem un pieaugušajiem ar daudzpusīgu krājumu, kultūras un mūžizglītības pasākumiem, bezmaksas piekļuvi internetam un abonētām pilnteksta datubāzēm. Bibliotēkas ēkā pakalpojumus sniedz arī Iedzīvotāju informācijas centrs un Digitālā centra Pārventas filiāle.
+Bibliotēka tika uzbūvēta 2009.gadā. Celtne atzīta par 2009.gada labāko jaunbūvi Latvijas Būvnieku asociācijas rīkotajā skatē "Gada labākā būve Latvijā 2009", saņēmusi Latvijas Dizaineru  savienības balvu "Labākais sabiedriskais interjers 2009.gadā", kā arī Latvijas Arhitektu savienība tai piešķīrusi Gada Lielo balvu arhitektūrā. 2011.gadā bibliotēka Maskavā ieguvusi pirmo vietu arhitektūras konkursā "Best Office Awards 2011" nominācijā "Labākais ārzemju projekts", kā arī iekļuvusi starptautiskā arhitektūras konkursa "Dedalo Minosse" izstādē un katalogā, kas ir būtisks sasniegums starptautiskā mērogā.
+</string>
+    <string name="staldz">Šeit vēl joprojām zvejnieki iet jūrā un rāmos vakaros nereti smaržo pēc cieti kūpinātām butēm. Staldzene ir pilsētnieku un viesu iecienīta pastaigu un peldvieta ar iespaidīgu jūras stāvkrastu. 2001. gadā pēc vētras Staldzenes stāvkrastā atklājās bronzas laikmeta (7. gs. p.m.ē.) rotaslietas un senlietas, lielākais šāda veida depozīts Baltijā, kas šobrīd apskatāms Livonijas ordeņa pils muzejā.
+Uz ziemeļiem no Ventspils, Kolkas virzienā atrodas Staldzene — sens zvejnieku ciemats, kur saglabājušās atsevišķas 19. gs. zvejnieku sētas.
+</string>
+    <string name="puka">Līdzās košajai dobei "Jūras akmentiņi" Sarkanmuižas pļavā izveidota četrus metrus augsta un septiņus metrus gara puķu skulptūra govs veidolā. Tā atklāta 2012.gadā, gatavojoties Ventspils Govju parādes desmitgades svinībām.
+</string>
+    <string name="gaismas">Gaismas visdažādākās vizuālās un estētiskās izteiksmes formas, kas sevī ietver gan atmosfēras radītus ziemeļblāzmas atspulgus un zvaigžņu mirdzumu, gan dvēseles un gara gaismas suģestējošo spēku.
+
+Autori: Sarmīte Caune sadarbībā ar Aivaru Lembergu
+</string>
+    <string name="matrozis">Uz Dienvidu mola novietotā 4 metrus augstā un 7 metrus garā skulptūra “Govs Matrozis”, stāvot uz sava kuģa, laipni sagaida ciemiņus, kas Ventspilī ierodas no jūras puses, kā arī sveicina Dienvidu mola apmeklētājus.
+
+Autors: Augusts Vilcāns
+</string>
+    <string name="piena">Tikai skaidrās vasaras naktīs saskatāma organiska saikne starp debesu zvaigznāja izgaismoto Piena Ceļu un Zemes gotiņas cilvēces barotājas misiju.
+
+Autore: Mārīte Guščika sadarbībā ar M. Čehova Rīgas Krievu teātri
+</string>
+    <string name="zala">Ventspils Zāļu govs projekta pamatā ir Latvijā un, protams, arī Ventspils reģionā vēl dzīvā tradīcija audzēt un ievākt ārstniecībā izmantojamus augus.
+
+Autors: Mākslinieku kopa SERDE
+</string>
+    <string name="celot">4 metrus augstā un 7 metrus garā govs atveidota kā vecs, nonēsāts čemodāns, ko rotā uzlīmes no pilsētām, kur notikusi “Govju parāde”.
+
+Autors: Pauls Spridzāns
+</string>
+    <string name="vsk">Ventspils 2. vidusskola ir senākā krievu skola pilsētā. Skola ir ar dziļām un pamatīgām tradīcijām, kuras tiek saglabātas un koptas arī šodien. Skola izvietota trīs ēkās un var lepoties ar lielāko skolu  bibliotēku fondu pilsētā krievu literatūrā. Skolai raksturīga atvērtība sadarbībai. Nebūtu melots, ja teiktu, ka sabiedrības integrācija te notiek, balstoties uz draudzību, interešu izglītību un mācībām. Direktore L. Volodina atzīst, ka pilsētā integrācijā nav negatīvu aspektu, jo ir liela atsaucība arī no latviešu bērniem.
+
+Skolā strādā stabils, talantīgs kolektīvs, no kuriem šobrīd 15 ir skolas absolventi. Seši kolektīva locekļi pilsētā ir atzinīgi novērtēti ar titulu „Gada skolotājs”. Daudzi skolotāji ir apbalvoti gan ar IZM, gan ar Ventspils pilsētas domes atzinības rakstiem par sasniegumiem pedagoģiskajā darbā.
+
+Skolā pastāv uzskats, ka veiksmīga izglītība ir kvalitatīva sākumskola un sākumskolas skolotāji. Skolas direktore norāda, ka bez labiem sākumskolas skolotājiem neiztikt: „Mūsu pedagogi ļoti labi sagatavo bērnus mācībām, atklāj viņu talantus un ļauj attīstīt tos.”
+
+Skolā vienmēr vislielākā uzmanība tikusi pievērsta eksaktajiem priekšmetiem. Liela daļa skolēnu vēlas mācīties matemātikas novirziena klasēs. Tiek pasniegts priekšmets „matemātiskā loģika”. Lielākā daļa absolventu turpina izglītību tehniskajās augstskolās.
+
+Cienot un novērtējot pensionēto pedagogu devumu skolai, netiek pārtraukta sadarbība arī ar viņiem – tā ir viena no skolas tradīcijām.
+</string>
+
+    <string name="pbm">1954. gadā dibinātā muzeja teritorijā izvietotas etnogrāfiska rakstura ekspozīcijas, kas liecina par tradīcijām, kuru saknes ir gadsimtiem senas. Muzeja krājumā ir vairāk nekā 20 000 priekšmetu, un tas atspoguļo latviešu un lībiešu zemnieku un zvejnieku dzīvi. Iekštelpu un brīvdabas ekspozīcijā (kopējā platība 4,8 ha) apskatei izvietoti aptuveni 600 eksponātu. Lielākais no tiem ir dzirnavas, mazākais – adata pludiņu piešūšanai pie tīkla.
+
+Piejūras brīvdabas muzejā godā tiek celtas un glabātas arī pagājušo laiku latviskās dzīves gudrības. Šeit atbilstoši tautas tradīcijām svin gadskārtu svētkus un piekopj saimniekošanas metodes – sviesta kulšanu, maizes cepšanu, sveču liešanu, kā arī darbošanos rijā.
+
+Šobrīd tas ir vienīgais tieši zvejniecībai veltītais brīvdabas muzejs Latvijā ar zvejnieku sētām, klētīm un vējdzirnavām no Užavas pagasta, dūmnamiem, kūpinātavām, tīklu būdām un citiem novada celtniecībā un sadzīvē raksturīgiem eksponātiem.
+</string>
+
+    <string name="mazb">Projekta ietvaros uzbūvētās dzelzceļa līnijas Muzejs-Kalns kopgarums ir 3 kilometri. Jaunā līnija atzarojas no Riņķa līnijas Jūrmalas parkā. Vēl viena 150m gara savienojoša līnija starp jauno Kalna līniju un Riņķa līniju veido trijstūri. Izveidotais dzelzceļa trijstūris atvieglo vilcienu kustību visos virzienos un kalpo tvaika lokomotīvju apgriešanai.
+
+Stacijā Muzejs, kas atrodas PBM teritorijā, tika ierīkoti divi stacijas sliežu ceļi, divi lokomotīvju depo ceļi un viens strupceļš. Kopā tika iebūvētas četras jaunas pārmijas.
+
+Jaunā dzelzceļa līnija līkumojot vijas caur kāpām ieskauto un mežaino apvidu un krusto Vasarnīcu un Aizsaules ielas, kur autotransportam ir ierīkotas pārbrauktuves ar gaismas un skaņas signalizāciju. Dzelzceļa līnija visā savā gareniskajā profilā no Jūrmalas parka līdz stacijai Kalns, šķērsojot ierakumus un uzbērumus, pakāpeniski iet mazā kāpumā. Augstuma starpība, kas jāpārvar vilcienam starp līnijas sākumpunktu Jūrmalas parkā un galapunktu stacijā Kalns ir 10 metru.
+</string>
 
 </resources>
