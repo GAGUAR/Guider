@@ -427,6 +427,106 @@ public class InfoActivities extends AppCompatActivity{
             infoImage.setImageDrawable(getResources().getDrawable(R.drawable.latvmeln));   //Sets image
             objLatLng="57.398184, 21.565340";
         }
+        if(activityNo==41){
+            titletext.setText("LEMBERGA HŪTE");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.hute));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.hute));   //Sets image
+            objLatLng="57.375320, 21.548041";
+            telephone="28611333";
+        }
+        if(activityNo==42){
+            titletext.setText("PĀRVENTAS BIBLIOTĒKA");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.parvbibl));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.parvbibl));   //Sets image
+            objLatLng="57.403801, 21.591665";
+            telephone="63680072";
+        }
+        if(activityNo==43){
+            titletext.setText("JŪRAS STĀVKRASTI STALDZENĒ");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.staldz));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.staldz));   //Sets image
+            objLatLng="57.444989, 21.605236";
+        }
+        if(activityNo==44){
+            titletext.setText("PUĶU GOVS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.puka));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.puka));   //Sets image
+            objLatLng="57.388072, 21.582282";
+        }
+        if(activityNo==45){
+            titletext.setText("GAISMAS GOVS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.gaismas));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.gaismas));   //Sets image
+            objLatLng="57.393273, 21.564254";
+        }
+        if(activityNo==46){
+            titletext.setText("GOVS MATROZIS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.matrozis));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.matrozis));   //Sets image
+            objLatLng="57.400300, 21.529508";
+        }
+        if(activityNo==47){
+            titletext.setText("PIENA CEĻŠ GOVS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.piena));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.piena));   //Sets image
+            objLatLng="57.393025, 21.541028";
+        }
+        if(activityNo==48){
+            titletext.setText("VENTSPILS ZĀĻU GOVS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.zala));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.zala));   //Sets image
+            objLatLng="57.403823, 21.591320";
+        }
+        if(activityNo==49){
+            titletext.setText("GOVS CEĻOTĀJA");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.celot));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.celot));   //Sets image
+            objLatLng="57.395156, 21.553630";
+        }
+        if(activityNo==50){
+            titletext.setText("VENTSPILS 2. VIDUSSKOLA");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.vsk));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.vsk));   //Sets image
+            objLatLng="57.387892, 21.566085";
+        }
+        if(activityNo==51){
+            titletext.setText("PIEJŪRAS BRĪVDABAS MUZEJS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.pbm));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.pbm));   //Sets image
+            objLatLng="57.385013, 21.537881";
+            telephone="63624467";
+        }
+        if(activityNo==52){
+            titletext.setText("VENTSPILS MAZBĀNĪTIS");     //Sets title of the ACTIVITY
+            infotext.setText(getString(R.string.mazb));        //Sets MAIN text
+            scndinfotitle.setVisibility(View.GONE);              //Hides PAPILDUS INFO(if it doesn’t exist)
+            secondinfo.setVisibility(View.GONE);                //Hides PAPILDUS INFO(if it doesn’t exist)
+            infoImage.setImageDrawable(getResources().getDrawable(R.drawable.mazb));   //Sets image
+            objLatLng="57.376095, 21.548336";
+            telephone="63624467";
+        }
 
         if (telephone != null) {
 
