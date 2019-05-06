@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private Polyline currentPolyline;
     private LatLng startRoute, latlng, latlngEnd, latLng1, latLng2, latLng4, latLng5, latLng6,latLng7,latLng8,latLng9, latLng10,
             latLng11, latLng12, latLng13, latLng14, latLng15, latLng16,latLng17,latLng18,latLng19,latLng20,latLng21,latLng22,latLng23,
-            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29, latLng30,latLng31,latLng32,latLng33,latLng34,latLng35,latLng36,latLng37,latLng38,latLng39,latLng40;
+            latLng24,latLng25,latLng26,latLng27,latLng28,latLng29, latLng30,latLng31,latLng32,latLng33,latLng34,latLng35,latLng36,latLng37,latLng38,latLng39,latLng40,latLng41,latLng42,latLng43,latLng44,latLng45,latLng46,latLng47,latLng48,latLng49,latLng50,latLng51,latLng52;
     private boolean routeBoolean=false;
     private boolean ROUTE_PERMISSION = false;
     private ArrayList<LatLng>waypts=new ArrayList<>();
@@ -245,6 +245,18 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         latLng38 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng38");
                         latLng39 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng39");
                         latLng40 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng40");
+                        latLng41 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng41");
+                        latLng42 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng42");
+                        latLng43 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng43");
+                        latLng44 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng44");
+                        latLng45 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng45");
+                        latLng46 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng46");
+                        latLng47 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng47");
+                        latLng48 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng48");
+                        latLng49 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng49");
+                        latLng50 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng50");
+                        latLng51 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng51");
+                        latLng52 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng52");
 
                         addMarkers2();
                     }
@@ -456,6 +468,66 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
                     .zIndex(1.0f)
                     .title("LATVIJAS MELNĀ"));
+         mMap.addMarker(new MarkerOptions()
+                .position(latLng41)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("LEMBERGA HŪTE"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng42)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("PĀRVENTAS BIBLIOTĒKA"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng43)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("JŪRAS STĀVKRASTI STALDZENĒ"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng44)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("PUĶU GOVS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng45)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("GAISMAS GOVS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng46)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("GOVS MATROZIS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng47)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("PIENA CEĻŠ GOVS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng48)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("VENTSPILS ZĀĻU GOVS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng49)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("GOVS CEĻOTĀJA"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng50)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("VENTSPILS 2. VIDUSSKOLA"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng51)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("PIEJŪRAS BRĪVDABAS MUZEJS"));
+        mMap.addMarker(new MarkerOptions()
+                .position(latLng52)
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN))
+                .zIndex(1.0f)
+                .title("VENTSPILS MAZBĀNĪTIS"));
 
     }
 
