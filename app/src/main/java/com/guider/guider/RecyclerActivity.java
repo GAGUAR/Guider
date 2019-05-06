@@ -83,6 +83,32 @@ public class RecyclerActivity extends AppCompatActivity {
             mNames.add("GOTIŅA ŠŪPOLĒS");
             mImageUrls.add(R.drawable.latvmeln);
             mNames.add("LATVIJAS MELNĀ");
+            mImageUrls.add(R.drawable.hute);
+        mNames.add("LEMBERGA HŪTE");
+
+        mImageUrls.add(R.drawable.staldz);
+        mNames.add("JŪRAS STĀVKRASTI STALDZENĒ");
+
+        mImageUrls.add(R.drawable.puka);
+        mNames.add("PUĶU GOVS");
+
+        mImageUrls.add(R.drawable.gaismas);
+        mNames.add("GAISMAS GOVS");
+
+        mImageUrls.add(R.drawable.matrozis);
+        mNames.add("GOVS MATROZIS");
+
+        mImageUrls.add(R.drawable.piena);
+        mNames.add("PIENA CEĻŠ GOVS");
+
+        mImageUrls.add(R.drawable.zala);
+        mNames.add("VENTSPILS ZĀĻU GOVS");
+
+        mImageUrls.add(R.drawable.celot);
+        mNames.add("GOVS CEĻOTĀJA");
+
+        mImageUrls.add(R.drawable.mazb);
+        mNames.add("VENTSPILS MAZBĀNĪTIS");
 
         }
         if(chosenNo==2){
@@ -100,6 +126,12 @@ public class RecyclerActivity extends AppCompatActivity {
 
             mImageUrls.add(R.drawable.jn);
             mNames.add("VENTSPILS JAUNRADES NAMS");
+            
+            mImageUrls.add(R.drawable.parvbibl);
+            mNames.add("PĀRVENTAS BIBLIOTĒKA");
+
+            mImageUrls.add(R.drawable.vsk);
+            mNames.add("VENTSPILS 2. VIDUSSKOLA");
         }
         if(chosenNo==3){
             mImageUrls.add(R.drawable.jav);
@@ -113,6 +145,9 @@ public class RecyclerActivity extends AppCompatActivity {
 
             mImageUrls.add(R.drawable.jf);
             mNames.add("PIEMINEKLIS JĀNIM FABRICIUSAM");
+            
+            mImageUrls.add(R.drawable.pbm);
+            mNames.add("PIEJŪRAS BRĪVDABAS MUZEJS");
 
         }
         if(chosenNo==4){
