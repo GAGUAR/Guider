@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:drawableTop="@drawable/close"
+                android:drawableTop="@drawable/ic_exit_to_app_black_24dp"
                 android:id="@+id/exit"
                 android:layout_margin="10dp"
                 android:background="@drawable/red"
