@@ -68,7 +68,7 @@ public class InfoActivities extends AppCompatActivity{
                 }
             });
         } else {
-            done.setText("PARĀDĪT KARTĒ");
+                 done.setText(getString(R.string.kart));
             done.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
