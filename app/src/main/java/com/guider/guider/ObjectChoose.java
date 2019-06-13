@@ -46,23 +46,23 @@ public class ObjectChoose extends AppCompatActivity {
         Intent intent2= getIntent();
         objects= (boolean) intent2.getExtras().get("ObjBool");
         if(objects==true) {
-            mImageUrls1.add(R.drawable.ic_sightseeing);
-            mNames1.add("APSKATES OBJEKTI");
+           mImageUrls1.add(R.drawable.ic_sightseeing);
+            mNames1.add(getString(R.string.aps));
 
             mImageUrls1.add(R.drawable.ic_monument);
-            mNames1.add("PIEMINEKĻI");
+            mNames1.add(getString(R.string.piem));
 
             mImageUrls1.add(R.drawable.bed);
-            mNames1.add("VIESNĪCAS");
+            mNames1.add(getString(R.string.hotels));
 
             mImageUrls1.add(R.drawable.ic_food);
-            mNames1.add("RESTORĀNI UN KAFEJNĪCAS");
+            mNames1.add(getString(R.string.cafe));
 
             mImageUrls1.add(R.drawable.ic_iestade);
-            mNames1.add("IESTĀDES");
+            mNames1.add(getString(R.string.iestad));
         }else {
             mImageUrls1.add(R.drawable.route_choose);
-            mNames1.add("VECPILSĒTA");
+            mNames1.add(getString(R.string.VECPILSĒTA));
         }
 
         initRecyclerView();
