@@ -23,7 +23,7 @@
             android:layout_alignParentBottom="false"
             android:orientation="horizontal">
             <Button
-                android:text="PATSTĀVĪGI"
+                android:text="@string/PATS"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                 android:background="@drawable/redbutton"
                 android:layout_weight="1"/>
             <Button
-                android:text="MARŠRUTI"
+                android:text="@string/MARŠRUTI"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:id="@+id/routes"
@@ -54,7 +54,7 @@
             android:layout_alignParentBottom="false"
             android:orientation="horizontal">
             <Button
-                android:text="OBJEKTI"
+                android:text="@string/obj"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                 android:background="@drawable/orange"
                 android:layout_weight="1"/>
             <Button
-                android:text="INFORMĀCIJA"
+                android:text="@string/inform"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:layout_width="match_parent"
@@ -86,7 +86,7 @@
             android:layout_alignParentBottom="false"
             android:orientation="horizontal">
             <Button
-                android:text="VALODAS"
+                android:text="udali"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:layout_width="match_parent"
@@ -98,7 +98,7 @@
                 android:background="@drawable/purple"
                 android:layout_weight="1"/>
             <Button
-                android:text="IZIET"
+                android:text="@string/exit"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"
                 android:layout_width="match_parent"
