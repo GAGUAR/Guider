@@ -1,9 +1,30 @@
 <resources>
-    <string name="app_name">Guider</string>
-    <string name="title_activity_main">Guider</string>
-    <string name="my_service_desc">Desc</string>
+   <string name="app_name" translatable="false">Guider</string>
+    <string name="title_activity_main" translatable="false">Guider</string>
+    <string name="my_service_desc" translatable="false">Desc</string>
     <string name="my_infinite_service">Service</string>
     <string name="done">DONE</string>
+    <string name="inform">INFORMĀCIJA</string>
+    <string name="PATS">PATSTĀVĪGI</string>
+    <string name="MARŠRUTI">PATSTĀVĪGI</string>
+    <string name="obj">OBJEKTI</string>
+    <string name="exit">IZIET</string>
+    <string name="infg">GALVENĀ INFORMĀCIJA</string>
+    <string name="infp">PAPILDUS INFORMĀCIJA</string>
+    <string name="PIEZVANĪT">PIEZVANĪT</string>
+    <string name="cancel">PABEIGT</string>
+    <string name="iziet">Iziet</string>
+    <string name="confirm">Vai jūs tiešām gribat iziet?</string>
+    <string name="ja">JĀ</string>
+    <string name="ne">NĒ</string>
+    <string name="init">GPS inicializācija...</string>
+    <string name="aps">Apskates objekti</string>
+    <string name="hotels">Viesnīcas</string>
+    <string name="cafe">Restorāni un kafejnīcas</string>
+    <string name="iestad">Iestādes</string>
+    <string name="VECPILSĒTA">VECPILSĒTA</string>
+    <string name="piem">Pieminekļi</string>
+     <string name="kart">PARĀDĪT KARTĒ</string>
     <string name="rgalds">"Kafejnīca Rātsgalds atrodas pašā Ventspils Rātslaukuma sirdī.
 Kafejnīca piedāvā ieturēties ar mūsdienīgu un gardu maltīti.  Īpašu uzmanību Rātsgalds velta klientu apkalpošanas kvalitātei un sadarbībai tikai ar kvalitatīviem produktu piegādātājiem."
 </string>
