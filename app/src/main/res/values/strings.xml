@@ -1,281 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-   <string name="app_name" translatable="false">Guider</string>
+    <string name="app_name" translatable="false">Guider</string>
     <string name="title_activity_main" translatable="false">Guider</string>
     <string name="my_service_desc" translatable="false">Desc</string>
     <string name="my_infinite_service">Service</string>
-    <string name="done">DONE</string>
-    <string name="inform">INFORMĀCIJA</string>
-    <string name="PATS">PATSTĀVĪGI</string>
-    <string name="MARŠRUTI">PATSTĀVĪGI</string>
-    <string name="obj">OBJEKTI</string>
-    <string name="exit">IZIET</string>
-    <string name="infg">GALVENĀ INFORMĀCIJA</string>
-    <string name="infp">PAPILDUS INFORMĀCIJA</string>
-    <string name="PIEZVANĪT">PIEZVANĪT</string>
-    <string name="cancel">PABEIGT</string>
-    <string name="iziet">Iziet</string>
-    <string name="confirm">Vai jūs tiešām gribat iziet?</string>
-    <string name="ja">JĀ</string>
-    <string name="ne">NĒ</string>
-    <string name="init">GPS inicializācija...</string>
-    <string name="aps">Apskates objekti</string>
-    <string name="hotels">Viesnīcas</string>
-    <string name="cafe">Restorāni un kafejnīcas</string>
-    <string name="iestad">Iestādes</string>
-    <string name="VECPILSĒTA">VECPILSĒTA</string>
-    <string name="piem">Pieminekļi</string>
-     <string name="kart">PARĀDĪT KARTĒ</string>
-    <string name="rgalds">"Kafejnīca Rātsgalds atrodas pašā Ventspils Rātslaukuma sirdī.
-Kafejnīca piedāvā ieturēties ar mūsdienīgu un gardu maltīti.  Īpašu uzmanību Rātsgalds velta klientu apkalpošanas kvalitātei un sadarbībai tikai ar kvalitatīviem produktu piegādātājiem."
-</string>
-    <string name="rgalds_eng">1st place in Restaurant group in the contest “The Best Catering Industry’s Company in Ventspils 2017”
-
-Café Rātsgalds is located in the heart of Ventspils Town Hall Square.
-
-The café offers a contemporary and delicious meal.  Particular attention is devoted to the customer service quality and to the collaboration with quality product suppliers.
-
-</string>
-    <string name="lutdrnams">Ventspils luterāņu draudzes nams Tirgus ielā 4 ir vienstāva koka ēka (1836) ar interjerā saglabātu manteļskursteni.
-</string>
-    <string name="lutdrnams_eng">The Ventspils Lutheran Congregation Church at 4 Tirgus street is a one-storey wooden building (1836) with a cone chimney preserved in its interior design</string>
-    <string name="courlander">Šis krogs ir īpašs ar to, ka tas atrodas vienā ēkā ar alus darītavu un no kroga zāles apmeklētājiem iespējams redzēt alus tapšanas procesu. Krogā var iegādāties un uz vietas nobaudīt alus darītavā ražoto alu – CORLANDER lager gaišo un COURLANDER lager tumšo, kā arī dažādas siltās un aukstās uzkodas, tajā skaitā dažādus zivju ēdienus. “COURLANDER” alus tiek darīts saskaņā ar vācu 1516.gada Alus tīrības likumu, kas nosaka, ka alus var tikt gatavots izmantojot tikai 4 sastāvdaļas: miežu iesalu, apiņus, ūdeni un raugu. Alus ir nefiltrēts, tajā nav konservanti un tas nav pasterizēts.
-</string>
-    <string name="courlander_eng">This bar is special by the fact that it is located at the same building where the brewery is located, and visitors have the possibility to take a look at the process of brewing beer. The pub provides a possibility to buy and taste beer – COURLANDER lager Light and COURLANDER lager dark produced in the brewery, as well as different warm and cold snacks, including different fish dishes.</string>
-    <string name="aka">Pēc Tirgus laukuma rekonstrukcijas 2009. gadā tika uzbūvēta īpaša „Tirgus aka" ar pilsētas ģerboņiem, aka atrodas tirgus laukumā pie Tirgus un Skolas ielas krustojuma. Saulainā laikā aka darbojas arī kā saules pulkstenis, savukārt no tās pamatnes laukuma iesegumā izvērstas četras līnijas, kas norāda uz četrām debess pusēm.
-</string>
-    <string name="aka_eng">In reconstruction market place get new paving stone covering. In covering are marked location places of 18th century’s buildings and foundation lines; Were build special “Market well” with city armorial bearings. Now it gives possibility to city inhabitants and guest use it not only for drinking but also for washing fruits and vegetables, which are bought in market. In sunny days well will work as Sun clock.</string>
-    <string name="zvantornis">Kā centrālais rekonstruētā tirgus laukuma objekts uzstādīts zvanu tornis ar pulksteni, kas simbolizē kādreiz rātskungu nerealizēto ieceri Rātsnama tornī uzstādīt pilsētas centrālo laikrādi. Pulkstenī apvienota laika un skaņu saspēle, izvietojot pulksteni un zvanu rindas. Trīs pulksteņu ciparnīcas katra sniedz atšķirīgu informāciju – Latvijas laiku, Mēness fāzi un attiecīgo nedēļas dienu. Apaļās stundās pulkstenis atskaņo dziesmas „Pie dzintara jūras" melodiju, bet plkst. 12:33 un 00:33 ar Ulda Marhilēviča dziesmas „Uz priekšu, Kurzeme" piedziedājumu ieskandē īpašo Ventspils laiku. Zvanu torņa ēkā atrodas atraktīvs elements – lieli skaitāmie kauliņi, kā arī tēlnieka Gļeba Panteļejeva veidota svaru, tilpumu un mēru ekspozīcija
-</string>
-    <string name="zvantornis_eng">As main object in market place is bell tower with clock, that symbolize not - realized town councilor’s idea to set up main city clock in Town Hall tower. In new clock are integrated time and sound game. The clock has three dials and each of them show different information – Latvian time, lunar phases and week days.  Each hour clock plays song’s “Pie dzintara jūras” (On Amber sea) melody but at 12:33 and 00:33 with song “Uz priekšu, Kurzeme”  (Ahead Kurzeme) written by U. Marhilēvičs clock jingle Ventspils’ time. In bell tower are located interesting and attractive objects like big counting frame and sculptor’s Gļebs Panteļejevs exhibition of weight, capacity and measure.</string>
-    <string name="piespog">Cilvēciskas sava skaistuma novērtēšanas tiesības tiek nodotas arī govij, piešķirot tai pašapziņu un pārliecību par savu svarīgumu un nozīmību pasaules elementu kontekstā. Autors: Jānis Mitrēvics</string>
-    <string name="piespog_eng">Light in multiple visual and aesthetic forms of expression, including aurora borealis reflections in the sky caused by atmosphere, starshine, and the inspiring power of the light of the soul and spirit.
-
-Author: Jānis Mitrēvics</string>
-    <string name="marites">Krāšņās puķu skulptūra „Mārītes”, kas Ventas ritējumu vēro Ostas ielas promenādē. Skulptūras ir 2-2,5 m  garas, 0,75-1,5 m augstas un 1,3-2,0 m platas. Izmantoti ap 1000 puķu stādu. Izveidotas 2004.gadā.</string>
-    <string name="marites_eng">The three flower ladybirds on Ostas Street Promenade were made in 2004 and are a bright accessory to the paved old town of Ventspils. </string>
-    <string name="sievgovs">"Gleznieciski mākslinieciskiem izteiksmes līdzekļiem radītu mīlestības un sievišķības tēlu kopums uz govs apliecina tās arhetipisko saikni mātišķā un ģimenes pavarda sargātājas dziļi simboliskajā lomā.
-Autore: Elita Patmalniece</string>
-    <string name="sievgovs_eng">A set of affectionate feminine characters on the cow’s body created using painting as a means of artistic expression confirms her archetypal link with the deeply symbolic role of the mother and protector of hearth and home.
-
-Author: Elita Patmalniece</string>
-    <string name="supgovs">Kā pa Ventas viļņiem Ostas ielas promenādē šūpojas gotiņa puķainā kleitiņā un aicina ikvienu nofotografēties atmiņai.</string>
-    <string name="supgovs_eng">Just like on the waves of the Venta River a cow in a floral dress is rocking on Ostas Street Promenade and inviting everyone to take a photo to remember.</string>
-    <string name="latvmeln">"Metafora par Latvijas attīstību – govs pagātnes rēgs, kad bija mazpamatota eiforija par Latviju kā agrāru valsti, bet mūsdienu situācija ir gluži cita.
-Autors: Kirils Panteļejevs</string>
-    <string name="latvmeln_eng">Metaphor about the development of Latvia – spirit of the past in form of a cow reminding us about the euphoria about Latvia as an agrarian country although today’s situation is quite the contrary.
-
-Author: Kiril Pantelejev</string>
-
-    <string name="lop">Livonijas ordeņa pils ir viens no vecākajiem viduslaiku cietokšņiem Latvijā, kas saglabājies līdz mūsdienām. Vēstures dokumentos pils pirmoreiz minēta 1290. gadā, kas tiek pieņemts arī par Ventspils pilsētas dibināšanas gadu. Plašus arheoloģiskus pētījumus un pils atjaunošanu uzsāka 1995. gadā. Atjaunojot, tika saglabātas gan 14. gs. nišas un 15. gs. sienu gleznojumi, gan 17. gs. durvju ailas, gan 19. gs. cietuma durvis. No ārpuses pils pašlaik ir ieguvusi 19. gs. izskatu.</string>
-    <string name="lop_eng">The Livonian Order Castle is one of the oldest medieval fortresses that has survived to this day. In 1290 the castle was first chronicled and this date is now considered to be the year of Ventspils’ foundation.
-
-In 1995 there was begun extensive archaelogical research and renovation of the Castle. Renovating the Castle, there were retained both niches of the 14th century and wall paintings of the 15th century, door openings of the 17th century and prision doors of the 19th century. Now outwardly the Castle has obtained its 19th century look.</string>
-    <string name="am">2007. gada augustā Ventspilī tika atklāts Ziemeļkurzemes Amatniecības konsultāciju centrs – Amatu māja. Ventspils tūrisma objekts atrodas Kurzemes hercogistes senākajā skolas ēkā (18. gs.), kas atjaunota un pārtapusi par mūsdienīgu kultūras objektu un interesantu apskates objektu pilsētas viesiem.</string>
-    <string name="am_eng">In August 2007 The North Kurzeme Craft Consultation Centre – Amatu māja (The House of Crafts) was opened in Ventspils. The latest Ventspils tourism object is located in the oldest school building of Kurzeme Duchy which is renovated and now turned into contemporary object of culture and tourism.</string>
-    <string name="bp">Ventspils brīvostas pārvalde atrodas kādreizējā viesnīcas “Royal” ēkā, kas būvēta historisma un jūgendstila periodā. Ēka atjaunota 1998. gadā un saņēmusi Latvijas Arhitektu savienības balvu kā togad vislabāk rekonstruētais objekts.</string>
-    <string name="bp_eng">Resides in the former building of the hotel Royal on 19 Jāņa Street, which was constructed during the period of Historicism and Art Nouveau. It was renovated in 1998 and received the Latvian Architects’ Union award as the best reconstructed building of the year.</string>
-    <string name="dc">Piedāvā mācību klasi (18 darba vietas ar datorpieslēgumu) un konferenču telpu (līdz 60 vietām). Pieejams bezvadu internets, datori, multimediju projektori, video, ekrāni, tāfeles. Tiek nodrošināta dokumentu drukāšana, pavairošana, iesiešana, laminēšana, pasākumu fotografēšana, filmēšana, montāža.</string>
-    <string name="dc_eng">Offers a classroom (70 seats; 40 seats with computer connection) and a conference room (20 seats). Wireless Internet, computers, multimedia projectors, TV, video, screens, and boards available. Document printing, copying, binding, laminating, event photography, filming, editing, and catering services provided.</string>
-    <string name="gb">Piedāvā mācību klasi (20 datorizētas darba vietas ar interneta pieslēgumu, interaktīvā tāfele, TV, video, CD, DVD atskaņotāji, multimediju projektors, ekrāns, specializēta datortehnika vājredzīgajiem), pasākumu un izstāžu zāli (50 sēdvietas, interneta pieslēgums, TV, video, CD, DVD atskaņotāji, mulimediju projektors,ekrāns). Iespējama dokumentu drukāšana un pavairošana. Izmantojot ārpakalpojumu, var nodrošināt kafijas pauzes.</string>
-    <string name="gb_eng"></string>
-    <string name="jak">Piemiņas akmens Ventspils brīvostas jūras kanāla padziļināšanai. Akmens izcelts no 17, 5 m dziļuma. Tēlnieks P. Jaunzems, arhitekts J. Poga. Uzstādīts 1998. gadā. Atrodas Ostas ielas promenādē.</string>
-    <string name="jak_eng">Memorial stone devoted to the deepening of Ventspils free port\'s channel. The stone was lifted from 17,5 m. depth.
-
-Sculptor - P.Jaunzems. Architect - J.Poga. Placed in 1998.</string>
-    <string name="jf">Akmeņu iela ir senākā bruģētā iela Ventspilī un tā virzās gar Vecpilsētas laukumu, kas līdz 20. gs. 30. gadu beigām bija apbūvēts. Tagad šeit stāv tēlnieka Jāņa Zariņa veidotais piemineklis (1954) Jānim Fabriciusam (1877–1929), leģendāram padomju Sarkanās armijas latviešu strēlnieku divīziju komandierim, mūsu novadniekam, kurš dzimis Ventspils novada Zlēku pagastā.</string>
-    <string name="jf_eng"></string>
-    <string name="jn">Ventspils Jaunrades nams ir liels ārpusskolas nodarbību komplekss dažādu aktivitāšu un programmu īstenošanai pilsētas, valsts, reģiona un starptautiskā mērogā. 1912. gadā būvētais Ventspils Latviešu biedrības nams rekonstruēts, piemērojot to mūsdienu jaunatnes vajadzībām, Eiropas Reģionālās attīstības fonda “Jaunrades nama attīstības projekta” ietvaros. Turklāt projekta ietvaros ir izveidots planetārijs un observatorija interešu izglītības nodrošināšanai un kā apskates objekts pilsētas viesiem.</string>
-    <string name="jn_eng">The Akmeņu Street is the oldest cobblestone street in Ventspils and it runs along the Old Town Square, which up to the late thirties of the 20th century was a built-up area. Now, the monument to Jānis Fabriciuss (1877-1929) created in 1954 by the sculptor Jānis Zariņš is erected here. Jānis Fabriciuss was the legendary commanding officer of Latvian Riflemen Division of the Soviet Red Army, born in the rural municipality of Zlēkas in the region of Ventspils.</string>
-    <string name="kk">Uzstādīts 1938. gadā par tautas saziedotiem līdzekļiem. Tā idejas autors ir toreizējais Ventspils ostas kapteinis V. Ābelnieks. Piemineklis atrodas Piemiņas laukumā Ventas upes krastā.</string>
-    <string name="kk_eng">Monument was mounted in 1938 from donations. The idea belongs to the captain of Ventspils port at that time V.Abelnieks. Monument is located in the Memorial square on the coast of River Venta.</string>
-    <string name="kvp">Piemineklis atrodas Ventmalā, netālu no Livonijas ordeņa pils. Autors M. Polis. Skulptūra atlieta bronzā Vācijā.
-Tā „novēro” Ventspils ostas darbību, kā arī katru kuģi, kas pa jūras vārtiem iepeld Ventspils ostā. Populāra pilsētas viesu fotografēšanās vieta.
-</string>
-    <string name="kvp_eng">Monument was mounted in 1938 from donations. The idea belongs to the captain of Ventspils port at that time V.Abelnieks. Monument is located in the Memorial square on the coast of River Venta.</string>
-
-    <string name="pt">Ventspils Pasažieru terminālis Dārza ielā 6 atklāts 2007. g., pilnībā rekonstruējot ilgu laiku pamestos vācu tirgotāju Reinku ģimenes 1904. un 1905. g. celtos namus, kuros 20. gs. pirmajā pusē atradās vācu reālskola. Termināļa ēkā darbojas arī Tūrisma informācijas centrs.</string>
-    <string name="pt_eng"></string>
-    <string name="rl">Vecpilsētas sirds ir Rātslaukums ar Evanģēliski luterisko Nikolaja baznīcu, Starptautisko Rakstnieku un tulkotāju māju, moderni rekonstruēto Galvenās bibliotēkas ēku un Digitālo centru.</string>
-    <string name="rl_eng"></string>
-    <string name="strkv">Autori R. un I. Dobičini. Strūklaka ir 2,8 m augsta un 15t smaga. Strūklakas izgatavošanai 2002. gadā no Zviedrijas tika atvests 38t smags akmens bluķis. Izveidota kā liela „galva” ar izspūrušiem „matiem” – ūdens strūklām.</string>
-    <string name="strkv_eng"></string>
-    <string name="svnik">Uzbūvēta 1901. gadā, sekojot pareizticīgo baznīcu 17. gadsimta arhitektūras tradīcijām – neobizantiskā stilā ar pieciem kupoliem. Pirmā pasaules kara laikā (1915–1918) vācu armijas vajadzībām šeit ierīkoja zirgu staļļus un benzīna noliktavu. Pēc ilga remonta baznīca tika atvērta tikai 1927. gadā.</string>
-    <string name="svnik_eng"></string>
-    <string name="tulkmaja">Starptautiskā rakstnieku un tulkotāju māja ierīkota 18. gs. ēkā, kur 1850. gadā ierīkoja pilsētas Rātsnamu, un kur ilgus gadus darbojās Venstpils ekskursiju birojs, bet 2006. gada augustā tika atklāta Starptautiskā rakstnieku un tulkotāju māja, kur regulāri viesojas Latvijas un dažādu ārvalstu rakstnieki un tulkotāji.</string>
-    <string name="tulkmaja_eng"></string>
-    <string name="vt">Veidojies 17. gs. sākumā. Līdz 19. gs. vidum pie Tirgus laukuma atradās rātsnams. Tirgus un Skolas ielas krustojumā atrodas vecākais (1646) dzīvojamais nams Ventspilī. Populāra pilsētnieku un viesu iepirkšanās vieta.</string>
-    <string name="vt_eng"></string>
-    <string name="kupfer">Labiekārtotas naktsmājas pilsētas centrā – TV, WC un duša numuros. Ēkas pirmajā stāvā atrodas restorāns – kafejnīca (22 vietas), frizētava, skaistumkopšanas salons, solārijs. Velosipēdu īre. Telpas svinībām (22 pers.). Cenā iekļautas brokastis. Pieejams bezvadu internets. Viesu nama klientiem piedāvā 10% atlaidi skaistumkopšanas salona pakalpojumiem.</string>
-    <string name="kupfer_eng"></string>
-    <string name="klosteris">Piedāvā atsevišķus dzīvokļus ar ērtībām, vienā no tiem pirts (ietilpst cenā). Iespējams pasūtīt ēdināšanu. Telšu vietas. Sētā vieta transportam. Iespējams noīrēt kanoe laivas un velosipēdus. Novuss, badmintons, futbols.</string>
-    <string name="klosteris_eng"></string>
-    <string name="mazais">Mazais namiņš piedāvā divus atsevišķus dzīvokļus privātmājā, klusā Ventspils rajonā netālu no jūras. Katrā dzīvoklī ir 2 istabas, virtuve ar aprīkojumu, duša, WC, kā arī bezmaksas WI-Fi. Slēgtajā pagalmā ir bezmaksas autostāvvieta, bērnu rotaļu stūrītis, vieta grilam.Iespējama velosipēdu noma. Netālu atrodas pludmales akvaparks, zilā karoga pludmale, bērnu pilsētiņa.
-Strādājam visu gadu.
-Gaidām ciemos!
-</string>
-    <string name="mazais_eng"></string>
-
-    <string name="oranžnams">Ventspils viesiem piedāvājam apmesties viesu mājas „Oranžais nams” siltajos un majīgajos divu un trīs istabu numuriņos. Numuriņi ir iekārtoti oranžos toņos, katrā numuriņā ir virtuve, duša un wc. Virtuves aprīkotas ar ledusskapi, mikroviļņu kr., el. ūdens vārāmo kannu, vienriņķa el. plītiņu, tosteri un traukiem. Katrā numuriņā ir pieejams Wi-Fi internets un televīzija, bez papildus maksas. Mūsu nelielajā slēgtajā pagalmā varat izmatot atpūtas zonu ar grillu. Izvietot līdzpaņemtos velosipēdus, kā arī pieejama velosipēdu noma. Strādājam cauru gadu un varam uzņemt vienlaicīgi 18 personas.</string>
-    <string name="oranžnams_eng"></string>
-    <string name="portoss">Viesu māja atrodas netālu no jūras un Bērnu pilsētiņas. Viesiem piedāvā dažāda veida istabiņas (1, 2, 3 un 4-vietīgas). Visās istabiņās ir ledusskapji un dažās pieejamas veļas mašīnas bez atsevišķas papildus maksas. Viesu ērtībām mājā atrodas kafejnīca, kurā var rīkot viesības līdz 30 personām. Pagalmā vieta 5 automašīnām.</string>
-    <string name="portoss_eng"></string>
-    <string name="dzintari">Katrā numurā pilnībā nokomplektēta virtuve ar ledusskapi, elektrisko plīti, tejkannu, traukiem un citiem virtuves piederumiem un tehniku.\n
-Katrā numurā WC, duša un veļas mazgājamā mašīna.\n
-Pieejams bezmaksas bezvadu internets.\n
-Viesu ērtībai un patīkamai atpūtai pieejams plašs dārzs ar terasi, galdiem un krēsliemm kā arī grilli. Rotaļu elementi bērniem.\n
-Iespējas izīrēt velosipēdu.\n
-Lieliska atrašanās vieta, tuvu pilsētas centram.
-</string>
-    <string name="dzintari_eng"></string>
-    <string name="landora">Krodziņš "Landora" atrodas pilsētas centrā. Gaišs interjers ar koka apdari. Nekādu ekstru, vienkārša ēdienkarte, alus, vasaras dārzs.\n
-
-Atsevišķā banketzālītē varat nosvinēt jauku jubileju. Pakarsēties ar malku izkurinātā pirtī. Piektdienas un sestdienas vakaros no 23:00 skan diskomūzika.
-</string>
-    <string name="landora_eng"></string>
-    <string name="erm">Ātrās apkalpošanas kafejnīca. Plašajās telpās mājo Ērmanīša tēls fotogrāfijās no k/f "Vella kalpi", kā arī dažādu mākslinieku gleznu izstāde. Ēdienkartē dažāda veida siltie gaļas, zivju, dārzeņu ēdieni.\n
- Šefpavārs iesaka karbonādi "Ērmanītis", kas pildīta ar sieru un āboliem.\n
-Rīta pusē pie kafijas tases var palasīt jaunākos preses izdevumus. Kafejnīcas 2 zālēs var apkalpot 45 viesus un vairāk, rīkojot arī banketus un prezentācijas.
-</string>
-    <string name="erm_eng"></string>
-    <string name="skroderkrogs">2. vieta grupā "Restorāni" konkursā „Labākais ēdināšanas uzņēmums Ventspilī” 2017.gadā.\n
-Atzinības raksts grupā " Restorānu–krogu" nominācijā “Ventspilnieku simpātija” 2017.gadā.\n
-Krodziņš atrodas uz Skroderu ielas, kas arī ir galvenais iemesls, kāpēc nosaukums ir "Skroderkrogs".\n
-Dizains ir tematiski veidots, interjers ir veidots senā stilā, papildināts ar veclaicīgām šujmašīnām, antīkiem gludekļiem un šķērēm un daudziem citiem Skroderu darbarīkiem.\n
-Mēs ielūdzam jūs uz gardu maltīti tematiski veidotā atmosfērā.\n
-Krodziņa ēdienkarte ir plaša - dažādi zivju ēdienu, veģetāriešu ēdieni, vairāk kā 10 vistas, cūkgaļas un liellopa gaļas ēdieni, dažādi salāti un deserti.\n
-Skroderkrogā ir vieta 40 cilvēkiem. Skroderkrogs ir lieliska vieta romantiskai pasēdēšanai un ir piemērots sanākšanai ar ģimenēm, draugiem vai biznesa partneriem.\n
-Visi ir laipni aicināti, jo viss ir pagatavots pēc pasūtījuma, tieši jums!
-</string>
-    <string name="skroderkrogs_eng"></string>
-    <string name="dolcevita">Atzinības raksts par 1.vietu nominācijā “Mazulim pieejams pakalpojums” 2016.gadā.\n
-Kafejnīca-picērija „Dolce Vita” atrodas pašā sirdī vienā no skaistākajām Latvijas pilsētām – Ventspilī, pēc adreses Kuldīgas iela 20.\n
-Kafejnīcā veiksmīgi tiek apvienota tradicionālā pašmāju virtuve (salāti, otrie ēdieni, zupas, konditorejas un gaļas izstrādājumi) ar itāļu izsmalcināto virtuvi (picas, pastas, lazanja, deserti) ar draudzīgām cenām un plašu sortimentu.\n
-Nogaršojot mūsu picu „Dolce Vita”,  Jūs uzzināsiet kāda ir īsta itāļu pica, kas pagatavota pēc senām itāļu receptēm, ar dažādām garšvielām un mērcēm, un Jums radīsies sajūta, it kā Jūs atrodaties Palermo vai Neapoles ielās.\n
-Ērtākai atpūtai tiek piedāvāts bezvadu internets (WI-FI) un iespēja norēķināties bezskaidrā naudā, kā arī tiek piedāvātas atlaides un dažādas akcijas. Mazie apmeklētāji var izbaudīt gaišu un saulainu bērnu stūrīti aktīvai atpūtai.
-</string>
-    <string name="dolcevita_eng"></string>
-    <string name="niklutbaz">Ventspils Nikolaja luterāņu baznīcas būvēšanu uzsāka 18. gs. sākumā, bet tā ieilga, līdz 1834.–1835. g. to iespaidīgā ātrumā uzcēla, pateicoties mācītāja F.N. Paufl era apņēmībai un Krievijas cara finansiālam atbalstam. Celta vēlīnā klasicisma stilā. Svētā Nikolaja vārds baznīcai ir dots tāpēc, ka tas ir jūrnieku un zvejnieku aizstāvis. Tās arhitekts un būvdarbu vadītājs bija Johanns Eduards de Vite, ērģeles būvēja J.T. Tīdemanis un pilnveidoja Kārlis Hermanis no Liepājas.</string>
-    <string name="niklutbaz_eng"></string>
-    <string name="burgerbars">2. vieta grupā "Kafejnīcas" konkursā „Labākais ēdināšanas uzņēmums Ventspilī” 2017.gadā.\n
-
-Pie mums viss ir vienkārši - Latvijā audzēta Šarolē buļļu gaļa, vietējā beķerejā gatavotas maizītes un kartupelīši no vietējiem zemniekiem. Mēs esam par īstiem burgeriem, mēs esam BurgerBārs.
-</string>
-    <string name="burgerbars_eng"></string>
-    <string name="ostas23">1. vieta grupā "Restorāni" konkursā „Labākais ēdināšanas uzņēmums Ventspilī” 2016.gadā.\n
-Kafejnīca piedāvā plašas, gaišas un mājīgas telpas, iespējas gardi paēst kafejnīcā, pasūtītāja gaumei atbilstošus banketus, prezentācijas un arī mielošanos korporatīvos pasākumos. Īpašu uzmanību Ostas23 velta klientu apkalpošanas kvalitātei un sadarbībai tikai ar kvalitatīviem produktu piegādātājiem.\n
-Kafejnīcā Ostas23 var ne tikai lieliski ieturēties ar mūsdienīgu un gardu maltīti, bet arī, vērojot Vecpilsētu un kuģus, ieskatīties vintage žurnālu un grāmatu klāstā, un, protams, šeit ir WiFi. Arī mazuļiem atradīsies nodarbes, - ir omulīgs bērnu stūrītis.
-</string>
-    <string name="ostas23_eng"></string>
-    <string name="lop1">2012.gada vasarā Livonijas ordeņa pilī noslēdzās restaurācijas un atjaunošanas darbi un apmeklētājiem tika atvērtas pils nozīmīgākās telpas – tostarp kapela, kapitula zāle, ordeņa brāļu guļamtelpa un ēdamtelpa ar tajās iekārtoto ekspozīciju „Ventspils pilsēta un novads vēstures ritumā zem dažādām varām. Šeit apskatāma arī senākā baznīcas telpa Kurzemē, un retums Latvijas mērogā ir senie iesvētīšanas krusti, kas visticamāk attiecināmi uz 14.-15. gs. \n \n
-Livonijas ordeņa pils no citiem viduslaiku cietokšņiem atšķiras ar savu interjeru, kur modernais muzeja eksponātu stendu noformējums harmonizē ar vēsturisko vidi. Tajā izveidots Ventspils muzejs, kas atzīts par vienu no modernākajiem Baltijā. \n \n
-Muzejā aplūkojama vēstures speciālistu augsti novērtētā digitālā ekspozīcija “Dzīvā vēsture” par pils, pilsētas un ostas vēsturi, kas regulāri tiek papildināta ar jaunu informāciju. Vizuāli efektīga ir tēlu galerija "Spoku pagrabs". Pilī ir atklāta arī cietuma ekspozīcija „Kroņa maizē”, kas iekārtota pils pagalmā uzbūvētajā vieninieku kameru ēkā (1850). Ekspozīcija ļauj izjust nebrīvei raksturīgo novērošanas un nepārtrauktās uzraudzības sajūtu, kā arī liecina par Livonijas ordeņa pils daudzšķautņaino vēsturi.
-</string>
-    <string name="lop1_eng">The Livonian Order castle differs from other medieval fortresses with its interior, where modern design of museum exhibits’ stands harmonizes with the historic environment. There is located the museum of Ventspils which is recognized as one of the most up-to-date museums in Baltic States.
-
-You can learn about the history of the Castle, the city and the port via the digitalised exposition “Living History” which has earned the praise of historians and is regularly updated with new information. For great visual effects you may visit the image gallery “Ghost Cellar”. There was opened the Exhibition of the Prison Kroņa maizē which is established in a building built in the Castle yard (in 1850). The exposition lets you catch a feeling of supervision and spying inherent to prison, and also witnesses the versatile history of the Livonian Order Castle.</string>
-
-    <string name="courlander1">SIA “Ventspils Alus Darītava” tika dibināta 2016.gadā, lai atdzīvinātu Ventspils vecpilsētā senas tradīcijas alus darīšanā. Vecpilsētā jau kopš 19.gadsimta tiek rūpnieciski ražots alus. Uzņēmums atrodas četrus gadsimtus senā tirgus laukuma malā, ēkā, kur savulaik atradies ventspilnieku iecienītais Buļļu krogs.</string>
-    <string name="courlander1_eng">“COURLANDER” beer is brewed according to “German Beer Purity Law” adopted in 1516, which states that beer must be produced using only 4 ingredients: barley malt, hops, water and yeast. Beer is unfiltered, it contains no preservatives and it is not pasteurised.
-
-SIA “Ventspils Alus Darītava” was founded in 2016 in order to revive old beer brewing traditions in the old town of Ventspils. Industrially produced beer has been manufactured in the old town since the 19th century. The company is located at the edge of a four-century ancient market square, in a building that had once been “Buļļu” pub, beloved by the townspeople.</string>
-    <string name="am1">Tā kā laikā no 1849. līdz 1851. gadam šajā ēkā, kur tolaik atradās apriņķa skola, mācījies arī ievērojamais jaunlatviešu darbinieks un izcilais folklorists Krišjānis Barons (1835-1923), pie amatu mājas atklāta Kr. Baronam veltīta tēlnieka Gļeba Panteļejeva veidota piemiņas plāksne. Amatu mājā darbojas un savu amata prasmi interesentiem rāda audēji un keramiķi.
-Amatu mājā atrodas arī izstāžu zāle, kur var aplūkot amatnieku darbu izstādes, kā arī rīkot seminārus un citus pasākumus. Suvenīru salonā var iegādāties amatnieku darinājumus un suvenīrus. Amatu mājas ēkā kādreiz darbojusies apriņķa skola, tāpēc apmeklētājiem apskatei tiek piedāvāta 19. gs. stilā iekārtota mācību klase. Iepriekš piesakoties, tajā iespējams piedalīties mācību stundā, kas norit tā laika tradīcijās.
-</string>
-    <string name="am1_eng">As from 1849 to 1851 in this building, where in those days was located a district school, one of most famous Neo-Latvian and great folklore specialist Krišjānis Barons (1835-1923) had studied, by the House of Crafts you can see an unveiled special memorial plaque for him, made by sculptor Gļebs Panteļejevs.
-
-In the House of Crafts works and demonstrates their craft skills to interesents weavers and ceramists. There is an exhibition hall as well, where it is possible to visit exhibitions of craftsmen works, as well as organize seminars and other events. At the souvenir shop visitors may acquire craftsmens’ products and souvenires.
-
-As in the building of the House of Crafts was located a district school, visitors have offered opportunity to visit a study class arranged in style of 19th century. If applied in advance, there is opportunity to participate in lesson conducted following the traditions of those days.</string>
-    <string name="jn1"><b>Planetārijs</b>\n\n
-Planetārija kupola diametrs ir 8 metri un tajā ir sēdvietas 40 apmeklētājiem.\n\n
-Viena seansa ilgums planetārijā ir 45-50 minūtes.\n\n
-Seansos uzsvars tiek likts uz Zemes un tai tuvākās Visuma daļas izzināšanu, kas tiek veikta pateicoties planetārija lektoru īpaši izveidotiem autoršoviem. Papildus šovam seansa laikā tiek demonstrēta viena no 360 grādu filmām, kas atklāj vēl citus Visumā glabātos noslēpumus. Seansi tiek piedāvāti katru dienu un to saturs tiek regulāri atjaunots un mainīts.\n\n
-<b>Observatorija</b>\n\n
-Aprīkota ar augstas kvalitātes teleskopu, ar kura palīdzību dienas laikā tiek veikti Saules novērojumi, savukārt, vakaros (no septembra līdz aprīlim) vērojam planētas, Mēnesi un zvaigznes. Novērojumi notiek lektoru stāstījumu pavadījumā.
-</string>
-    <string name="jn1_eng"></string>
-    <string name="rl1">Netālu no Tirgus laukuma, Skolas ielā atrodas jaunākais pilsētas tūrisma objekts - 2007.gada augustā atklātā Ventspils Amatu māja ar darbnīcām keramiķiem, audējiem un kalējiem, kas atvērtas apskatei.\n Šeit ierīkota arī 19.gs. mācību klase, kur atraktīvā ekskursijā ir iespēja iejusties tā laika mācību stundas atmosfērā.\n
-Rātslaukumā aug 1936.gadā par godu arhibīskapam Teodoram Grīnbergam iestādīte ozoli, kam līdzās atrodas senais un ar lielu rūpību koptais Ventspils Nikolaja ev.luteriskās baznīcas dārzs.\n
-        Ratslaukuma pulksteņi pirmie publiskie pulksteni, kontrole savu gaitu ar sputniku un Bremenes observatoriju.
-</string>
-    <string name="rl1_eng"></string>
-    <string name="vt1">Tirgus laukums sen sev pievērsis Ventspils senās apbūves un plānojuma pētnieku uzmanību. Savulaik tas uzskatīts par senāko Ventspils centru. Ventspils vēsturiskā centra pētniece arhitekte Rita Zandberga (1929.-1993.) savulaik uzskatīja, ka Tirgus laukums izveidots laikā no 14. Līdz 17.gs. Taču, pamazām iepazīstoties ar arhīvos saglabātajām ziņām, viņa nonāca pie secinājuma, ka Tirgus laukums izveidots un tirgus laukuma komplekss celts 17. gs. sākumā, laikā, kad viduslaiku Ventspils jau eksistēja, un tātad tā nav senākā pilsētas daļa.\n
-2009. gadā tirgus laukumā notika rekonstrukcijas darbi un 5.decembrī tas tika atklāts ar vērienīgu pasākumu.\n
-Pēc rekonstrukcijas tirgus laukums ir ieguvis jaunu bruģakmens segumu, ar kuru ir iezīmēta vēsturiskā 18. gs. tirgus saimniecisko būvju atrašanās vieta un pamatu kontūras, kas dod iespēju tūristiem iepazīties ar vēsturisko Tirgus laukuma būvju izvietojumu. Tāpat uzbūvēta īpaša „Tirgus aka" ar pilsētas ģerboņiem, radot iespēju tūristiem un citiem tirgus apmeklētājiem ūdeni lietot ne tikai dzeršanai, bet arī lai nomazgātu tirgū iegādātos augļus un dārzeņus. Saulainā laikā aka darbojas arī kā saules pulkstenis, savukārt no tās pamatnes laukuma iesegumā izvērstas četras līnijas, kas norāda uz četrām debess pusēm.\n
-Kā centrālais rekonstruētā tirgus laukuma objekts uzstādīts zvanu tornis ar pulksteni, kas simbolizē kādreiz rātskungu nerealizēto ieceri Rātsnama tornī uzstādīt pilsētas centrālo laikrādi. Pulkstenī apvienota laika un skaņu saspēle, izvietojot pulksteni un zvanu rindas. Trīs pulksteņu ciparnīcas katra sniedz atšķirīgu informāciju – Latvijas laiku, Mēness fāzi un attiecīgo nedēļas dienu. Apaļās stundās pulkstenis atskaņo dziesmas „Pie dzintara jūras" melodiju, bet plkst. 12:33 un 00:33 ar Ulda Marhilēviča dziesmas „Uz priekšu, Kurzeme" piedziedājumu ieskandē īpašo Ventspils laiku. Zvanu torņa ēkā atrodas atraktīvs elements – lieli skaitāmie kauliņi, kā arī tēlnieka Gļeba Panteļejeva veidota svaru, tilpumu un mēru ekspozīcija.\n
-Tirgus laukums rekonstruēts ar Eiropas Reģionālās attīstības fonda, Ventspils pilsētas domes un valsts budžeta finansējumu projekta „Ventspils pilsētas vēsturiskā centra atjaunošana tūrisma attīstībai" ietvaros.
-</string>
-    <string name="vt1_eng"></string>
-    <string name="oranžnams1">Mēs atrodamies Ventspils vēsturiskajā daļā Ostgals, tikai 5 min. gājienā no iecienītākajām atpūtas vietām. Zilā karoga pludmale, pludmales akvaparks, Jūrmalas parks, bērnu parks, promināde un teātra nams „Jūras vārti”. Nedaudz tālāk, 2 km attālumā atrodas pilsētas centrs, olimpiskais centrs, Ventspils ūdens piedzīvojumu parks, atrakciju un SPA komplekss, Ventspils piedzīvojumu parks un brīvdabas muzejs. Apkārtnē ir pārtikas veikali, kafeijnīcas un picērija.\n
-Visiem "Oranžā nama" viesiem no 1. maija līdz 31. oktobrim, piedāvājam ģimenes brīvbiļetes uz Ventspils muzejiem - pils, amatu māja, piejūras brīvdabas muzejs (arī Mazbānītis).
-</string>
-    <string name="oranžnams1_eng"></string>
-    <string name="title_activity_start">StartActivity</string>
-    <string name="hute">Ventspilnieki pratuši uzbūvēt kalnu un devuši tam ilggadējā pilsētas mēra vārdu – „Lemberga hūte”. Unikālais kalns Rietumlatvijas piejūras zemienē radīts mākslīgi, izmantojot būvgružus un rekonstruējamo ielu nederīgo grunts segumu. Tā augstums šobrīd ir 58 m, nobrauciena garums 240 m un tas tiek palielināts katru gadu.
-Ziemā kalns iepriecina slēpotājus un snovbordistus, kuriem izveidots īpašs snovborda parks un kalnu slēpošanas trase. Līksmus brīžus sagādā arī kameršļūkšanas trase un bērnu trase nobraucieniem ar ragaviņām. Kalna darbību nodrošina pieci pacēlāji, pieci sniega pūtēji un sniega traktors. Trases ir apgaismotas. Tiem, kas slēpojot vēl nejūtas īsti droši, palīdzēs prasmīgi slēpošanas instruktori. Kalna pakājē darbojas arī kalnu slēpošanas un snovborda inventāra noma.
-</string>
-    <string name="hute_eng"></string>
-    <string name="parvbibl">Bibliotēka bērniem un pieaugušajiem ar daudzpusīgu krājumu, kultūras un mūžizglītības pasākumiem, bezmaksas piekļuvi internetam un abonētām pilnteksta datubāzēm. Bibliotēkas ēkā pakalpojumus sniedz arī Iedzīvotāju informācijas centrs un Digitālā centra Pārventas filiāle.
-Bibliotēka tika uzbūvēta 2009.gadā. Celtne atzīta par 2009.gada labāko jaunbūvi Latvijas Būvnieku asociācijas rīkotajā skatē "Gada labākā būve Latvijā 2009", saņēmusi Latvijas Dizaineru  savienības balvu "Labākais sabiedriskais interjers 2009.gadā", kā arī Latvijas Arhitektu savienība tai piešķīrusi Gada Lielo balvu arhitektūrā. 2011.gadā bibliotēka Maskavā ieguvusi pirmo vietu arhitektūras konkursā "Best Office Awards 2011" nominācijā "Labākais ārzemju projekts", kā arī iekļuvusi starptautiskā arhitektūras konkursa "Dedalo Minosse" izstādē un katalogā, kas ir būtisks sasniegums starptautiskā mērogā.
-</string>
-    <string name="parvbib1_eng"></string>
-    <string name="staldz">Šeit vēl joprojām zvejnieki iet jūrā un rāmos vakaros nereti smaržo pēc cieti kūpinātām butēm. Staldzene ir pilsētnieku un viesu iecienīta pastaigu un peldvieta ar iespaidīgu jūras stāvkrastu. 2001. gadā pēc vētras Staldzenes stāvkrastā atklājās bronzas laikmeta (7. gs. p.m.ē.) rotaslietas un senlietas, lielākais šāda veida depozīts Baltijā, kas šobrīd apskatāms Livonijas ordeņa pils muzejā.
-Uz ziemeļiem no Ventspils, Kolkas virzienā atrodas Staldzene — sens zvejnieku ciemats, kur saglabājušās atsevišķas 19. gs. zvejnieku sētas.
-</string>
-    <string name="staldz_eng"></string>
-    <string name="puka">Līdzās košajai dobei "Jūras akmentiņi" Sarkanmuižas pļavā izveidota četrus metrus augsta un septiņus metrus gara puķu skulptūra govs veidolā. Tā atklāta 2012.gadā, gatavojoties Ventspils Govju parādes desmitgades svinībām.
-</string>
-    <string name="puka_eng"></string>
-    <string name="gaismas">Gaismas visdažādākās vizuālās un estētiskās izteiksmes formas, kas sevī ietver gan atmosfēras radītus ziemeļblāzmas atspulgus un zvaigžņu mirdzumu, gan dvēseles un gara gaismas suģestējošo spēku.
-
-Autori: Sarmīte Caune sadarbībā ar Aivaru Lembergu
-</string>
-    <string name="gaismas_eng"></string>
-    <string name="matrozis">Uz Dienvidu mola novietotā 4 metrus augstā un 7 metrus garā skulptūra “Govs Matrozis”, stāvot uz sava kuģa, laipni sagaida ciemiņus, kas Ventspilī ierodas no jūras puses, kā arī sveicina Dienvidu mola apmeklētājus.
-
-Autors: Augusts Vilcāns
-</string>
-    <string name="matrozis_eng"></string>
-    <string name="piena">Tikai skaidrās vasaras naktīs saskatāma organiska saikne starp debesu zvaigznāja izgaismoto Piena Ceļu un Zemes gotiņas cilvēces barotājas misiju.
-
-Autore: Mārīte Guščika sadarbībā ar M. Čehova Rīgas Krievu teātri
-</string>
-    <string name="piena_eng"></string>
-    <string name="zala">Ventspils Zāļu govs projekta pamatā ir Latvijā un, protams, arī Ventspils reģionā vēl dzīvā tradīcija audzēt un ievākt ārstniecībā izmantojamus augus.
-
-Autors: Mākslinieku kopa SERDE
-</string>
-    <string name="zala_eng"></string>
-    <string name="celot">4 metrus augstā un 7 metrus garā govs atveidota kā vecs, nonēsāts čemodāns, ko rotā uzlīmes no pilsētām, kur notikusi “Govju parāde”.
-
-Autors: Pauls Spridzāns
-</string>
-    <string name="celot_eng"></string>
-    <string name="vsk">Ventspils 2. vidusskola ir senākā krievu skola pilsētā. Skola ir ar dziļām un pamatīgām tradīcijām, kuras tiek saglabātas un koptas arī šodien. Skola izvietota trīs ēkās un var lepoties ar lielāko skolu  bibliotēku fondu pilsētā krievu literatūrā. Skolai raksturīga atvērtība sadarbībai. Nebūtu melots, ja teiktu, ka sabiedrības integrācija te notiek, balstoties uz draudzību, interešu izglītību un mācībām. Direktore L. Volodina atzīst, ka pilsētā integrācijā nav negatīvu aspektu, jo ir liela atsaucība arī no latviešu bērniem.
-
-Skolā strādā stabils, talantīgs kolektīvs, no kuriem šobrīd 15 ir skolas absolventi. Seši kolektīva locekļi pilsētā ir atzinīgi novērtēti ar titulu „Gada skolotājs”. Daudzi skolotāji ir apbalvoti gan ar IZM, gan ar Ventspils pilsētas domes atzinības rakstiem par sasniegumiem pedagoģiskajā darbā.
-
-Skolā pastāv uzskats, ka veiksmīga izglītība ir kvalitatīva sākumskola un sākumskolas skolotāji. Skolas direktore norāda, ka bez labiem sākumskolas skolotājiem neiztikt: „Mūsu pedagogi ļoti labi sagatavo bērnus mācībām, atklāj viņu talantus un ļauj attīstīt tos.”
-
-Skolā vienmēr vislielākā uzmanība tikusi pievērsta eksaktajiem priekšmetiem. Liela daļa skolēnu vēlas mācīties matemātikas novirziena klasēs. Tiek pasniegts priekšmets „matemātiskā loģika”. Lielākā daļa absolventu turpina izglītību tehniskajās augstskolās.
-
-Cienot un novērtējot pensionēto pedagogu devumu skolai, netiek pārtraukta sadarbība arī ar viņiem – tā ir viena no skolas tradīcijām.
-</string>
-    <string name="vsk_eng"></string>
-
-    <string name="pbm">1954. gadā dibinātā muzeja teritorijā izvietotas etnogrāfiska rakstura ekspozīcijas, kas liecina par tradīcijām, kuru saknes ir gadsimtiem senas. Muzeja krājumā ir vairāk nekā 20 000 priekšmetu, un tas atspoguļo latviešu un lībiešu zemnieku un zvejnieku dzīvi. Iekštelpu un brīvdabas ekspozīcijā (kopējā platība 4,8 ha) apskatei izvietoti aptuveni 600 eksponātu. Lielākais no tiem ir dzirnavas, mazākais – adata pludiņu piešūšanai pie tīkla.
-
-Piejūras brīvdabas muzejā godā tiek celtas un glabātas arī pagājušo laiku latviskās dzīves gudrības. Šeit atbilstoši tautas tradīcijām svin gadskārtu svētkus un piekopj saimniekošanas metodes – sviesta kulšanu, maizes cepšanu, sveču liešanu, kā arī darbošanos rijā.
-
-Šobrīd tas ir vienīgais tieši zvejniecībai veltītais brīvdabas muzejs Latvijā ar zvejnieku sētām, klētīm un vējdzirnavām no Užavas pagasta, dūmnamiem, kūpinātavām, tīklu būdām un citiem novada celtniecībā un sadzīvē raksturīgiem eksponātiem.
-</string>
-    <string name="pbm_eng"></string>
-    <string name="mazb">Projekta ietvaros uzbūvētās dzelzceļa līnijas Muzejs-Kalns kopgarums ir 3 kilometri. Jaunā līnija atzarojas no Riņķa līnijas Jūrmalas parkā. Vēl viena 150m gara savienojoša līnija starp jauno Kalna līniju un Riņķa līniju veido trijstūri. Izveidotais dzelzceļa trijstūris atvieglo vilcienu kustību visos virzienos un kalpo tvaika lokomotīvju apgriešanai.
-
-Stacijā Muzejs, kas atrodas PBM teritorijā, tika ierīkoti divi stacijas sliežu ceļi, divi lokomotīvju depo ceļi un viens strupceļš. Kopā tika iebūvētas četras jaunas pārmijas.
-
-Jaunā dzelzceļa līnija līkumojot vijas caur kāpām ieskauto un mežaino apvidu un krusto Vasarnīcu un Aizsaules ielas, kur autotransportam ir ierīkotas pārbrauktuves ar gaismas un skaņas signalizāciju. Dzelzceļa līnija visā savā gareniskajā profilā no Jūrmalas parka līdz stacijai Kalns, šķērsojot ierakumus un uzbērumus, pakāpeniski iet mazā kāpumā. Augstuma starpība, kas jāpārvar vilcienam starp līnijas sākumpunktu Jūrmalas parkā un galapunktu stacijā Kalns ir 10 metru.
-</string>
-    <string name="mazb_eng"></string>
-
-</resources>
+        <string name="inform">Information</string>
+        <string name="done">DONE</string>
+        <string name="PATS">FREEWALK</string>
+        <string name="MARŠRUTI">ROUTES</string>
+        <string name="obj">OBJECTS</string>
+        <string name="infg">MAIN INFORMATION</string>
+        <string name="infp">ADDITIONAL INFORMATION</string>
+        <string name="exit">EXIT</string>
+        <string name="PIEZVANĪT">PHONE</string>
+        <string name="cancel">FINISH</string>
+        <string name="iziet">Exit</string>
+        <string name="ja">YES</string>
+        <string name="ne">NO</string>
+        <string name="init">GPS initialization...</string>
+        <string name="aps">Sightseeing</string>
+        <string name="hotels">Hotels</string>
+        <string name="cafe">Restaurants and cafes</string>
+        <string name="iestad">Institutions</string>
+        <string name="VECPILSĒTA">OLD CITY</string>
+        <string name="piem">Monuments</string>
+        <string name="confirm">Do you really want to exit?</string>
+        <string name="rgalds">1st place in Restaurant group in the contest “The Best Catering Industry’s Company in Ventspils 2017”. Café Rātsgalds is located in the heart of Ventspils Town Hall Square. The café offers a contemporary and delicious meal. Particular attention is devoted to the customer service quality and to the collaboration with quality product suppliers.</string>
+        <string name="lutdrnams">The Ventspils Lutheran Congregation Church at 4 Tirgus street is a one-storey wooden building (1836) with a cone chimney preserved in its interior design.</string>
+        <string name="courlander">This bar is special by the fact that it is located at the same building where the brewery is located, and visitors have the possibility to take a look at the process of brewing beer. The pub provides a possibility to buy and taste beer – COURLANDER lager Light and COURLANDER lager dark produced in the brewery, as well as different warm and cold snacks, including different fish dishes.</string>
+        <string name="aka">In reconstruction market place get new paving stone covering. In covering are marked location places of 18th century’s buildings and foundation lines; Were build special “Market well” with city armorial bearings. Now it gives possibility to city inhabitants and guest use it not only for drinking but also for washing fruits and vegetables, which are bought in market. In sunny days well will work as Sun clock.</string>
+        <string name="zvantornis">As main object in market place is bell tower with clock, that symbolize not - realized town councilor’s idea to set up main city clock in Town Hall tower. In new clock are integrated time and sound game. The clock has three dials and each of them show different information – Latvian time, lunar phases and week days. Each hour clock plays song’s “Pie dzintara jūras” (On Amber sea) melody but at 12:33 and 00:33 with song “Uz priekšu, Kurzeme” (Ahead Kurzeme) written by U. Marhilēvičs clock jingle Ventspils’ time. In bell tower are located interesting and attractive objects like big counting frame and sculptor’s Gļebs Panteļejevs exhibition of weight, capacity and measure.</string>
+        <string name="piespog">Light in multiple visual and aesthetic forms of expression, including aurora borealis reflections in the sky caused by atmosphere, starshine, and the inspiring power of the light of the soul and spirit.  Author: Jānis Mitrēvics.</string>
+        <string name="marites">The three flower ladybirds on Ostas Street Promenade were made in 2004 and are a bright accessory to the paved old town of Ventspils.</string>
+        <string name="sievgovs">A set of affectionate feminine characters on the cow’s body created using painting as a means of artistic expression confirms her archetypal link with the deeply symbolic role of the mother and protector of hearth and home.  Author: Elita Patmalniece.</string>
+        <string name="supgovs">Just like on the waves of the Venta River a cow in a floral dress is rocking on Ostas Street Promenade and inviting everyone to take a photo to remember.</string>
+        <string name="latvmeln">Metaphor about the development of Latvia – spirit of the past in form of a cow reminding us about the euphoria about Latvia as an agrarian country although today’s situation is quite the contrary.  Author: Kiril Pantelejev.</string>
+        <string name="lop">The Livonian Order Castle is one of the oldest medieval fortresses that has survived to this day. In 1290 the castle was first chronicled and this date is now considered to be the year of Ventspils’ foundation.  In 1995 there was begun extensive archaelogical research and renovation of the Castle. Renovating the Castle, there were retained both niches of the 14th century and wall paintings of the 15th century, door openings of the 17th century and prision doors of the 19th century. Now outwardly the Castle has obtained its 19th century look.</string>
+        <string name="am">In August 2007 The North Kurzeme Craft Consultation Centre – Amatu māja (The House of Crafts) was opened in Ventspils. The latest Ventspils tourism object is located in the oldest school building of Kurzeme Duchy which is renovated and now turned into contemporary object of culture and tourism.</string>
+        <string name="bp">Resides in the former building of the hotel Royal on 19 Jāņa Street, which was constructed during the period of Historicism and Art Nouveau. It was renovated in 1998 and received the Latvian Architects’ Union award as the best reconstructed building of the year.</string>
+        <string name="dc">Offers a classroom (70 seats; 40 seats with computer connection) and a conference room (20 seats). Wireless Internet, computers, multimedia projectors, TV, video, screens, and boards available. Document printing, copying, binding, laminating, event photography, filming, editing, and catering services provided.</string>
+        <string name="gb">Offers a classroom (20 computerized workstations with Internet connection, interactive whiteboard, TV, video, CD, DVD player, multimedia projector, screen, specialized computer for visually impaired), event and exhibition hall (50 seats, internet connection, TV, video, CD) , DVD players, multimedia projector, screen). Document printing and reproduction possible. Outsourcing can provide coffee breaks.</string>
+        <string name="jak">Memorial stone devoted to the deepening of Ventspils free port\\\'s channel. The stone was lifted from 17,5 m. depth.  Sculptor - P.Jaunzems. Architect - J.Poga. Placed in 1998.</string>
+        <string name="jf">The Akmeņu Street is the oldest cobblestone street in Ventspils and it runs along the Old Town Square, which up to the late thirties of the 20th century was a built-up area. Now, the monument to Jānis Fabriciuss (1877-1929) created in 1954 by the sculptor Jānis Zariņš is erected here. Jānis Fabriciuss was the legendary commanding officer of Latvian Riflemen Division of the Soviet Red Army, born in the rural municipality of Zlēkas in the region of Ventspils.</string>
+        <string name="jn">Ventspils Jaunrades nams is a large complex of out-of-school activities for the implementation of various activities and programs at the city, national, regional and international levels. Built in 1912, the Ventspils Latvian Society House was reconstructed to meet the needs of contemporary youth, within the framework of the European Regional Development Fund “Creative House Development Project”. In addition, the project has created a planetarium and an observatory for interest education and as a sightseeing destination for city guests.</string>
+        <string name="kk">Monument was mounted in 1938 from donations. The idea belongs to the captain of Ventspils port at that time V.Abelnieks. Monument is located in the Memorial square on the coast of River Venta.</string>
+        <string name="kvp">The monument is located in Ventmala, near the Livonian Order Castle. By M. Polis. The sculpture was cast in bronze in Germany. It observes the operation of the Ventspils port, as well as every vessel that enters the port of Ventspils by the sea gate. A popular place to take pictures of city guests.</string>
+        <string name="pt">The Ventspils Passenger Terminal at Dārza Street 6 was opened in 2007, fully reconstructing the long-lost German merchant Reinku families in 1904 and 1905. houses built in the 20th century. in the first half was a German real school. There is also a Tourist Information Center in the terminal building.</string>
+        <string name="rl">The heart of the Old Town is the Town Hall Square with the Evangelical Lutheran Nicholas Church, the International Writers \'and Translators\' House, the modern reconstructed Main Library building and the Digital Center</string>
+        <string name="strkv">Authors R. and I. Dobičini. The fountain is 2.8 meters high and 15t heavy. In 2002, a 38t stone block was brought from Sweden to make the fountain. Created as a large \"head\" with outstretched \"hair\" - water jets.</string>
+        <string name="svnik">"Built in 1901, following the 17th-century architectural traditions of Orthodox churches - in a non-Islamic style with five domes. During World War I (1915–1918), German stables and a gasoline warehouse were set up for the German army. After a long repair, the church was opened only in 1927.  "</string>
+        <string name="tulkmaja">The International House of Writers and Translators was built in the 18th century. the building of the Town Hall of the city in 1850, where the Venstpils excursion office had been operating for a long time, but in August 2006 the International House of Writers and Translators was opened, where Latvian and various foreign writers and translators regularly visit.</string>
+        <string name="vt">Formed in the 17th century. at the beginning. By the 19th century In the middle of the Market Square was a town hall. The oldest (1646) residential building in Ventspils is located at the intersection of Market and Skolas Street. A popular shopping place for city dwellers and guests.</string>
+        <string name="kupfer">Well-equipped accommodations in the city center - TV, WC and shower rooms. On the first floor of the building there is a restaurant - cafe (22 places), hairdresser, beauty salon, solarium. Bicycle rental. Premises for celebrations (22 pers.). Breakfast included. Wireless internet is available. The guest house offers a 10% discount on beauty salon services.</string>
+        <string name="klosteris">Offers individual apartments with amenities, one of which has a sauna (included in the price). Possibility to order meals. Tent sites. Sowing site for transport. Canoes and bikes are available for rent. Novuss, badminton, football.</string>
+        <string name="mazais">The small house offers two separate apartments in a private house, in a quiet area of ​​Ventspils near the sea. Each apartment has 2 rooms, a kitchen with equipment, shower, WC and free WI-Fi. There is free parking, a play corner for children, a barbecue in the enclosed courtyard. Bicycle rental is possible. Nearby is a beach water park, a blue flag beach, a children\'s town. We work all year round. We are waiting for you!</string>
+        <string name="oranžnams">"For guests of Ventspils we offer to stay in the warm and spacious rooms of two and three rooms in the guest house „Oranžais nams”. Rooms are decorated in orange tones, each with a kitchen, shower and toilet. Kitchens equipped with fridge, microwave, el. water kettle, monochrome hot plates, toasters and dishes. Wi-Fi and TV are available in each room at no extra charge. In our small enclosed yard you can use the seating area with a barbecue. Place bikes on board and rent bicycles. We work throughout the year and can accommodate up to 18 people at a time.  "</string>
+        <string name="portoss">The guest house is close to the sea and the Children\'s Town. Various types of rooms (1, 2, 3 and 4 beds) are available. All rooms have refrigerators and some have a washing machine with no extra charge. There is a café for up to 30 people in the house for the convenience of guests. Yard space for 5 cars.</string>
+        <string name="dzintari">Each room has a fully equipped kitchen with a fridge, electric hob, milk jug, crockery and other kitchen utensils and appliances, a WC, a shower and a washing machine. Free Wi-Fi is available. For the comfort and convenience of guests, a large garden with terrace, tables and chairs and barbecues is available.</string>
+        <string name="landora">The Landora pub is located in the city center. Bright interior with wooden finish. No extras, simple menu, beer, summer garden. In a separate banquet hall you can celebrate a nice anniversary. Hang on a wood-fired sauna. Friday and Saturday evenings from 23:00 sound disco.</string>
+        <string name="erm">Fast service cafe. The spacious rooms are home to Ērmanīša \'s image in the photos of \"Vella Servants\", as well as an exhibition of paintings by various artists. The menu includes various kinds of warm meat, fish and vegetable dishes.  The chef recommends a chop \"Emanite\" filled with cheese and apples.  In the morning, you can read the latest press releases on a cup of coffee. Cafes in 2 halls can accommodate 45 guests and more, including banquets and presentations.</string>
+        <string name="skroderkrogs">2nd place in the group \"Restaurants\" in the competition \"The Best Catering Company in Ventspils\" in 2017. The design is themed, the interior is designed in an ancient style, complemented by old-fashioned sewing machines, antique irons and scissors and many other Skroder tools. The tavern menu is wide - various fish dishes, vegetarian dishes, more than 10 chicken, pork and beef dishes, various salads and desserts.</string>
+        <string name="dolcevita">Award for the 1st prize in \"Baby Available Service\" in 2016. The Dolce Vita café-pizzeria is located in the heart of one of the most beautiful cities in Latvia - Ventspils, at 20 Kuldīgas Street. The café successfully combines traditional homemade cuisine (salads, second dishes, soups, pastries and meat) with Italian fine cuisine (pizzas, pastas, lasagna, desserts) with friendly prices and a wide assortment. Tasting our pizza \"Dolce Vita\", you will learn what a real Italian pizza is made from ancient Italian recipes, with different spices and sauces, and you will feel as if you are on the streets of Palermo or Naples.</string>
+        <string name="niklutbaz">The construction of the Ventspils Nicholas Lutheran Church began in the 18th century. early, but it lasted until 1834–1835. g. it was built at an impressive speed thanks to Pastor F.N. Paufl era for determination and financial support from Russian Tsar. Built in late classicism style. The name of St. Nicholas is given to the church because it is a defender of sailors and fishermen. Its architect and construction manager was Johann Edward de Vite, the organ was built by J.T. Tideman and perfected Kārlis Hermanis from Liepaja.</string>
+        <string name="burgerbars">2nd place in the group \"Cafe\" competition \"Best catering company in Ventspils\" in 2017. Everything is simple with us - Charlotte bull meat grown in Latvia, local bakery buns and potatoes from local farmers. We are the real burgers, we are BurgerBar.</string>
+        <string name="ostas23">1st place in the group \"Restaurants\" in the competition \"The Best Catering Company in Ventspils\" in 2016. The café offers spacious, bright and cozy rooms, the opportunity to have a nice meal in the café, banquets that suit the customer\'s taste, presentations and also enjoyment at corporate events. Ostas23 pays special attention to the quality of customer service and cooperation only with quality product suppliers.</string>
+        <string name="lop1">The Livonian Order castle differs from other medieval fortresses with its interior, where modern design of museum exhibits’ stands harmonizes with the historic environment. There is located the museum of Ventspils which is recognized as one of the most up-to-date museums in Baltic States.  You can learn about the history of the Castle, the city and the port via the digitalised exposition “Living History” which has earned the praise of historians and is regularly updated with new information. For great visual effects you may visit the image gallery “Ghost Cellar”. There was opened the Exhibition of the Prison Kroņa maizē which is established in a building built in the Castle yard (in 1850). The exposition lets you catch a feeling of supervision and spying inherent to prison, and also witnesses the versatile history of the Livonian Order Castle.</string>
+        <string name="courlander1">“COURLANDER” beer is brewed according to “German Beer Purity Law” adopted in 1516, which states that beer must be produced using only 4 ingredients: barley malt, hops, water and yeast. Beer is unfiltered, it contains no preservatives and it is not pasteurised.  SIA “Ventspils Alus Darītava” was founded in 2016 in order to revive old beer brewing traditions in the old town of Ventspils. Industrially produced beer has been manufactured in the old town since the 19th century. The company is located at the edge of a four-century ancient market square, in a building that had once been “Buļļu” pub, beloved by the townspeople.</string>
+        <string name="am1">As from 1849 to 1851 in this building, where in those days was located a district school, one of most famous Neo-Latvian and great folklore specialist Krišjānis Barons (1835-1923) had studied, by the House of Crafts you can see an unveiled special memorial plaque for him, made by sculptor Gļebs Panteļejevs.  In the House of Crafts works and demonstrates their craft skills to interesents weavers and ceramists. There is an exhibition hall as well, where it is possible to visit exhibitions of craftsmen works, as well as organize seminars and other events. At the souvenir shop visitors may acquire craftsmens’ products and souvenires.  As in the building of the House of Crafts was located a district school, visitors have offered opportunity to visit a study class arranged in style of 19th century. If applied in advance, there is opportunity to participate in lesson conducted following the traditions of those days.</string>
+        <string name="jn1">The planetary dome has a diameter of 8 meters and has seating for 40 visitors.The duration of one session on planetarium is 45-50 minutes.Seansos uzsvars tiek likts uz Zemes un tai tuvākās Visuma daļas izzināšanu, kas tiek veikta pateicoties planetārija lektoru īpaši izveidotiem autoršoviem. Papildus šovam seansa laikā tiek demonstrēta viena no 360 grādu filmām, kas atklāj vēl citus Visumā glabātos noslēpumus. Seansi tiek piedāvāti katru dienu un to saturs tiek regulāri atjaunots un mainīts.</string>
+        <string name="rl1">Not far from the Market Square, Skolas Street is the newest tourist destination in the city - the Ventspils Crafts House opened in August 2007 with workshops for ceramics, weavers and blacksmiths open for viewing.In the Town Hall Square in 1936, the oak trees were planted in honor of Archbishop Teodor Grinberg, which is adjacent to the ancient and well-kept garden of Ventspils Nicholas Evangelical Lutheran Church.Horse Riding Watches are the first public clock to control their progress with Sputnik and the Bremen Observatory.</string>
+        <string name="vt1">Market Square has long attracted the attention of the researchers of Ventspils ancient building and planning. It was once considered the oldest center of Ventspils. Researcher Rita Zandberg (1929-1993), a researcher at Ventspils Historical Center, once thought that the Market Square was created from the 14th to the 17th century. However, as she gradually became aware of the information stored in the archives, she came to the conclusion that the Market Square was built and the market square complex was built in the 17th century. at the beginning of the Middle Ages, when Ventspils existed, and so it is not the oldest part of the city.In 2009, the marketplace was reconstructed and on 5 December it was opened with an ambitious event.After the reconstruction, the market square has acquired a new cobblestone pavement, which has been marked by the historic 18th century. the location of the market economic buildings and the contours of the foundations that allow tourists to get acquainted with the location of the historical Market Square buildings. It also has a special \"Market Well\" with city coats of arms, allowing tourists and other market visitors to use water not only for drinking, but also to wash fruit and vegetables purchased on the market. four lines pointing to the four sides of the sky.</string>
+        <string name="oranžnams1">We are located in the historical part of Ventspils in Ostgals, only 5 min. walk from favorite places of rest. Blue flag beach, beach water park, Jurmala park, children\'s park, prominade and theater house \"Jūras vārti\". A little further, 2 km away is the city center, Olympic Center, Ventspils Water Adventure Park, amusement and SPA complex, Ventspils Adventure Park and Open Air Museum. There are grocery stores, cafés and a pizzeria in the area For all guests of \"Orange House\" from May 1 to October 31, we offer family tickets to Ventspils museums - castle, craft house, seaside open-air museum (also Mazbānītis).</string>
+        <string name="hute">Ventspils inhabitants managed to build a mountain and gave it the name of a long-time mayor of the city - \"Lembergs hūte\". The unique mountain in the Western Latvian seaside lowland is created artificially by using debris and the unfinished ground cover of the street to be reconstructed. Its height is currently 58 m, the length of the ride is 240 m and it is increased every year. In winter, the mountain delights skiers and snowboarders with a special snowboard park and a mountain skiing track. There are also some fun moments in the camel ride and the sledge track for children. The hill is operated by five lifts, five snow blowers and a snow tractor. The tracks are illuminated. Skilled ski instructors will help those who still do not feel safe when skiing. Mountain skiing and snowboard equipment rental are also available at the foot of the hill.</string>
+        <string name="parvbibl">Library for children and adults with versatile stock, cultural and lifelong learning activities, free internet access and subscribed full-text databases. In the library building services are also provided by the Population Information Center and Digital Center Pārventa Branch. The library was built in 2009. The building was recognized as the best new building in 2009 in the \"Best Building of the Year 2009\" organized by the Latvian Builders Association, and received the \"Best Public Interior in 2009\" by the Latvian Association of Designers, and the Latvian Union of Architects awarded it the Great Architecture Award of the Year. In 2011, the library in Moscow won the first prize in the \"Best Office Awards\" nomination for the \"Best Office Awards 2011\", as well as an exhibition and catalog of the international architectural competition \"Dedalo Minosse\", which is a major international achievement.</string>
+        <string name="staldz">Here, the fishermen still go to the sea and often smell in the smoky flats after a hard night. Staldzene is a popular place for hiking and swimming in the city, with a spectacular seafront. In 2001, after a storm on the Staldzene steeple, the Bronze Age (7th century BC) jewelery and antiques, the largest deposit of its kind in the Baltics, can be seen at the Livonian Order Castle Museum.</string>
+        <string name="puka">Along with the bright hollow \"Jūras akmentiņi\" in Sarkanmuiža meadow, four meters tall and seven meters long flower sculpture in the form of a cow is created. It was opened in 2012 in preparation for the celebration of the decade of Ventspils Cow Parade.</string>
+        <string name="gaismas">Various forms of visual and aesthetic expression of light, which include the reflections of the northern lights of the atmosphere and the radiance of the stars, as well as the suggestive power of the soul and spirit.  Authors: Sarmīte Caune in collaboration with Aivars Lembergs</string>
+        <string name="matrozis">The 4-meter high and 7-meter sculpture \"Cow Matros\", located on the southern pier, stands on its own boat and welcomes visitors from the sea in Ventspils, as well as greeting the visitors of the South Pier.  Author: August Vilcāns</string>
+        <string name="piena">Only in the clear summer nights is there an organic link between the heavenly constellation-lit Milky Way and the Earth\'s coworker mission.  Author: Mārte Guščika in cooperation with M. Chekhov Riga Russian Theater</string>
+        <string name="zala">The Ventspils Herbal Cow project is based on a living tradition of growing and harvesting herbs in Latvia and, of course, in the Ventspils region.  Author: Set of artists SERDE</string>
+        <string name="celot">The 4-meter-tall and 7-meter-long cow is presented as an old, worn-out suitcase decorated with stickers from the cities where the Cow Parade took place.  Author: Pauls Spridzans</string>
+        <string name="vsk">Ventspils Secondary School No. 2 is the oldest Russian school in the city. The school has a deep and profound tradition that is maintained and nurtured today. The school is housed in three buildings and boasts the largest school library fund in the Russian literature. School is open to cooperation. It would not be a lie if you say that social integration takes place on the basis of friendship, interest education and learning. Director L. Volodina admits that there are no negative aspects of integration in the city, because there is a great response from Latvian children.  The school has a stable, talented team, of whom 15 are school graduates. Six members of the collective are welcomed by the title \"Teacher of the Year\". Many teachers have been awarded both MES and Ventspils City Council recognition letters for their achievements in pedagogical work.  The school believes that successful education is high-quality primary school and primary school teachers. The headmaster of the school points out that without good primary school teachers do not do: \"Our teachers prepare children very well for learning, discover their talents and allow them to develop.\"</string>
+        <string name="pbm">Founded in 1954, the museum has ethnographic exhibitions that show traditions that have been rooted for centuries. The museum\'s collection contains over 20,000 items, reflecting the lives of Latvian and Liv farmers and fishermen. There are about 600 exhibits for indoor and outdoor exposition (total area 4.8 ha). The biggest one is the mill, the smallest one is the needle for floating on the net.  The wisdom of the past Latvian life is being built and preserved in the seaside open-air museum. Here, according to folk traditions, celebrations of anniversary celebrations and farming methods are celebrated - butter churning, bread baking, candle casting, and running in the morning.  At present, it is the only open-air museum dedicated to fishing in Latvia with fishermen\'s fences, barns and windmills from Užava parish, smokehouses, smokehouses, network huts and other exhibits characteristic of the region\'s construction and everyday life.</string>
+        <string name="mazb">The total length of the railway line Museum-Mountain built within the project is 3 kilometers. The new line is branching out from Riņķis line in Jurmala Park. Another 150m long connecting line between the new line of the Hill and the Ring Line creates a triangle. The created railway triangle facilitates the movement of trains in all directions and serves to trap steam locomotives.  The station Museum, located in the PBM area, was equipped with two station tracks, two locomotive depots and one dead end. In total, four new switches were built.  The new railway line winds through the dunes, surrounded by a wooded area and crosses the Summer House and Aizsaules Street, where there are level crossings with light and sound alarms. The railway line in its entire longitudinal profile from Jurmala Park to the Hill Hill, crossing trenches and embankments, gradually goes up a small climb. The height difference that must be overcome for the train between the starting point of the line in Jurmala Park and the destination station Hill is 10 meters.</string>
+        <string name="kart">SHOW ON MAP</string>
+    </resources>
