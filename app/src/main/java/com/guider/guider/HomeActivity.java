@@ -15,7 +15,7 @@ import com.google.maps.model.LatLng;
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
-    Button freewalk, routes, obj, lang,informat,exit;
+    Button freewalk, routes, obj,informat,exit;
     private boolean objects;
 
     @Override
@@ -25,7 +25,6 @@ public class HomeActivity extends AppCompatActivity {
         freewalk=(Button)findViewById(R.id.freewalk);
         routes=(Button)findViewById(R.id.routes);
         obj=(Button)findViewById(R.id.obj);
-        lang=(Button)findViewById(R.id.lang);
         informat=(Button)findViewById(R.id.informat);
         exit=(Button)findViewById(R.id.exit);
         BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -72,12 +71,6 @@ public class HomeActivity extends AppCompatActivity {
                 objects=true;
                 intent.putExtra("ObjBool",objects);
                 startActivity(intent);
-            }
-        });
-        lang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {

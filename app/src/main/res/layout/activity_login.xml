@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="360dp"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:layout_weight="1">
         <ImageView
@@ -41,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:hint="Email"
+                android:layout_weight="1"
                 android:background="@drawable/gray"
                 android:padding="15dp"
                 android:inputType="textEmailAddress"
@@ -52,10 +53,11 @@
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/gray"
                 android:padding="15dp"
                 android:fontFamily="sans-serif"
-                android:hint="Parole"
+                android:hint="@string/pass"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp"
                 android:layout_marginBottom="15dp"
@@ -67,8 +69,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
+                android:layout_weight="1"
                 android:background="@drawable/roundedbutton"
-                android:text="Pieslēgties"
+                android:text="@string/login"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary" />
 
@@ -76,8 +79,9 @@
                 android:id="@+id/textViewSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="Nav konta? Reģistrējies"
+                android:padding="5dp"
+                android:layout_weight="1"
+                android:text="@string/donthaveacc"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorAccent" />

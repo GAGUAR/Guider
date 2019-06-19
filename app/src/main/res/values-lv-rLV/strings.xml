@@ -9,6 +9,8 @@
     <string name="obj">OBJEKTI</string>
     <string name="exit">IZIET</string>
     <string name="infg">GALVENĀ INFORMĀCIJA</string>
+    <string name="finish">PABEIGT</string>
+    <string name="patiziet">Vai jūs tiešām gribat iziet?</string>
     <string name="infp">PAPILDUS INFORMĀCIJA</string>
     <string name="PIEZVANĪT">PIEZVANĪT</string>
     <string name="cancel">PABEIGT</string>
@@ -191,4 +193,9 @@ Stacijā Muzejs, kas atrodas PBM teritorijā, tika ierīkoti divi stacijas slie�
 Jaunā dzelzceļa līnija līkumojot vijas caur kāpām ieskauto un mežaino apvidu un krusto Vasarnīcu un Aizsaules ielas, kur autotransportam ir ierīkotas pārbrauktuves ar gaismas un skaņas signalizāciju. Dzelzceļa līnija visā savā gareniskajā profilā no Jūrmalas parka līdz stacijai Kalns, šķērsojot ierakumus un uzbērumus, pakāpeniski iet mazā kāpumā. Augstuma starpība, kas jāpārvar vilcienam starp līnijas sākumpunktu Jūrmalas parkā un galapunktu stacijā Kalns ir 10 metru.
 </string>
     <string name="kart">PARĀDĪT KARTĒ</string>
+    <string name="login">PIESLĒGTIES</string>
+    <string name="register">REGISTRĒTIES</string>
+    <string name="pass">Parole</string>
+    <string name="alreadyhaveacc">Jau ir konts?<u> Pieslēdzies!</u></string>
+    <string name="donthaveacc">Vēl nav konta?<u> Reģistrējies!</u></string>
 </resources>

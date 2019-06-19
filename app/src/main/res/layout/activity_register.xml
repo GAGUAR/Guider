@@ -57,7 +57,7 @@
                 android:background="@drawable/gray"
                 android:padding="15dp"
                 android:fontFamily="sans-serif"
-                android:hint="Parole"
+                android:hint="@string/pass"
                 android:inputType="textPassword"
                 android:paddingBottom="15dp"
                 android:layout_marginBottom="15dp"
@@ -70,7 +70,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="7dp"
                 android:background="@drawable/roundedbutton"
-                android:text="Reģistrēties"
+                android:text="@string/register"
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary" />
 
@@ -78,8 +78,8 @@
                 android:id="@+id/textViewLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:text="Jau ir konts? Pieslēdzies"
+                android:padding="5dp"
+                android:text="@string/alreadyhaveacc"
                 android:textAlignment="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/colorAccent" />

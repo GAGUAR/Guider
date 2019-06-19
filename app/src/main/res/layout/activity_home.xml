@@ -86,18 +86,6 @@
             android:layout_alignParentBottom="false"
             android:orientation="horizontal">
             <Button
-                android:text="udali"
-                android:textColor="@android:color/white"
-                android:textSize="17dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:id="@+id/lang"
-                android:drawableTop="@drawable/language"
-                android:layout_margin="10dp"
-                android:background="@drawable/purple"
-                android:layout_weight="1"/>
-            <Button
                 android:text="@string/exit"
                 android:textColor="@android:color/white"
                 android:textSize="17dp"

@@ -9,13 +9,15 @@
     <string name="infg">MAIN INFORMATION</string>
     <string name="infp">ADDITIONAL INFORMATION</string>
     <string name="exit">EXIT</string>
-    <string name="PIEZVANĪT">PHONE</string>
+    <string name="PIEZVANĪT">CALL</string>
     <string name="cancel">FINISH</string>
     <string name="iziet">Exit</string>
     <string name="ja">YES</string>
     <string name="ne">NO</string>
     <string name="init">GPS initialization...</string>
     <string name="aps">Sightseeing</string>
+    <string name="finish">FINISH</string>
+    <string name="patiziet">Do you really want to exit?</string>
     <string name="hotels">Hotels</string>
     <string name="cafe">Restaurants and cafes</string>
     <string name="iestad">Institutions</string>
@@ -81,4 +83,9 @@
     <string name="pbm">Founded in 1954, the museum has ethnographic exhibitions that show traditions that have been rooted for centuries. The museum\'s collection contains over 20,000 items, reflecting the lives of Latvian and Liv farmers and fishermen. There are about 600 exhibits for indoor and outdoor exposition (total area 4.8 ha). The biggest one is the mill, the smallest one is the needle for floating on the net.  The wisdom of the past Latvian life is being built and preserved in the seaside open-air museum. Here, according to folk traditions, celebrations of anniversary celebrations and farming methods are celebrated - butter churning, bread baking, candle casting, and running in the morning.  At present, it is the only open-air museum dedicated to fishing in Latvia with fishermen\'s fences, barns and windmills from Užava parish, smokehouses, smokehouses, network huts and other exhibits characteristic of the region\'s construction and everyday life.</string>
     <string name="mazb">The total length of the railway line Museum-Mountain built within the project is 3 kilometers. The new line is branching out from Riņķis line in Jurmala Park. Another 150m long connecting line between the new line of the Hill and the Ring Line creates a triangle. The created railway triangle facilitates the movement of trains in all directions and serves to trap steam locomotives.  The station Museum, located in the PBM area, was equipped with two station tracks, two locomotive depots and one dead end. In total, four new switches were built.  The new railway line winds through the dunes, surrounded by a wooded area and crosses the Summer House and Aizsaules Street, where there are level crossings with light and sound alarms. The railway line in its entire longitudinal profile from Jurmala Park to the Hill Hill, crossing trenches and embankments, gradually goes up a small climb. The height difference that must be overcome for the train between the starting point of the line in Jurmala Park and the destination station Hill is 10 meters.</string>
     <string name="kart">SHOW ON MAP</string>
+    <string name="login">LOG IN</string>
+    <string name="register">REGISTER</string>
+    <string name="pass">Password</string>
+    <string name="alreadyhaveacc">Already have an account?<u> Log in!</u></string>
+    <string name="donthaveacc">Do not have an account?<u> Register!</u></string>
 </resources>

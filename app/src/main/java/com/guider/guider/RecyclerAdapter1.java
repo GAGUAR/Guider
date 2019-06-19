@@ -3,6 +3,7 @@ package com.guider.guider;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 
+import static com.guider.guider.R.string.aps;
 
 
 public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.ViewHolder> {
@@ -55,40 +57,40 @@ public class RecyclerAdapter1 extends RecyclerView.Adapter<RecyclerAdapter1.View
         holder.parentLayout1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.d(TAG, "onClick: clicked on: " + mImageNames1.get(position));
+                Log.d(TAG, " ");
 
                 String img_pressed=mImageNames1.get(position);
-                if(img_pressed=="APSKATES OBJEKTI") {
+                if(img_pressed== mContext1.getString(R.string.aps)) {
                     Intent myIntent = new Intent(mContext1, RecyclerActivity.class);
                     myIntent.putExtra("chosen", "1");
                     myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext1.startActivity(myIntent);
                 }
-                if(img_pressed=="PIEMINEKĻI") {
+                if(img_pressed==mContext1.getString(R.string.piem)) {
                     Intent myIntent = new Intent(mContext1, RecyclerActivity.class);
                     myIntent.putExtra("chosen", "3");
                     myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext1.startActivity(myIntent);
                 }
-                if(img_pressed=="VIESNĪCAS") {
+                if(img_pressed==mContext1.getString(R.string.hotels)) {
                     Intent myIntent = new Intent(mContext1, RecyclerActivity.class);
                     myIntent.putExtra("chosen", "5");
                     myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext1.startActivity(myIntent);
                 }
-                if(img_pressed=="RESTORĀNI UN KAFEJNĪCAS") {
+                if(img_pressed==mContext1.getString(R.string.cafe)) {
                     Intent myIntent = new Intent(mContext1, RecyclerActivity.class);
                     myIntent.putExtra("chosen", "4");
                     myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext1.startActivity(myIntent);
                 }
-                if(img_pressed=="IESTĀDES") {
+                if(img_pressed==mContext1.getString(R.string.iestad)) {
                     Intent myIntent = new Intent(mContext1, RecyclerActivity.class);
                     myIntent.putExtra("chosen", "2");
                     myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     mContext1.startActivity(myIntent);
                 }
-                if(img_pressed=="VECPILSĒTA") {
+                if(img_pressed==mContext1.getString(R.string.VECPILSĒTA)) {
                     Intent myIntent = new Intent(mContext1, MainActivity.class);
                     ArrayList<LatLng>waypts=new ArrayList<>();
                     waypts.add(new LatLng(57.395557376,21.567588039));
