@@ -136,7 +136,6 @@ Tirgus laukums rekonstruēts ar Eiropas Reģionālās attīstības fonda, Ventsp
     <string name="oranžnams1">Mēs atrodamies Ventspils vēsturiskajā daļā Ostgals, tikai 5 min. gājienā no iecienītākajām atpūtas vietām. Zilā karoga pludmale, pludmales akvaparks, Jūrmalas parks, bērnu parks, promināde un teātra nams „Jūras vārti”. Nedaudz tālāk, 2 km attālumā atrodas pilsētas centrs, olimpiskais centrs, Ventspils ūdens piedzīvojumu parks, atrakciju un SPA komplekss, Ventspils piedzīvojumu parks un brīvdabas muzejs. Apkārtnē ir pārtikas veikali, kafeijnīcas un picērija.\n
 Visiem "Oranžā nama" viesiem no 1. maija līdz 31. oktobrim, piedāvājam ģimenes brīvbiļetes uz Ventspils muzejiem - pils, amatu māja, piejūras brīvdabas muzejs (arī Mazbānītis).
 </string>
-    <string name="title_activity_start" translatable="false">StartActivity</string>
     <string name="hute">Ventspilnieki pratuši uzbūvēt kalnu un devuši tam ilggadējā pilsētas mēra vārdu – „Lemberga hūte”. Unikālais kalns Rietumlatvijas piejūras zemienē radīts mākslīgi, izmantojot būvgružus un rekonstruējamo ielu nederīgo grunts segumu. Tā augstums šobrīd ir 58 m, nobrauciena garums 240 m un tas tiek palielināts katru gadu.
 Ziemā kalns iepriecina slēpotājus un snovbordistus, kuriem izveidots īpašs snovborda parks un kalnu slēpošanas trase. Līksmus brīžus sagādā arī kameršļūkšanas trase un bērnu trase nobraucieniem ar ragaviņām. Kalna darbību nodrošina pieci pacēlāji, pieci sniega pūtēji un sniega traktors. Trases ir apgaismotas. Tiem, kas slēpojot vēl nejūtas īsti droši, palīdzēs prasmīgi slēpošanas instruktori. Kalna pakājē darbojas arī kalnu slēpošanas un snovborda inventāra noma.
 </string>
@@ -198,4 +197,8 @@ Jaunā dzelzceļa līnija līkumojot vijas caur kāpām ieskauto un mežaino apv
     <string name="pass">Parole</string>
     <string name="alreadyhaveacc">Jau ir konts?<u> Pieslēdzies!</u></string>
     <string name="donthaveacc">Vēl nav konta?<u> Reģistrējies!</u></string>
+    <string name="timeexp">Jūsu laiks beigsies:  </string>
+    <string name="ambulance">Neatliekama mediciniska palidziba</string>
+    <string name="police">Policija</string>
+    <string name="firefight">Ugunsdrošība</string>
 </resources>

@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/D:/androidstudio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_exit_to_app_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/D:/androidstudio/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_security_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -34,9 +34,11 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_exit_to_app_black_24dp" />
+                            <entry key="height" value="110" />
+                            <entry key="outputName" value="ic_security_black_24dp" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\Jaguar\Downloads\3d-building-svgrepo-com.svg" />
+                            <entry key="width" value="110" />
                           </map>
                         </option>
                       </PersistentState>

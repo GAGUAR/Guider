@@ -19,7 +19,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".InformActivity"></activity>
+        <activity android:name=".PaymentDetails" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,8 +52,7 @@
         <activity
             android:name=".IntroScreen"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Transparent">
-        </activity>
+            android:theme="@style/Theme.Transparent" />
 
         <service
             android:name=".GPS_Service"

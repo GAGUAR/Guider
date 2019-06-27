@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -14,8 +15,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.model.LatLng;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class InfoActivities extends AppCompatActivity{
     private TextView infotext;
@@ -24,6 +36,14 @@ public class InfoActivities extends AppCompatActivity{
     private int fromGpsNo;
     private String objLatLng;
     private String telephone=null;
+    private FirebaseDatabase mFirebaseDatabase;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference myRef;
+    private String userID;
+    private String strEndTime;
+    private Date currentTime = Calendar.getInstance().getTime();
+    private Date date;
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -49,7 +69,20 @@ public class InfoActivities extends AppCompatActivity{
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        myRef = mFirebaseDatabase.getReference();
+        FirebaseUser user = mAuth.getCurrentUser();
+        userID = user.getUid();
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                showData(dataSnapshot);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
 
         infotext = (TextView) findViewById(R.id.infotext);
         infoImage = (ImageView) findViewById(R.id.infoimage);
@@ -543,6 +576,23 @@ public class InfoActivities extends AppCompatActivity{
             });
         }else {
             phone.setVisibility(View.GONE);
+        }
+    }
+    private void showData(DataSnapshot dataSnapshot) {
+        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+            UserInformation uInfo = new UserInformation();
+            uInfo.setEndTime(ds.child(userID).getValue(UserInformation.class).getEndTime());
+            strEndTime = uInfo.getEndTime();
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            try {
+                date = format.parse(strEndTime);
+                Log.d(TAG, String.valueOf(date));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            if (currentTime.after(date)) {
+                finish();
+            }
         }
     }
 }

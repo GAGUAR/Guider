@@ -88,4 +88,8 @@
     <string name="pass">Password</string>
     <string name="alreadyhaveacc">Already have an account?<u> Log in!</u></string>
     <string name="donthaveacc">Do not have an account?<u> Register!</u></string>
+    <string name="timeexp">Your time expires at:  </string>
+    <string name="ambulance">Ambulance</string>
+    <string name="police">Police</string>
+    <string name="firefight">Firefighters</string>
 </resources>

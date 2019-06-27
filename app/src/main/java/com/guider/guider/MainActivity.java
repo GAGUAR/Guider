@@ -42,7 +42,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -55,6 +59,13 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.guider.guider.directionhelpers.FetchURL;
 import com.guider.guider.directionhelpers.TaskLoadedCallback;
 
@@ -90,7 +101,14 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private boolean routeBoolean=false;
     private boolean ROUTE_PERMISSION = false;
     private ArrayList<LatLng>waypts=new ArrayList<>();
-
+    private FirebaseDatabase mFirebaseDatabase;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private DatabaseReference myRef;
+    private String userID;
+    private String strEndTime;
+    private Date currentTime = Calendar.getInstance().getTime();
+    private Date date;
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -103,10 +121,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
             }
             mMap.setOnCameraMoveStartedListener(this);
             mMap.getUiSettings().setMyLocationButtonEnabled(false);
-            mMap.getUiSettings().setZoomGesturesEnabled(true);
-            mMap.getUiSettings().setScrollGesturesEnabled(true);
-            mMap.getUiSettings().setTiltGesturesEnabled(true);
-            mMap.getUiSettings().setRotateGesturesEnabled(true);
+            mMap.getUiSettings().setZoomGesturesEnabled(false);
+            mMap.getUiSettings().setScrollGesturesEnabled(false);
+            mMap.getUiSettings().setTiltGesturesEnabled(false);
+            mMap.getUiSettings().setRotateGesturesEnabled(false);
             startserv();
 
         }
@@ -166,7 +184,20 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         getLocationPermission();
         enable_buttons();
         addCircles();
-
+        mAuth = FirebaseAuth.getInstance();
+        mFirebaseDatabase = FirebaseDatabase.getInstance();
+        myRef = mFirebaseDatabase.getReference();
+        FirebaseUser user = mAuth.getCurrentUser();
+        userID = user.getUid();
+        myRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                showData(dataSnapshot);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+            }
+        });
         if(isMyServiceRunning(GPS_Service.class)==false) {
             Intent intent3= getIntent();
             waypts= (ArrayList<LatLng>) intent3.getExtras().get("waypts");
@@ -186,7 +217,22 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
     }
-
+    private void showData(DataSnapshot dataSnapshot) {
+        for (DataSnapshot ds : dataSnapshot.getChildren()) {
+            UserInformation uInfo = new UserInformation();
+            uInfo.setEndTime(ds.child(userID).getValue(UserInformation.class).getEndTime());
+            strEndTime = uInfo.getEndTime();
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+            try {
+                date = format.parse(strEndTime);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            if (currentTime.after(date)) {
+                finish();
+            }
+        }
+    }
     private boolean isMyServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
@@ -612,6 +658,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                                 moveCamera(latlngEnd,DEFAULT_ZOOM);
                                 loadinglout.setVisibility(View.GONE);
                                 progbar.setVisibility(View.VISIBLE);
+                                mMap.getUiSettings().setZoomGesturesEnabled(true);
+                                mMap.getUiSettings().setScrollGesturesEnabled(true);
+                                mMap.getUiSettings().setTiltGesturesEnabled(true);
+                                mMap.getUiSettings().setRotateGesturesEnabled(true);
                             }else{
                                 moveCamera(new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude()),
                                         DEFAULT_ZOOM);

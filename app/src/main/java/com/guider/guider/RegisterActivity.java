@@ -18,6 +18,12 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -25,6 +31,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     EditText editTextEmail, editTextPassword;
 
     private FirebaseAuth mAuth;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +89,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful()){
                                 Toast.makeText(RegisterActivity.this, "Konts ir reģistrēts. Apstipriniet Email", Toast.LENGTH_LONG).show();
+                                SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+                                Date date = new Date();
+                                Calendar calendar = Calendar.getInstance();
+                                calendar.setTime(date);
+                                calendar.add(Calendar.HOUR, -6);
+                                Date plusDate = calendar.getTime();
+                                String dateTime = dateFormat.format(plusDate);
+                                FirebaseUser user = mAuth.getCurrentUser();
+                                String userID = user.getUid();
+                                myRef.child("users").child(userID).child("endTime").setValue(dateTime);
                                 mAuth.signOut();
                                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
