@@ -37,7 +37,7 @@
                 android:background="@drawable/infotitles"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:text="GALVENĀ INFORMĀCIJA"
+                android:text="@string/infg"
                 android:textStyle="bold"
                 android:padding="10dp"
 
@@ -60,7 +60,7 @@
                 android:background="@drawable/infotitles"
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:text="PAPILDUS INFORMĀCIJA"
+                android:text="@string/infp"
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:textColor="@android:color/white"
