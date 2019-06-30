@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:text="@string/guiderpass"
-                android:textStyle="bold"
+
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <Button
@@ -63,6 +63,7 @@
                 android:textColor="@color/colorPrimary"
                 android:layout_gravity="center"
                 android:id="@+id/paybtn"
+                android:layout_margin="10dp"
                 android:padding="15dp"/>
         </LinearLayout>
 
