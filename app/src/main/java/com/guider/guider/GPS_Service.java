@@ -861,7 +861,7 @@
         manager.requestLocationUpdates(LocationManager.GPS_PROVIDER,1000,0,listener);
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this.getApplicationContext(), "notify_001");
-        mBuilder.setSmallIcon(R.mipmap.ic_launcher_round);
+        mBuilder.setSmallIcon(R.drawable.servicelogo);
         mBuilder.setContentTitle("Guider");
         mBuilder.setOngoing(true);
         mBuilder.setContentText("Guider ekskursija ir aktīva");

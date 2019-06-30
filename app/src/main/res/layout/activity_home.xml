@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="false"
     android:orientation="vertical">
 
-    <include layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+    <include layout="@layout/toolbar" />
 
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hlout"
         android:layout_alignParentBottom="false"
         android:orientation="vertical">
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -105,6 +105,6 @@
 
 </LinearLayout>
 
-
+    </ScrollView>
 
 

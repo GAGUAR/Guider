@@ -30,7 +30,7 @@ import java.util.Date;
 
 public class InformActivity extends AppCompatActivity {
     Button doctor, police, fire;
-    TextView timeExp;
+    TextView timeExp , ppol;
     private boolean objects;
     private static final String TAG = "time: ";
     private FirebaseDatabase mFirebaseDatabase;
@@ -52,6 +52,7 @@ public class InformActivity extends AppCompatActivity {
         police=(Button)findViewById(R.id.police);
         doctor=(Button)findViewById(R.id.doctor);
         mAuth = FirebaseAuth.getInstance();
+        ppol=findViewById(R.id.ppolbtn);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabase.getReference();
         FirebaseUser user = mAuth.getCurrentUser();
@@ -111,6 +112,15 @@ public class InformActivity extends AppCompatActivity {
                 intent.setData(Uri.parse("tel:" + "112"));
                 // Start the dialer app activity with number
                 startActivity(intent);
+            }
+        });
+        ppol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://sites.google.com/view/guider-inc/privacy-policy?authuser=0";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
             }
         });
     }

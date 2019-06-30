@@ -3,83 +3,103 @@ package com.guider.guider;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.SystemClock;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.guider.guider.Config.Config;
-import com.paypal.android.sdk.payments.PayPalConfiguration;
-import com.paypal.android.sdk.payments.PayPalPayment;
-import com.paypal.android.sdk.payments.PayPalService;
-import com.paypal.android.sdk.payments.PaymentConfirmation;
+
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+
 
 import org.json.JSONException;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
-public class PaymentActivity extends AppCompatActivity {
-    private static final int PAYPAL_REQUEST_CODE = 0404;
-    private static PayPalConfiguration config = new PayPalConfiguration()
-            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
-            .clientId(Config.PAYPAL_CLIENT_ID);
-    String amount = "";
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if(requestCode == PAYPAL_REQUEST_CODE){
-            if(resultCode == RESULT_OK){
-                PaymentConfirmation confirmation = data.getParcelableExtra(com.paypal.android.sdk.payments.PaymentActivity.EXTRA_RESULT_CONFIRMATION);
-            if(confirmation != null){
-                try {
-                    String paymentDetails = confirmation.toJSONObject().toString(4);
-                    startActivity(new Intent(this, PaymentDetails.class)
-                    .putExtra("PaymentDetails",paymentDetails)
-                            .putExtra("PaymentAmount",amount)
-
-                    );
-                    finish();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            }
-            else if (resultCode == Activity.RESULT_CANCELED)
-                Toast.makeText(this, "Cancel", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-        else if(resultCode== com.paypal.android.sdk.payments.PaymentActivity.RESULT_EXTRAS_INVALID)
-            Toast.makeText(this, "Invalid",Toast.LENGTH_SHORT).show();
-        finish();
-    }
-
-    @Override
-    protected void onDestroy() {
-        stopService(new Intent(this, PayPalService.class));
-        super.onDestroy();
-    }
+public class PaymentActivity extends AppCompatActivity implements BillingProcessor.IBillingHandler{
+    BillingProcessor bp;
+    Button pay;
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-        Intent intent = new Intent(this,PayPalService.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
-        startService(intent);
-        SystemClock.sleep(3000);
-        processPay();
+        bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiyI3QkVqWDLTHuoR5VHM/Wjm7FaRZ77yrasjG9jx8EvATvsTXywMEjRGY0xymqPragtc1zx2phPgAOMlZ8vEe4voUDEK6zkGhXhFq4VuFRlKXErwimAhgrHq+A7B+KfoXJFKDw4RVolTp7rCWVPCgsodTg26iMo309PVH0zOpZBz45hxw7qW2H2H/O64NCPEX2vrvf6rhBSrl07+Zzk0Y3dGlkGbvxNMF+nW7LNxnLBd56eFBHWPbMM+37Ryl0d2YSbk3+Hm4S2IgbDEQxtTNPT+vNw0Q665MnS2EZORr24eO+O0oRlk44Zm3utQSZ0WSy9vTzB7czLpjhs8z/JGwQIDAQAB", this);
+        pay = findViewById(R.id.paybtn);
+        pay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bp.consumePurchase("com.guider.entrance");
+                bp.purchase(PaymentActivity.this,"com.guider.entrance");
+            }
+        });
     }
 
-    private void processPay() {
-        amount = "2.99";
-        PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(String.valueOf(amount)),"EUR","Buy Guider Pass",
-                PayPalPayment.PAYMENT_INTENT_SALE);
-        Intent intent = new Intent(this, com.paypal.android.sdk.payments.PaymentActivity.class);
-        intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION,config);
-        intent.putExtra(com.paypal.android.sdk.payments.PaymentActivity.EXTRA_PAYMENT,payPalPayment);
-        startActivityForResult(intent,PAYPAL_REQUEST_CODE);
+
+
+    @Override
+    public void onProductPurchased(@NonNull String productId, @Nullable TransactionDetails details) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
+        Date date = new Date();
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR, 6);
+        Date plusDate = calendar.getTime();
+        String dateTime = dateFormat.format(plusDate);
+        FirebaseUser user = mAuth.getCurrentUser();
+        String userID = user.getUid();
+        myRef.child("users").child(userID).child("endTime").setValue(dateTime);
+        startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onPurchaseHistoryRestored() {
+
+    }
+
+    @Override
+    public void onBillingError(int errorCode, @Nullable Throwable error) {
+
+    }
+
+    @Override
+    public void onBillingInitialized() {
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (!bp.handleActivityResult(requestCode, resultCode, data)) {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
+    @Override
+    public void onDestroy() {
+        if (bp != null) {
+            bp.release();
+        }
+        super.onDestroy();
     }
 }

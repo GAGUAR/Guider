@@ -229,7 +229,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 e.printStackTrace();
             }
             if (currentTime.after(date)) {
-                finish();
+finish();
             }
         }
     }
@@ -251,6 +251,10 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                         received = true;
                         loadinglout.setVisibility(View.GONE);
                         progbar.setVisibility(View.GONE);
+                        mMap.getUiSettings().setZoomGesturesEnabled(true);
+                        mMap.getUiSettings().setScrollGesturesEnabled(true);
+                        mMap.getUiSettings().setTiltGesturesEnabled(true);
+                        mMap.getUiSettings().setRotateGesturesEnabled(true);
                         stop.setEnabled(true);
                         latLng1 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng1");   //Getting radius center coords
                         latLng2 = (com.google.android.gms.maps.model.LatLng) intent.getExtras().get("latLng2");

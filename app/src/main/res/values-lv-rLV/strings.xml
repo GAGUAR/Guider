@@ -2,7 +2,6 @@
 <resources>
     <string name="app_name">Guider</string>
     <string name="my_infinite_service">Service</string>
-    <string name="done">DONE</string>
     <string name="inform">INFORMĀCIJA</string>
     <string name="PATS">PATSTĀVĪGI</string>
     <string name="MARŠRUTI">PATSTĀVĪGI</string>
@@ -13,9 +12,7 @@
     <string name="patiziet">Vai jūs tiešām gribat iziet?</string>
     <string name="infp">PAPILDUS INFORMĀCIJA</string>
     <string name="PIEZVANĪT">PIEZVANĪT</string>
-    <string name="cancel">PABEIGT</string>
     <string name="iziet">Iziet</string>
-    <string name="confirm">Vai jūs tiešām gribat iziet?</string>
     <string name="ja">JĀ</string>
     <string name="ne">NĒ</string>
     <string name="init">GPS inicializācija...</string>
@@ -201,4 +198,6 @@ Jaunā dzelzceļa līnija līkumojot vijas caur kāpām ieskauto un mežaino apv
     <string name="ambulance">Neatliekama mediciniska palidziba</string>
     <string name="police">Policija</string>
     <string name="firefight">Ugunsdrošība</string>
+    <string name="guiderpass">Lai izmantotu visas aplikācijas funkcijas mēs lūdzam jūs iegādāties Guider Pass uz 6 stundām</string>
+    <string name="guiderpassbtn">IEGŪT GUIDER PASS</string>
 </resources>

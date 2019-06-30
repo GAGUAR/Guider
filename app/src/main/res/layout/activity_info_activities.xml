@@ -32,7 +32,6 @@
             android:orientation="vertical"
             android:layout_weight="2">
             <TextView
-                android:id="@+id/maininfo"
                 android:layout_width="match_parent"
                 android:background="@drawable/infotitles"
                 android:layout_height="wrap_content"

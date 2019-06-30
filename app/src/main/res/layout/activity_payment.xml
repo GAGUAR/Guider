@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.guider.guider.RegisterActivity">
 
 
     <RelativeLayout
@@ -12,20 +13,31 @@
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:layout_weight="1">
+
         <ImageView
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:background="@drawable/logo_white" />
+            android:background="@drawable/logo_white"/>
+
+
     </RelativeLayout>
 
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUIDER PASS"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:background="@color/colorAccent"
+        android:textAlignment="center"
+        android:textSize="35dp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="@color/colorPrimary">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,33 +46,28 @@
             android:paddingTop="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
+
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="GUIDER PASS"
-                android:textSize="50dp"
-                android:textColor="@color/colorAccent"
+                android:padding="10dp"
+                android:text="@string/guiderpass"
                 android:textStyle="bold"
-                android:layout_gravity="center"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2.99 EUR"
-                android:textSize="35dp"
-                android:layout_margin="20dp"
                 android:textAlignment="center"
-                android:layout_gravity="center"/>
-            <ProgressBar
-                android:id="@+id/progressbar"
+                android:textSize="20dp"/>
+            <Button
                 android:layout_width="wrap_content"
-                android:layout_margin="20dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center" />
-
-
-
-
+                android:text="@string/guiderpassbtn"
+                android:background="@drawable/roundedbutton"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:id="@+id/paybtn"
+                android:padding="15dp"/>
         </LinearLayout>
+
+
+
 
     </RelativeLayout>
 

@@ -2,7 +2,6 @@
 <resources>
     <string name="inform">Information</string>
     <string name="my_infinite_service">Service</string>
-    <string name="done">DONE</string>
     <string name="PATS">FREEWALK</string>
     <string name="MARŠRUTI">ROUTES</string>
     <string name="obj">OBJECTS</string>
@@ -10,7 +9,6 @@
     <string name="infp">ADDITIONAL INFORMATION</string>
     <string name="exit">EXIT</string>
     <string name="PIEZVANĪT">CALL</string>
-    <string name="cancel">FINISH</string>
     <string name="iziet">Exit</string>
     <string name="ja">YES</string>
     <string name="ne">NO</string>
@@ -23,7 +21,6 @@
     <string name="iestad">Institutions</string>
     <string name="VECPILSĒTA">OLD CITY</string>
     <string name="piem">Monuments</string>
-    <string name="confirm">Do you really want to exit?</string>
     <string name="rgalds">1st place in Restaurant group in the contest “The Best Catering Industry’s Company in Ventspils 2017”. Café Rātsgalds is located in the heart of Ventspils Town Hall Square. The café offers a contemporary and delicious meal. Particular attention is devoted to the customer service quality and to the collaboration with quality product suppliers.</string>
     <string name="lutdrnams">The Ventspils Lutheran Congregation Church at 4 Tirgus street is a one-storey wooden building (1836) with a cone chimney preserved in its interior design.</string>
     <string name="courlander">This bar is special by the fact that it is located at the same building where the brewery is located, and visitors have the possibility to take a look at the process of brewing beer. The pub provides a possibility to buy and taste beer – COURLANDER lager Light and COURLANDER lager dark produced in the brewery, as well as different warm and cold snacks, including different fish dishes.</string>
@@ -92,4 +89,6 @@
     <string name="ambulance">Ambulance</string>
     <string name="police">Police</string>
     <string name="firefight">Firefighters</string>
+    <string name="guiderpass">In order to use all functions of the app we kindly ask you to get Guider Pass for 6 hours</string>
+    <string name="guiderpassbtn">GET GUIDER PASS</string>
 </resources>

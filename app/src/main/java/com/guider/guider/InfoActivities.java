@@ -591,7 +591,7 @@ public class InfoActivities extends AppCompatActivity{
                 e.printStackTrace();
             }
             if (currentTime.after(date)) {
-                finish();
+finish();
             }
         }
     }
