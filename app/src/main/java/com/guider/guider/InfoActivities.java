@@ -1,7 +1,10 @@
 package com.guider.guider;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -58,12 +61,20 @@ public class InfoActivities extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_activities);
+
         Button done = (Button) findViewById(R.id.donebtn);
         Button phone = (Button) findViewById(R.id.phoneButton);
         TextView titletext = (TextView) findViewById(R.id.titletext);
         TextView secondinfo = (TextView) findViewById(R.id.infotext2);
         TextView scndinfotitle = (TextView) findViewById(R.id.secondinfo);
         scndinfotitle.setVisibility(View.GONE);
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        if(activeNetworkInfo ==null){
+            startActivity(new Intent(getApplicationContext(),NoInternet.class));
+            finish();
+        }
         secondinfo.setVisibility(View.GONE);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);

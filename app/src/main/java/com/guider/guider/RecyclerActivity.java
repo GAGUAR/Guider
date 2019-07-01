@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,6 +57,13 @@ public class RecyclerActivity extends AppCompatActivity {
                 }
             }
         };
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        if(activeNetworkInfo ==null){
+            startActivity(new Intent(getApplicationContext(),NoInternet.class));
+            finish();
+        }
         registerReceiver(broadcastReceiver, new IntentFilter("finish_activity"));
         initImageBitmaps();
         mAuth = FirebaseAuth.getInstance();

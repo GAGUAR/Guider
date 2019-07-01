@@ -1,7 +1,10 @@
 package com.guider.guider;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -46,6 +49,13 @@ public class PaymentActivity extends AppCompatActivity implements BillingProcess
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        if(activeNetworkInfo ==null){
+            startActivity(new Intent(getApplicationContext(),NoInternet.class));
+            finish();
+        }
         bp = new BillingProcessor(this, "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiyI3QkVqWDLTHuoR5VHM/Wjm7FaRZ77yrasjG9jx8EvATvsTXywMEjRGY0xymqPragtc1zx2phPgAOMlZ8vEe4voUDEK6zkGhXhFq4VuFRlKXErwimAhgrHq+A7B+KfoXJFKDw4RVolTp7rCWVPCgsodTg26iMo309PVH0zOpZBz45hxw7qW2H2H/O64NCPEX2vrvf6rhBSrl07+Zzk0Y3dGlkGbvxNMF+nW7LNxnLBd56eFBHWPbMM+37Ryl0d2YSbk3+Hm4S2IgbDEQxtTNPT+vNw0Q665MnS2EZORr24eO+O0oRlk44Zm3utQSZ0WSy9vTzB7czLpjhs8z/JGwQIDAQAB", this);
         pay = findViewById(R.id.paybtn);
         pay.setOnClickListener(new View.OnClickListener() {

@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -52,6 +54,13 @@ public class InformActivity extends AppCompatActivity {
         police=(Button)findViewById(R.id.police);
         doctor=(Button)findViewById(R.id.doctor);
         mAuth = FirebaseAuth.getInstance();
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        if(activeNetworkInfo ==null){
+            startActivity(new Intent(getApplicationContext(),NoInternet.class));
+            finish();
+        }
         ppol=findViewById(R.id.ppolbtn);
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         myRef = mFirebaseDatabase.getReference();

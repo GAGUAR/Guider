@@ -11,6 +11,8 @@ import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -738,6 +740,13 @@ finish();
                 @SuppressLint("MissingPermission")
                 @Override
                 public void onReceive(Context context, Intent intent) {
+                    ConnectivityManager connectivityManager
+                            = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+                    NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+                    if(activeNetworkInfo ==null){
+                        startActivity(new Intent(getApplicationContext(),NoInternet.class));
+                        finish();
+                    }
                     String latLng = "\n" + intent.getExtras().get("coordinates");
 
                     String[] LatLng = latLng.split(",");
